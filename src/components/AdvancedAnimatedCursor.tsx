@@ -1,0 +1,225 @@
+import React, { useEffect, useState, useRef } from "react";
+import AnimatedCursor from "react-animated-cursor";
+
+interface CursorState {
+  color: string;
+  blendMode: string;
+  outerScale: number;
+  innerScale: number;
+  outerStyle: React.CSSProperties;
+  innerStyle: React.CSSProperties;
+}
+
+const AdvancedAnimatedCursor: React.FC = () => {
+  const [cursorState, setCursorState] = useState<CursorState>({
+    color: "#7c877f",
+    blendMode: "exclusion",
+    outerScale: 15,
+    innerScale: 0.15,
+    outerStyle: {
+      borderWidth: "2px",
+      borderStyle: "solid",
+      backgroundColor: "transparent",
+    },
+    innerStyle: {
+      backgroundColor: "#7c877f",
+    },
+  });
+
+  const cursorRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const updateCursorOnHover = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+
+      // Default cursor state
+      let newState: CursorState = {
+        color: "#7c877f",
+        blendMode: "exclusion",
+        outerScale: 15,
+        innerScale: 0.15,
+        outerStyle: {
+          borderWidth: "2px",
+          borderStyle: "solid",
+          backgroundColor: "transparent",
+        },
+        innerStyle: {
+          backgroundColor: "#7c877f",
+        },
+      };
+
+      // Hero section - difference blend mode with white cursor
+      if (target.closest(".hero")) {
+        newState = {
+          ...newState,
+          color: "#ffffff",
+          blendMode: "difference",
+          outerStyle: {
+            ...newState.outerStyle,
+            borderColor: "#ffffff",
+            backgroundColor: "rgba(255, 255, 255, 0.1)",
+          },
+          innerStyle: {
+            backgroundColor: "#ffffff",
+          },
+        };
+      }
+
+      // About section - multiply blend mode
+      else if (target.closest(".about-us")) {
+        newState = {
+          ...newState,
+          blendMode: "multiply",
+          outerScale: 2,
+          innerScale: 0.2,
+        };
+      }
+
+      // Services section - overlay blend mode
+      else if (target.closest(".our-services")) {
+        newState = {
+          ...newState,
+          blendMode: "overlay",
+          outerScale: 1.8,
+          innerScale: 0.18,
+        };
+      }
+
+      // Projects section - soft-light blend mode
+      else if (target.closest(".projects")) {
+        newState = {
+          ...newState,
+          blendMode: "soft-light",
+          outerScale: 1.6,
+          innerScale: 0.16,
+        };
+      }
+
+      // Interactive elements - enhanced cursor
+      else if (
+        target.matches("a, button, .btn, .btn-default, input, textarea, select")
+      ) {
+        newState = {
+          ...newState,
+          outerScale: 2.5,
+          innerScale: 0.5,
+          outerStyle: {
+            ...newState.outerStyle,
+            borderColor: "#7c877f",
+            backgroundColor: "rgba(124, 135, 127, 0.1)",
+          },
+        };
+      }
+
+      // Image elements - larger cursor
+      else if (
+        target.matches(
+          ".service-image a, .project-image, .blog-image, .team-member, .about-img-1, .about-img-2, .why-choose-img-1, .why-choose-img-2, .why-choose-img-3, .why-choose-img-4"
+        )
+      ) {
+        newState = {
+          ...newState,
+          outerScale: 2.2,
+          innerScale: 0.4,
+          outerStyle: {
+            ...newState.outerStyle,
+            borderColor: "#7c877f",
+            backgroundColor: "rgba(124, 135, 127, 0.15)",
+          },
+        };
+      }
+
+      // Form elements - text cursor
+      else if (target.matches("input:focus, textarea:focus, select:focus")) {
+        newState = {
+          ...newState,
+          outerScale: 2,
+          innerScale: 0.3,
+          outerStyle: {
+            ...newState.outerStyle,
+            borderColor: "#7c877f",
+          },
+        };
+      }
+
+      setCursorState(newState);
+    };
+
+    const updateCursorOnLeave = () => {
+      setCursorState({
+        color: "#7c877f",
+        blendMode: "exclusion",
+        outerScale: 15,
+        innerScale: 0.15,
+        outerStyle: {
+          borderWidth: "2px",
+          borderStyle: "solid",
+          backgroundColor: "transparent",
+        },
+        innerStyle: {
+          backgroundColor: "#7c877f",
+        },
+      });
+    };
+
+    document.addEventListener("mouseover", updateCursorOnHover);
+    document.addEventListener("mouseout", updateCursorOnLeave);
+
+    return () => {
+      document.removeEventListener("mouseover", updateCursorOnHover);
+      document.removeEventListener("mouseout", updateCursorOnLeave);
+    };
+  }, []);
+
+  return (
+    <div ref={cursorRef}>
+      <AnimatedCursor
+        innerStyle={{
+          backgroundColor: cursorState.innerStyle.backgroundColor,
+          mixBlendMode: cursorState.blendMode as any,
+          ...cursorState.innerStyle,
+        }}
+        outerStyle={{
+          border: `2px solid ${cursorState.color}`,
+          mixBlendMode: cursorState.blendMode as any,
+          ...cursorState.outerStyle,
+        }}
+        innerScale={cursorState.innerScale}
+        outerScale={cursorState.outerScale}
+        color={cursorState.color}
+        clickables={[
+          "a",
+          'input[type="text"]',
+          'input[type="email"]',
+          'input[type="number"]',
+          'input[type="submit"]',
+          'input[type="image"]',
+          "label[for]",
+          "select",
+          "textarea",
+          "button",
+          ".link",
+          ".btn",
+          ".btn-default",
+          ".service-image a",
+          ".project-image",
+          ".blog-image",
+          ".team-member",
+          ".why-choose-item",
+          ".process-step",
+          ".skill-item",
+          ".testimonial-content",
+          ".blog-item",
+          ".about-img-1",
+          ".about-img-2",
+          ".why-choose-img-1",
+          ".why-choose-img-2",
+          ".why-choose-img-3",
+          ".why-choose-img-4",
+        ]}
+      />
+    </div>
+  );
+};
+
+export default AdvancedAnimatedCursor;
