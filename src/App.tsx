@@ -22,7 +22,7 @@ function App() {
     <Router>
       <div className="App">
         <AdvancedAnimatedCursor />
-        <Preloader />
+        {/* <Preloader /> */}
         <Header />
         <main>
           <Routes>
