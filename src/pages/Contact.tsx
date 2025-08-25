@@ -42,7 +42,7 @@ const Contact: React.FC = () => {
     {
       icon: <Mail size={24} className="text-accent" />,
       title: "Email Address",
-      details: "info@inspaire.com",
+      details: "info@velease.com",
     },
     {
       icon: <Clock size={24} className="text-accent" />,

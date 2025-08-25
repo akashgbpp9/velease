@@ -25,7 +25,7 @@ const Preloader: React.FC = () => {
             className="w-16 h-16 mx-auto"
           />
         </div>
-        <div className="text-2xl font-bold text-primary">Inspaire</div>
+        <div className="text-2xl font-bold text-primary">VeLease</div>
       </div>
     </div>
   );

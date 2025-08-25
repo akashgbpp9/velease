@@ -57,7 +57,7 @@ const About: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Discover our story, mission, and the passionate team behind Inspaire
+            Discover our story, mission, and the passionate team behind Velease
           </motion.p>
         </div>
       </section>
@@ -80,7 +80,7 @@ const About: React.FC = () => {
                   <span className="text-accent">2009</span>
                 </h2>
                 <p>
-                  Founded with a passion for exceptional design, Inspaire has
+                  Founded with a passion for exceptional design, VeLease has
                   been transforming spaces and lives for over 15 years. What
                   started as a small design studio has grown into a full-service
                   interior design and architecture firm, serving clients across
