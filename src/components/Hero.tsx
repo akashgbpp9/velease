@@ -14,9 +14,11 @@ const Hero: React.FC = () => {
             <div className="hero-content">
               {/* Section Title Start */}
               <div className="section-title">
-                <h3>Furniture-as-a-Service (FaaS)</h3>
-                <h1>The Future of Office Leasing is Here.</h1>
-                <p>
+                <h3 className="wow fadeInUp">Furniture-as-a-Service (FaaS)</h3>
+                <h1 className="text-anime-style-2" data-cursor="-opaque">
+                  The Future of Office Leasing is Here.
+                </h1>
+                <p className="wow fadeInUp" data-wow-delay="0.2s">
                   We design, build, and furnish plug-and-play workspaces — you
                   just pay a simple monthly rent per sq.ft.
                 </p>
@@ -24,7 +26,7 @@ const Hero: React.FC = () => {
               {/* Section Title End */}
 
               {/* Hero Button Start */}
-              <div className="hero-btn">
+              <div className="hero-btn wow fadeInUp" data-wow-delay="0.4s">
                 <Link to="/about" className="btn-default">
                   Find your Workspace
                 </Link>

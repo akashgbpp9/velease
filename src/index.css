@@ -54,6 +54,96 @@
   --divider-color: #eaf0ec;
   --cursor-color: #7c877f;
   --cursor-blend-mode: exclusion;
+  --default-font: "Hanken Grotesk", sans-serif;
+}
+
+body {
+  font-family: var(--default-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6em;
+  background-color: var(--white-color);
+  color: var(--text-color);
+}
+
+p {
+  line-height: 1.7em;
+  margin-bottom: 1.6em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.1em;
+  color: var(--primary-color);
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  outline: 0;
+}
+
+a:focus {
+  text-decoration: none;
+  outline: 0;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: clip;
+}
+
+.container {
+  max-width: 1300px;
+}
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.row > * {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.row.no-gutters {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.row.no-gutters > * {
+  padding-right: 0px;
+  padding-left: 0px;
 }
 
 /************************************/
@@ -169,6 +259,28 @@ select:focus ~ .react-animated-cursor .cursor-inner {
   border-color: var(--accent-color);
 }
 
+/* Section Row Styles */
+.section-row {
+  margin-bottom: 80px;
+}
+
+.section-row .section-title {
+  margin-bottom: 0;
+  margin-right: 30px;
+}
+
+.section-btn {
+  text-align: end;
+}
+
+.section-title-content {
+  margin-left: 120px;
+}
+
+.section-title-content p {
+  margin: 0;
+}
+
 .project-image:hover ~ .react-animated-cursor .cursor-outer {
   transform: scale(2.6);
   background-color: rgba(124, 135, 127, 0.18);
@@ -225,32 +337,24 @@ select,
 .why-choose-img-2,
 .why-choose-img-3,
 .why-choose-img-4 {
-  cursor: none;
+  /* cursor: none; - Removed to allow React cursor to work */
   text-decoration: none;
 }
 
-/* Ensure cursor is visible on all interactive elements */
-a:hover,
-button:hover,
-.btn:hover,
-.btn-default:hover,
-.service-image a:hover,
-.project-image:hover,
-.blog-image:hover,
-.team-member:hover,
-.why-choose-item:hover,
-.process-step:hover,
-.skill-item:hover,
-.testimonial-content:hover,
-.blog-item:hover,
-.about-img-1:hover,
-.about-img-2:hover,
-.why-choose-img-1:hover,
-.why-choose-img-2:hover,
-.why-choose-img-3:hover,
-.why-choose-img-4:hover {
-  cursor: none;
+.cursor {
+  top: -12px;
+  left: -12px;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 1;
+  position: absolute;
+  z-index: 100;
+  border-radius: 50%;
+  border: 1px solid rgb(255, 255, 255);
 }
+
+/* Ensure cursor is visible on all interactive elements */
+/* Removed cursor: none rules to allow React cursor to work */
 
 /* Cursor animation keyframes for smooth scaling */
 @keyframes cursorPulse {
@@ -460,11 +564,11 @@ header.main-header .header-sticky.active .navbar {
 .header-btn {
   margin-left: 20px;
 }
-
+/* 
 .header-btn .btn-default {
   padding: 12px 24px;
   font-size: 14px;
-}
+} */
 
 /* Custom Button Styles */
 .btn-default {
@@ -482,6 +586,11 @@ header.main-header .header-sticky.active .navbar {
   overflow: hidden;
   z-index: 0;
   text-decoration: none;
+}
+
+.btn-default:hover {
+  background: transparent;
+  color: var(--white-color);
 }
 
 .btn-default::before {
@@ -554,11 +663,15 @@ header.main-header .header-sticky.active .navbar {
 
 /* Section Title Styles */
 .section-title h3 {
+  display: inline-block;
+  position: relative;
   color: var(--accent-color);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
+  line-height: 1.6em;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  padding-left: 35px;
   margin-bottom: 16px;
 }
 
@@ -573,6 +686,13 @@ header.main-header .header-sticky.active .navbar {
   color: var(--accent-color);
 }
 
+.section-title h1 {
+  font-size: 80px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0;
+}
+
 .section-title h2 {
   font-size: 48px;
   font-weight: 700;
@@ -585,8 +705,22 @@ header.main-header .header-sticky.active .navbar {
   color: var(--accent-color);
 }
 
+.section-title h3::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: url("../public/images/icon-sub-heading.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+  width: 24px;
+  height: 5px;
+}
+
 .section-title p {
-  font-size: 18px;
+  font-size: 22px;
   color: var(--text);
   line-height: 1.6;
 }
@@ -634,6 +768,18 @@ header.main-header .header-sticky.active .navbar {
   color: var(--white-color);
 }
 
+.hero-content .section-title h3 {
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6em;
+  text-transform: capitalize;
+  letter-spacing: 0.1em;
+  padding-left: 35px;
+  margin-bottom: 20px;
+}
+
 .hero-content .section-title p {
   font-size: 22px;
   color: var(--white-color);
@@ -656,10 +802,9 @@ header.main-header .header-sticky.active .navbar {
 }
 
 /************************************/
-/*** 	   05. About Us css		  ***/
+/***       05. About Us css 	  ***/
 /************************************/
 
-/* About Us Section */
 .about-us {
   background-image: url("../public/images/section-bg-shape-1.svg");
   background-repeat: no-repeat;
@@ -797,11 +942,107 @@ header.main-header .header-sticky.active .navbar {
   width: calc(50% - 40px);
 }
 
+.about-us-content-list {
+  margin-bottom: 40px;
+}
+
+.about-us-content-list ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.about-us-content-list ul li {
+  position: relative;
+  font-weight: 500;
+  color: var(--primary-color);
+  padding-left: 30px;
+  margin-bottom: 15px;
+}
+
+.about-us-content-list ul li:last-child {
+  margin-bottom: 0;
+}
+
+.about-us-content-list ul li::before {
+  content: "\f058";
+  position: absolute;
+  font-family: "FontAwesome";
+  font-size: 20px;
+  font-weight: 900;
+  line-height: normal;
+  color: var(--accent-color);
+  display: inline-block;
+  top: 2px;
+  left: 0;
+}
+
+.about-us-contact-list {
+  width: calc(50% - 40px);
+}
+
+.about-contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.about-contact-item:last-child {
+  margin-bottom: 0;
+}
+
+.about-contact-item .icon-box {
+  width: 40px;
+  height: 40px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.about-contact-item:hover .icon-box {
+  background-color: var(--primary-color);
+}
+
+.about-contact-item .icon-box figure {
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.about-contact-item .icon-box img {
+  max-width: 40px;
+  border-radius: 50%;
+}
+
+.about-contact-item .icon-box i {
+  font-size: 18px;
+  color: var(--white-color);
+}
+
+.about-contact-content {
+  width: calc(100% - 55px);
+}
+
+.about-contact-content h3 {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.about-contact-content p {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
+
 /************************************/
-/*** 	   06. Why Choose Us css	  ***/
+/***     06. Why Choose Us css    ***/
 /************************************/
 
-/* Why Choose Us Section */
 .why-choose-us {
   padding: 100px 0;
   background-color: var(--secondery-color);
@@ -959,7 +1200,7 @@ header.main-header .header-sticky.active .navbar {
 
 .service-image a {
   display: block;
-  cursor: none;
+  /* cursor: none; - Removed to allow React cursor to work */
 }
 
 .service-image a figure {
@@ -1595,6 +1836,7 @@ header.main-header .header-sticky.active .navbar {
 
 .testimonial-slider .swiper-button-next,
 .testimonial-slider .swiper-button-prev {
+  display: none;
   width: 40px;
   height: 40px;
   background-color: var(--accent-color);
@@ -1815,18 +2057,37 @@ header.main-header .header-sticky.active .navbar {
 }
 
 /* Image Reveal Animations - Only for images */
-.image-anime,
+/* .image-anime,
 .reveal {
   opacity: 0;
   transform: scale(1.1) translateY(30px);
   transition: all 0.8s ease;
-}
+} */
 
 .image-anime.animate-in,
 .reveal.animate-in {
   opacity: 1;
   transform: scale(1) translateY(0);
 }
+
+/* Reveal class styles from original CSS */
+/* .reveal {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.reveal img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-transform-origin: left;
+  transform-origin: left;
+} */
 
 /* Text Animation Styles - Ensure visibility */
 .text-anime-style-1,
@@ -1846,7 +2107,7 @@ header.main-header .header-sticky.active .navbar {
   transition: all 0.3s ease;
 }
 
-/* Image Hover Effects */
+/* Image Hover Effects
 .image-anime::before {
   content: "";
   position: absolute;
@@ -1862,7 +2123,7 @@ header.main-header .header-sticky.active .navbar {
   );
   transition: left 0.5s ease;
   z-index: 1;
-}
+} */
 
 .image-anime:after {
   content: "";
@@ -1988,7 +2249,21 @@ header.main-header .header-sticky.active .navbar {
   }
 
   .about-contact-item {
+    display: flex;
+    align-items: center;
     margin-bottom: 20px;
+  }
+
+  .about-contact-item .icon-box {
+    width: 40px;
+    height: 40px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    transition: all 0.3s ease-in-out;
   }
 
   .about-contact-content h3 {
@@ -2111,6 +2386,28 @@ header.main-header .header-sticky.active .navbar {
   height: 250%;
   transition: all 600ms linear;
   background-color: transparent;
+}
+
+/* Image-anime before pseudo-element for shine effect */
+/* .image-anime::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+  z-index: 1;
+} */
+
+.image-anime:hover::after {
+  left: 100%;
 }
 
 /************************************/
@@ -2295,7 +2592,7 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .how-we-work-item {
-  width: calc(25% - 22.5px);
+  width: calc((100% / 3) - 22.5px);
 }
 
 .how-we-work-item .icon-box {
@@ -2984,7 +3281,7 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .vision-mission {
-  padding: 100px 0 50px;
+  padding: 100px 0 12px;
   background: linear-gradient(
     180deg,
     var(--primary-color) 60%,
@@ -4170,6 +4467,7 @@ header.main-header .header-sticky.active .navbar {
 
 .page-contact-us {
   padding: 100px 0 50px;
+  background-color: var(--secondery-color);
 }
 
 .contact-us-image {
@@ -4457,7 +4755,21 @@ header.main-header .header-sticky.active .navbar {
   }
 
   .about-contact-item {
+    display: flex;
+    align-items: center;
     margin-bottom: 30px;
+  }
+
+  .about-contact-item .icon-box {
+    width: 40px;
+    height: 40px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    transition: all 0.3s ease-in-out;
   }
 
   .why-choose-us {
@@ -5272,7 +5584,21 @@ header.main-header .header-sticky.active .navbar {
   }
 
   .about-contact-item {
+    display: flex;
+    align-items: center;
     margin-bottom: 20px;
+  }
+
+  .about-contact-item .icon-box {
+    width: 40px;
+    height: 40px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    transition: all 0.3s ease-in-out;
   }
 
   .about-contact-content h3 {

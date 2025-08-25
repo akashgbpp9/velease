@@ -82,11 +82,11 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
             <div className="about-us-content">
               {/* Section Title Start */}
               <div className="section-title">
-                <h3>about us</h3>
-                <h2>
+                <h3 className="wow fadeInUp">about us</h3>
+                <h2 className="text-anime-style-2" data-cursor="-opaque">
                   Design without debt, growth without <span>compromise.</span>
                 </h2>
-                <p>
+                <p className="wow fadeInUp" data-wow-delay="0.2s">
                   We believe workspaces should accelerate business, not drain
                   it. veLease transforms bare-shells into fully-functional
                   offices with zero upfront cost — so your capital stays free to
@@ -100,7 +100,10 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                 {/* About Content Info Start */}
                 <div className="about-us-content-info">
                   {/* About Us Content List Start */}
-                  <div className="about-us-content-list">
+                  <div
+                    className="about-us-content-list wow fadeInUp"
+                    data-wow-delay="0.4s"
+                  >
                     <ul>
                       <li>smart interiors</li>
                       <li>flexible leasing</li>
@@ -110,7 +113,10 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                   {/* About Us Content List End */}
 
                   {/* About Us Content Button Start */}
-                  <div className="about-us-content-btn">
+                  <div
+                    className="about-us-content-btn wow fadeInUp"
+                    data-wow-delay="0.6s"
+                  >
                     <Link to="/about" className="btn-default">
                       How it Works
                     </Link>
@@ -118,11 +124,13 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                   {/* About Us Content Button End */}
                 </div>
                 {/* About Content Info End */}
-
                 {/* About Content List Start */}
                 <div className="about-us-contact-list">
                   {/* About Contact Item Start */}
-                  <div className="about-contact-item">
+                  <div
+                    className="about-contact-item wow fadeInUp"
+                    data-wow-delay="0.4s"
+                  >
                     <div className="icon-box">
                       <i className="fa-solid fa-phone"></i>
                     </div>
@@ -134,9 +142,12 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                   {/* About Contact Item End */}
 
                   {/* About Contact Item Start */}
-                  <div className="about-contact-item">
+                  <div
+                    className="about-contact-item wow fadeInUp"
+                    data-wow-delay="0.6s"
+                  >
                     <div className="icon-box">
-                      <figure>
+                      <figure className="image-anime">
                         <img
                           src="/images/author-1.jpg"
                           alt="Leslie Alexander"

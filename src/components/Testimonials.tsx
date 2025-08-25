@@ -149,6 +149,45 @@ const Testimonials: React.FC<TestimonialsProps> = ({
                       </div>
                     </div>
                   </SwiperSlide>
+
+                  <SwiperSlide>
+                    <div className="testimonial-item">
+                      <div className="testimonial-rating">
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                      </div>
+                      <div className="testimonial-content">
+                        <p>
+                          "From day one, veLease handled everything — design,
+                          build, and furniture. We went from a bare shell to a
+                          fully functional office in under two months, without
+                          chasing multiple vendors. It was one partner, one SLA,
+                          and zero stress."
+                        </p>
+                      </div>
+                      <div className="testimonial-body">
+                        <div className="author-image">
+                          <figure
+                            className="image-anime"
+                            ref={(el) => {
+                              if (el && !imageRefs.current.includes(el)) {
+                                imageRefs.current.push(el);
+                              }
+                            }}
+                          >
+                            <img src="/images/author-1.jpg" alt="" />
+                          </figure>
+                        </div>
+                        <div className="author-content">
+                          <h3>Bhushan Jagtap</h3>
+                          <p>Conveyors Ltd.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </SwiperSlide>
                 </Swiper>
 
                 {/* Custom Navigation and Pagination */}

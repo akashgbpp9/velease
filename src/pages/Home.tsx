@@ -5,12 +5,21 @@ import {
   WhyChooseUs,
   Services,
   IntroVideo,
-  Projects,
   HowWeWork,
   Skills,
   Testimonials,
   Blog,
+  CompanyLogos,
+  CTASection,
+  EnhancedProjects,
+  Statistics,
+  Features,
+  Team,
+  Gallery,
+  ContactForm,
 } from "../components";
+import { Advantages } from "../components/Advantages";
+import { FaqSection } from "../components/FaqSection";
 
 const Home: React.FC = () => {
   const counterRefs = useRef<(HTMLSpanElement | null)[]>([]);
@@ -143,14 +152,14 @@ const Home: React.FC = () => {
     <>
       <Hero />
       <AboutUs imageRefs={imageRefs} counterRefs={counterRefs} />
-      <WhyChooseUs imageRefs={imageRefs} />
       <Services />
-      <IntroVideo />
-      <Projects imageRefs={imageRefs} />
-      <HowWeWork imageRefs={imageRefs} />
+      <WhyChooseUs imageRefs={imageRefs} />
+      <Advantages imageRefs={imageRefs} />
       <Skills imageRefs={imageRefs} />
+      <HowWeWork imageRefs={imageRefs} />
       <Testimonials imageRefs={imageRefs} counterRefs={counterRefs} />
-      <Blog imageRefs={imageRefs} />
+      <FaqSection imageRefs={imageRefs} />
+      <ContactForm />
     </>
   );
 };

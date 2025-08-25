@@ -3,7 +3,6 @@ import AnimatedCursor from "react-animated-cursor";
 
 interface CursorState {
   color: string;
-  blendMode: string;
   outerScale: number;
   innerScale: number;
   outerStyle: React.CSSProperties;
@@ -11,15 +10,15 @@ interface CursorState {
 }
 
 const AdvancedAnimatedCursor: React.FC = () => {
-  const [cursorState, setCursorState] = useState<CursorState>({
+  const [cursorState, setCursorState] = useState<any>({
     color: "#7c877f",
-    blendMode: "exclusion",
     outerScale: 15,
     innerScale: 0.15,
     outerStyle: {
       borderWidth: "2px",
+      mixBlendMode: "exclusion",
       borderStyle: "solid",
-      backgroundColor: "transparent",
+      // backgroundColor: "transparent",
     },
     innerStyle: {
       backgroundColor: "#7c877f",
@@ -31,17 +30,16 @@ const AdvancedAnimatedCursor: React.FC = () => {
   useEffect(() => {
     const updateCursorOnHover = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
-
       // Default cursor state
       let newState: CursorState = {
         color: "#7c877f",
-        blendMode: "exclusion",
-        outerScale: 15,
+        outerScale: 10,
         innerScale: 0.15,
         outerStyle: {
           borderWidth: "2px",
           borderStyle: "solid",
-          backgroundColor: "transparent",
+          // backgroundColor: "transparent",
+          mixBlendMode: "exclusion",
         },
         innerStyle: {
           backgroundColor: "#7c877f",
@@ -53,11 +51,10 @@ const AdvancedAnimatedCursor: React.FC = () => {
         newState = {
           ...newState,
           color: "#ffffff",
-          blendMode: "difference",
           outerStyle: {
             ...newState.outerStyle,
             borderColor: "#ffffff",
-            backgroundColor: "rgba(255, 255, 255, 0.1)",
+            // backgroundColor: "rgba(255, 255, 255, 0.1)",
           },
           innerStyle: {
             backgroundColor: "#ffffff",
@@ -69,9 +66,8 @@ const AdvancedAnimatedCursor: React.FC = () => {
       else if (target.closest(".about-us")) {
         newState = {
           ...newState,
-          blendMode: "multiply",
-          outerScale: 2,
-          innerScale: 0.2,
+          outerScale: 10,
+          innerScale: 0.15,
         };
       }
 
@@ -79,9 +75,9 @@ const AdvancedAnimatedCursor: React.FC = () => {
       else if (target.closest(".our-services")) {
         newState = {
           ...newState,
-          blendMode: "overlay",
-          outerScale: 1.8,
-          innerScale: 0.18,
+
+          outerScale: 2,
+          innerScale: 0.2,
         };
       }
 
@@ -89,7 +85,6 @@ const AdvancedAnimatedCursor: React.FC = () => {
       else if (target.closest(".projects")) {
         newState = {
           ...newState,
-          blendMode: "soft-light",
           outerScale: 1.6,
           innerScale: 0.16,
         };
@@ -106,38 +101,60 @@ const AdvancedAnimatedCursor: React.FC = () => {
           outerStyle: {
             ...newState.outerStyle,
             borderColor: "#7c877f",
-            backgroundColor: "rgba(124, 135, 127, 0.1)",
+            // backgroundColor: "rgba(124, 135, 127, 0.1)",
           },
         };
       }
 
       // Image elements - larger cursor
+      // else if (
+      //   target.matches(
+      //     " .service-image a, .project-image, .blog-image, .team-member, .about-img-1, .about-img-2, .why-choose-img-1, .why-choose-img-2, .why-choose-img-3, .why-choose-img-4"
+      //   )
+      // ) {
+      //   newState = {
+      //     ...newState,
+      //     outerScale: 2.2,
+      //     innerScale: 0.4,
+      //     outerStyle: {
+      //       ...newState.outerStyle,
+      //       borderColor: "#7c877f",
+      //       backgroundColor: "rgba(124, 135, 127, 0.15)",
+      //     },
+      //   };
+      // }
+
+      // Form elements - text cursor
+      // else if (target.matches("input:focus, textarea:focus, select:focus")) {
+      //   newState = {
+      //     ...newState,
+      //     outerScale: 2,
+      //     innerScale: 0.3,
+      //     outerStyle: {
+      //       ...newState.outerStyle,
+      //       borderColor: "#7c877f",
+      //     },
+      //   };
+      // }
+
+      // Section title h1 tags - enhanced cursor
       else if (
-        target.matches(
-          ".service-image a, .project-image, .blog-image, .team-member, .about-img-1, .about-img-2, .why-choose-img-1, .why-choose-img-2, .why-choose-img-3, .why-choose-img-4"
-        )
+        target.matches(".section-title h1") ||
+        target.matches(".section-title h2") ||
+        target.matches("h2.text-anime-style-2")
       ) {
         newState = {
           ...newState,
-          outerScale: 2.2,
-          innerScale: 0.4,
-          outerStyle: {
-            ...newState.outerStyle,
-            borderColor: "#7c877f",
-            backgroundColor: "rgba(124, 135, 127, 0.15)",
-          },
-        };
-      }
 
-      // Form elements - text cursor
-      else if (target.matches("input:focus, textarea:focus, select:focus")) {
-        newState = {
-          ...newState,
-          outerScale: 2,
-          innerScale: 0.3,
+          outerScale: 2.6,
+          innerScale: 0.6,
           outerStyle: {
             ...newState.outerStyle,
             borderColor: "#7c877f",
+            // backgroundColor: "rgba(124, 135, 127, 0.2)",
+          },
+          innerStyle: {
+            backgroundColor: "#7c877f",
           },
         };
       }
@@ -148,12 +165,13 @@ const AdvancedAnimatedCursor: React.FC = () => {
     const updateCursorOnLeave = () => {
       setCursorState({
         color: "#7c877f",
-        blendMode: "exclusion",
+
         outerScale: 15,
         innerScale: 0.15,
         outerStyle: {
           borderWidth: "2px",
           borderStyle: "solid",
+          mixBlendMode: "exclusion",
           backgroundColor: "transparent",
         },
         innerStyle: {
@@ -175,14 +193,16 @@ const AdvancedAnimatedCursor: React.FC = () => {
     <div ref={cursorRef}>
       <AnimatedCursor
         innerStyle={{
-          backgroundColor: cursorState.innerStyle.backgroundColor,
-          mixBlendMode: cursorState.blendMode as any,
           ...cursorState.innerStyle,
+          backgroundColor: cursorState.innerStyle.backgroundColor,
+          // mixBlendMode: cursorState.blendMode as any,
+          // ["-webkit-mix-blend-mode" as any]: cursorState.blendMode,
         }}
         outerStyle={{
-          border: `2px solid ${cursorState.color}`,
-          mixBlendMode: cursorState.blendMode as any,
           ...cursorState.outerStyle,
+          border: `2px solid ${cursorState.color}`,
+          // mixBlendMode: cursorState.blendMode as any,
+          // ["-webkit-mix-blend-mode" as any]: cursorState.blendMode,
         }}
         innerScale={cursorState.innerScale}
         outerScale={cursorState.outerScale}
@@ -216,6 +236,9 @@ const AdvancedAnimatedCursor: React.FC = () => {
           ".why-choose-img-2",
           ".why-choose-img-3",
           ".why-choose-img-4",
+          ".section-title h1",
+          ".section-title h2",
+          "h2.text-anime-style-2",
         ]}
       />
     </div>
