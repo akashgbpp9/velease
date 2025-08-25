@@ -57,7 +57,7 @@ const AdvancedAnimatedCursor: React.FC = () => {
             // backgroundColor: "rgba(255, 255, 255, 0.1)",
           },
           innerStyle: {
-            backgroundColor: "#ffffff",
+            backgroundColor: "#7c877f",
           },
         };
       }
