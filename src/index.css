@@ -702,7 +702,11 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .section-title h2 span {
-  color: var(--accent-color);
+  background: linear-gradient(135deg, #00cfff 0%, #f500c0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .section-title h3::before {

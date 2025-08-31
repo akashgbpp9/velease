@@ -83,7 +83,10 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
               {/* Section Title Start */}
               <div className="section-title">
                 <h3 className="wow fadeInUp">about us</h3>
-                <h2 className="text-anime-style-2" data-cursor="-opaque">
+                <h2
+                  className="text-anime-style-2 gradient-text"
+                  data-cursor="-opaque"
+                >
                   Design without debt, growth without <span>compromise.</span>
                 </h2>
                 <p className="wow fadeInUp" data-wow-delay="0.2s">
