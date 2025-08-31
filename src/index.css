@@ -2984,6 +2984,10 @@ header.main-header .header-sticky.active .navbar {
   padding: 0;
 }
 
+.footer-logo img {
+  max-width: 60px !important;
+}
+
 .footer-social-links ul li {
   display: inline-flex;
   margin-right: 10px;
