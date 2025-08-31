@@ -1513,7 +1513,7 @@ header.main-header .header-sticky.active .navbar {
   position: relative;
   width: 100%;
   min-height: 120px;
-  background: rgba(255, 255, 255, 0.02);
+  background: white;
   border-radius: 8px;
   padding: 20px;
 }

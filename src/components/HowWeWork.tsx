@@ -26,9 +26,11 @@ const HowWeWork: React.FC<HowWeWorkProps> = ({ imageRefs }) => {
             <div className="section-title-content dark-section">
               <p className="wow fadeInUp" data-wow-delay="0.2s">
                 Our streamlined approach ensures you get a fully functional
-                office without delays or heavy upfront costs. From initial
-                consultation to final handover, veLease manages every stage so
-                you can move in and get to work — fast.
+                office without delays or heavy upfront costs.
+                <br />
+                <br />
+                From initial consultation to final handover, veLease manages
+                every stage so you can move in and get to work — fast.
               </p>
             </div>
             {/* Section Title Content End */}
@@ -130,7 +132,7 @@ const HowWeWork: React.FC<HowWeWorkProps> = ({ imageRefs }) => {
                 <div className="company-logos-grid">
                   <div className="company-logo">
                     <img
-                      src="/images/company-logo-1.svg"
+                      src="/images/company-logo-1.png"
                       alt="Company Logo 1"
                       className="image-anime"
                       ref={(el) => {
@@ -142,7 +144,7 @@ const HowWeWork: React.FC<HowWeWorkProps> = ({ imageRefs }) => {
                   </div>
                   <div className="company-logo">
                     <img
-                      src="/images/company-logo-2.svg"
+                      src="/images/company-logo-2.png"
                       alt="Company Logo 2"
                       className="image-anime"
                       ref={(el) => {
@@ -154,7 +156,7 @@ const HowWeWork: React.FC<HowWeWorkProps> = ({ imageRefs }) => {
                   </div>
                   <div className="company-logo">
                     <img
-                      src="/images/company-logo-3.svg"
+                      src="/images/company-logo-3.png"
                       alt="Company Logo 3"
                       className="image-anime"
                       ref={(el) => {
@@ -166,7 +168,7 @@ const HowWeWork: React.FC<HowWeWorkProps> = ({ imageRefs }) => {
                   </div>
                   <div className="company-logo">
                     <img
-                      src="/images/company-logo-4.svg"
+                      src="/images/company-logo-4.png"
                       alt="Company Logo 4"
                       className="image-anime"
                       ref={(el) => {
@@ -178,7 +180,7 @@ const HowWeWork: React.FC<HowWeWorkProps> = ({ imageRefs }) => {
                   </div>
                   <div className="company-logo">
                     <img
-                      src="/images/company-logo-5.svg"
+                      src="/images/company-logo-5.png"
                       alt="Company Logo 5"
                       className="image-anime"
                       ref={(el) => {

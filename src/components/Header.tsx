@@ -15,7 +15,7 @@ const Header: React.FC = () => {
           <div className="navbar navbar-expand-lg">
             {/* Logo Start */}
             <Link className="navbar-brand" to="/">
-              <img src="/images/logo.svg" alt="Logo" />
+              <img src="/images/veLease-logo.svg" alt="Logo" />
             </Link>
             {/* Logo End */}
 
