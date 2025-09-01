@@ -27,18 +27,23 @@ const Footer: React.FC = () => {
                     </div>
                     <ul>
                       <li>
-                        <a href="#">
+                        <a href="https://www.facebook.com/veLeaseHQ">
                           <i className="fa-brands fa-facebook-f"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
-                          <i className="fa-brands fa-dribbble"></i>
+                        <a href="https://www.instagram.com/veleasehq/">
+                          <i className="fa-brands fa-instagram"></i>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
-                          <i className="fa-brands fa-instagram"></i>
+                        <a href="https://www.linkedin.com/company/veleasehq/">
+                          <i className="fa-brands fa-linkedin"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://x.com/@veleaseHQ">
+                          <i className="fa-brands fa-x-twitter"></i>
                         </a>
                       </li>
                     </ul>
@@ -53,22 +58,22 @@ const Footer: React.FC = () => {
           <div className="col-lg-3 col-md-6">
             {/* Footer Links Start */}
             <div className="footer-links">
-              <h3>information</h3>
+              <h3>Our Firm</h3>
               <ul>
                 <li>
-                  <Link to="/about">about our company</Link>
+                  <Link to="/about">About Us</Link>
                 </li>
                 <li>
                   <Link to="/services">view our service</Link>
                 </li>
                 <li>
-                  <a href="#">careers at company</a>
+                  <a href="#">careers</a>
                 </li>
                 <li>
-                  <Link to="/blog">read our blog</Link>
+                  <Link to="/blog">Blogs & Resources</Link>
                 </li>
                 <li>
-                  <Link to="/projects">our latest projects</Link>
+                  <Link to="/projects">Portfolio</Link>
                 </li>
               </ul>
             </div>
@@ -78,25 +83,21 @@ const Footer: React.FC = () => {
           <div className="col-lg-3 col-md-6">
             {/* Footer Links Start */}
             <div className="footer-links">
-              <h3>portfolio</h3>
+              <h3>Solutions</h3>
               <ul>
                 <li>
-                  <Link to="/project-single">luxury home design</Link>
+                  <Link to="#">Office Interiors Consultation</Link>
                 </li>
                 <li>
-                  <Link to="/project-single">residential interior design</Link>
+                  <Link to="/#">Design & Build Execution</Link>
                 </li>
                 <li>
-                  <Link to="/project-single">commercial space design</Link>
+                  <Link to="/#">commercial space design</Link>
                 </li>
                 <li>
-                  <Link to="/project-single">residential interior design</Link>
+                  <Link to="/#">Furniture-as-a-Service (FaaS)</Link>
                 </li>
-                <li>
-                  <Link to="/project-single">
-                    renovation and restoration design
-                  </Link>
-                </li>
+               
               </ul>
             </div>
             {/* Footer Links End */}
@@ -112,7 +113,7 @@ const Footer: React.FC = () => {
                   <i className="fa-solid fa-phone"></i>
                 </div>
                 <div className="footer-contact-content">
-                  <p>+1 (213) 465 789</p>
+                  <p>+91 989 090 7614</p>
                 </div>
               </div>
               {/* Footer Contact Item End */}
@@ -123,7 +124,7 @@ const Footer: React.FC = () => {
                   <i className="fa-solid fa-envelope"></i>
                 </div>
                 <div className="footer-contact-content">
-                  <p>info@domain.com</p>
+                  <p>sales@velease.com</p>
                 </div>
               </div>
               {/* Footer Contact Item End */}
@@ -134,7 +135,7 @@ const Footer: React.FC = () => {
                   <i className="fa-solid fa-location-dot"></i>
                 </div>
                 <div className="footer-contact-content">
-                  <p>Generała Ziętka Jerzego 54, Mysłowice 41-412</p>
+                  <p>101-B, Gamma-1, Giga Space IT Park, Viman Nagar, Pune, India</p>
                 </div>
               </div>
               {/* Footer Contact Item End */}
@@ -145,12 +146,11 @@ const Footer: React.FC = () => {
           <div className="col-lg-3 col-md-6">
             {/* Footer Newsletter Form Start */}
             <div className="footer-latest-news footer-links">
-              <h3>get the latest trending news</h3>
+              <h3>Get Latest Office Designs</h3>
 
               <div className="footer-newsletter-form">
                 <p>
-                  Your Dream Space Starts Here Get Exclusive Design Straight
-                  Your Inbox!
+                Strategically powered by flexible leasing options for your next dream space!
                 </p>
 
                 <form id="newslettersForm" action="#" method="POST">
