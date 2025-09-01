@@ -23,8 +23,9 @@ const Services: React.FC = () => {
               <p>
                 We go beyond interiors to offer flexible, finance-first
                 solutions that help companies move in faster, scale smarter, and
-                preserve their capital. From tailored fit-outs to furniture
-                leasing, veLease makes office expansion effortless.
+                preserve their capital. <br />
+                From tailored fit-outs to furniture leasing, veLease makes
+                office expansion effortless.
               </p>
             </div>
             {/* Section Title Content End */}
@@ -59,12 +60,11 @@ const Services: React.FC = () => {
               {/* Service Content Start */}
               <div className="service-content">
                 <h3>
-                  <a href="/services/1">Workspace Strategy & Consultation</a>
+                  <a href="/services/1">Office Interiors Consultation</a>
                 </h3>
                 <p>
-                  We align your office design with your business goals,
-                  providing strategic advice on space planning, growth
-                  forecasting, and financial structuring.
+                  We design offices aligned to business goals, offering smart
+                  space planning and financial structuring strategies.
                 </p>
               </div>
               {/* Service Content End */}
@@ -102,9 +102,8 @@ const Services: React.FC = () => {
                   <a href="/services/2">Design & Build Execution</a>
                 </h3>
                 <p>
-                  We manage the entire process — from design concepts to fit-out
-                  and furnishing — delivering a branded, plug-and-play workspace
-                  ready to move in.
+                  From design to fit-out and furnishing, we handle it
+                  all—delivering a seamless, ready-to-move-in workspace.
                 </p>
               </div>
               {/* Service Content End */}
@@ -142,9 +141,8 @@ const Services: React.FC = () => {
                   <a href="/services/3">Furniture-as-a-Service (FaaS)</a>
                 </h3>
                 <p>
-                  We lease premium furniture and interiors you don't have to
-                  buy, with upgrades, swaps, and maintenance included in your
-                  monthly rent.
+                  Lease premium furniture & interiors—no upfront cost. Monthly
+                  rent covers upgrades, swaps, and hassle-free maintenance.
                 </p>
               </div>
               {/* Service Content End */}

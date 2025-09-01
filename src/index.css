@@ -1251,7 +1251,7 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .service-btn a {
-  background-color: var(--accent-color);
+  background-color: #8d52d9;
   height: 60px;
   width: 60px;
   border-radius: 50%;
