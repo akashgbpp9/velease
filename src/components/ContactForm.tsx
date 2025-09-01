@@ -33,11 +33,11 @@ const ContactForm = () => {
           <div className="section-title">
             <h3 className="wow fadeInUp">contact form</h3>
             <h2 className="text-anime-style-2" data-cursor="-opaque">
-              We would love to hear <span>from you</span>
+            Turn your office into a growth engine — <br/><span style={{color: 'var(--text)!important', backgroundClip: 'unset', background: 'none', WebkitTextFillColor: 'none'}}>not a cost center.</span>
             </h2>
             <p className="wow fadeInUp" data-wow-delay="0.2s">
-              Your email address will not be published. Required fields are
-              marked *
+            Unlock premium interiors without the upfront drain. One partner, one predictable lease, endless possibilities for growth. Let’s create your future workspace today.
+
             </p>
           </div>
           {/* Section Title End */}
