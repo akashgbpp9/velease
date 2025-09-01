@@ -83,8 +83,8 @@ const TeamSection: React.FC = () => {
         </div>
 
         <div className="row">
-          <div className="col-lg-4 col-md-6">
-            {teamMembers.map((member, index) => (
+          {teamMembers.map((member, index) => (
+            <div className="col-lg-4 col-md-6">
               <motion.div
                 key={index}
                 className="team-member-item mb-8"
@@ -110,10 +110,10 @@ const TeamSection: React.FC = () => {
                   </a>
 
                   {/* Team Readmore Button */}
-                  <div className="team-readmore-btn absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="team-readmore-btn absolute top-4 right-4  group-hover:opacity-100 transition-opacity duration-300">
                     <a
                       href="#"
-                      className="bg-white p-3 rounded-full shadow-lg hover:bg-accent hover:text-white transition-colors"
+                      className="p-3 rounded-full shadow-lg hover:bg-accent hover:text-white transition-colors"
                     >
                       <img
                         src="/images/arrow-white.svg"
@@ -128,7 +128,7 @@ const TeamSection: React.FC = () => {
                 <div className="team-body">
                   {/* Team Content */}
                   <div className="team-content text-center mb-4">
-                    <h3 className="text-xl font-semibold text-primary mb-2 capitalize">
+                    <h3 className="text-xl font-semibold  mb-2 capitalize">
                       {member.name}
                     </h3>
                     <p className="text-accent font-medium capitalize">
@@ -138,31 +138,30 @@ const TeamSection: React.FC = () => {
 
                   {/* Team Social List */}
                   <div className="team-social-list">
-                    <div className="team-social-icon flex justify-center space-x-3">
-                      <a
-                        href={member.social.instagram}
-                        className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-accent hover:text-white transition-colors"
-                      >
-                        <Instagram size={16} />
-                      </a>
-                      <a
-                        href={member.social.twitter}
-                        className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-accent hover:text-white transition-colors"
-                      >
-                        <Twitter size={16} />
-                      </a>
-                      <a
-                        href={member.social.facebook}
-                        className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-accent hover:text-white transition-colors"
-                      >
-                        <Facebook size={16} />
-                      </a>
+                    <div className="team-social-icon">
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <i className="fa-brands fa-instagram"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i className="fa-brands fa-x-twitter"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i className="fab fa-facebook-f"></i>
+                          </a>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
               </motion.div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
