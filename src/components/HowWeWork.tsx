@@ -183,6 +183,7 @@ const HowWeWork: React.FC<HowWeWorkProps> = ({ imageRefs }) => {
                       src="/images/company-logo-5.png"
                       alt="Company Logo 5"
                       className="image-anime"
+                      style={{maxHeight: '75px'}}
                       ref={(el) => {
                         if (el && !imageRefs.current.includes(el)) {
                           imageRefs.current.push(el);
