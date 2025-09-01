@@ -1,28 +1,90 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 import { Link } from "react-router-dom";
 
 const Hero: React.FC = () => {
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [currentText, setCurrentText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [isTyping, setIsTyping] = useState(false);
 
-  const phrases = [
-    "Here.",
-    "OpEx > CapEx.",
-    "Scalable Interiors.",
-    "Unrestricted Growth.",
-  ];
+  const phrases = useMemo(
+    () => ["Here", "OpEx > CapEx", "Scalable Interiors", "Unrestricted Growth"],
+    []
+  );
+
+  // Variable typing speeds for more natural feel
+  const getTypingSpeed = useCallback(
+    (isDeleting: boolean, charIndex: number, phraseLength: number) => {
+      if (isDeleting) {
+        // Faster deletion with slight variation
+        return Math.random() * 30 + 50; // 50-80ms
+      } else {
+        // Variable typing speed based on character position and type
+        const baseSpeed = 80;
+        const variation = Math.random() * 40; // 0-40ms variation
+
+        // Slower for punctuation and spaces
+        if (charIndex < phraseLength) {
+          const char = phrases[currentPhraseIndex][charIndex];
+          if (char === " " || char === ">" || char === "<") {
+            return baseSpeed + variation + 40; // 120-160ms
+          }
+        }
+
+        return baseSpeed + variation; // 80-120ms
+      }
+    },
+    [currentPhraseIndex, phrases]
+  );
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIsTransitioning(true);
-      setTimeout(() => {
-        setCurrentPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
-        setIsTransitioning(false);
-      }, 300); // Half of the transition time
-    }, 3000); // Change every 3 seconds
+    const currentPhrase = phrases[currentPhraseIndex];
 
-    return () => clearInterval(interval);
-  }, []);
+    if (!isDeleting) {
+      // Typing effect
+      if (currentText.length < currentPhrase.length) {
+        setIsTyping(true);
+        const speed = getTypingSpeed(
+          false,
+          currentText.length,
+          currentPhrase.length
+        );
+        const timeout = setTimeout(() => {
+          setCurrentText(currentPhrase.slice(0, currentText.length + 1));
+          setIsTyping(false);
+        }, speed);
+        return () => clearTimeout(timeout);
+      } else {
+        // Pause before deleting - longer pause for better readability
+        const timeout = setTimeout(() => {
+          setIsDeleting(true);
+        }, 2500);
+        return () => clearTimeout(timeout);
+      }
+    } else {
+      // Deleting effect
+      if (currentText.length > 0) {
+        const speed = getTypingSpeed(
+          true,
+          currentText.length,
+          currentPhrase.length
+        );
+        const timeout = setTimeout(() => {
+          setCurrentText(currentText.slice(0, -1));
+        }, speed);
+        return () => clearTimeout(timeout);
+      } else {
+        // Move to next phrase with a brief pause
+        const timeout = setTimeout(() => {
+          setIsDeleting(false);
+          setCurrentPhraseIndex(
+            (prevIndex) => (prevIndex + 1) % phrases.length
+          );
+        }, 300);
+        return () => clearTimeout(timeout);
+      }
+    }
+  }, [currentText, currentPhraseIndex, isDeleting, getTypingSpeed, phrases]);
 
   return (
     <div
@@ -41,23 +103,11 @@ const Hero: React.FC = () => {
                   The Future of Office Leasing is <br />
                   <div className="animated-text-container">
                     <span
-                      className={`animated-text ${
-                        isTransitioning ? "fade-out" : "fade-in"
-                      }`}
-                      key={`current-${currentPhraseIndex}`}
+                      className={`animated-text ${isTyping ? "typing" : ""}`}
                     >
-                      {phrases[currentPhraseIndex]}
+                      {currentText}
+                      <span className="typewriter-cursor">.</span>
                     </span>
-                    {isTransitioning && (
-                      <span
-                        className="animated-text fade-in"
-                        key={`next-${
-                          (currentPhraseIndex + 1) % phrases.length
-                        }`}
-                      >
-                        {phrases[(currentPhraseIndex + 1) % phrases.length]}
-                      </span>
-                    )}
                   </div>
                 </h1>
                 <p className="wow fadeInUp" data-wow-delay="0.2s">
