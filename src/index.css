@@ -3223,6 +3223,7 @@ header.main-header .header-sticky.active .navbar {
 
 .about-facility-list {
   margin-top: 100px;
+  margin-bottom: 100px;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -5135,6 +5136,7 @@ header.main-header .header-sticky.active .navbar {
 
   .about-facility-list {
     margin-top: 50px;
+    margin-bottom: 50px;
     gap: 20px;
   }
 
