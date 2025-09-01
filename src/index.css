@@ -3693,6 +3693,16 @@ header.main-header .header-sticky.active .navbar {
   padding-right: 25px;
   transition: all 0.3s ease-in-out;
 }
+.service-catagery-list ul li p {
+  position: relative;
+  display: block;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: var(--accent-color);
+  padding-right: 25px;
+  font-size: 12px;
+  transition: all 0.3s ease-in-out;
+}
 
 .service-catagery-list ul li:hover a {
   color: var(--primary-color);
