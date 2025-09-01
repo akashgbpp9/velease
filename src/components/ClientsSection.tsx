@@ -24,7 +24,7 @@ const ClientsSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="row">
           <div className="col-lg-12">
-            <div className="our-clients-box text-center">
+            <div className="our-clients-box ">
               {/* Section Title */}
               <div className="section-title mb-16">
                 <motion.h3
@@ -37,13 +37,13 @@ const ClientsSection: React.FC = () => {
                   our clients
                 </motion.h3>
                 <motion.h2
-                  className="text-4xl font-bold text-primary mb-6"
+                  className="text-4xl font-bold mb-6"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 }}
                   viewport={{ once: true }}
                 >
-                  Transforming 1,000+ spaces with tailored designs
+                  Redefining office interiors, one lease at a time.
                 </motion.h2>
                 <motion.p
                   className="text-lg text-text leading-relaxed max-w-4xl mx-auto"
@@ -52,16 +52,15 @@ const ClientsSection: React.FC = () => {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   viewport={{ once: true }}
                 >
-                  We've had the privilege of designing and transforming over a
-                  thousand interiors, creating spaces that truly resonate with
-                  our clients' visions and needs. Our approach focuses on
-                  blending aesthetics and functionality, ensuring each project
-                  brings comfort, elegance, and a personalized touch.
+                  We’ve helped businesses and landlords transform thousands of
+                  square feet into scalable, branded workspaces that fuel
+                  growth. With veLease, your office becomes more than a place to
+                  work — it becomes a strategic advantage.
                 </motion.p>
               </div>
 
               {/* Client Logo Slider */}
-              <div className="our-client-slider">
+              {/* <div className="our-client-slider">
                 <div className="swiper">
                   <div className="swiper-wrapper flex items-center justify-center">
                     {clientLogos.map((logo, index) => (
@@ -83,10 +82,10 @@ const ClientsSection: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                </div>
+                </div> */}
 
-                {/* Client Logo Navigation */}
-                <div className="flex justify-center mt-12 space-x-3">
+              {/* Client Logo Navigation */}
+              {/* <div className="flex justify-center mt-12 space-x-3">
                   {clientLogos.map((_, index) => (
                     <button
                       key={index}
@@ -99,10 +98,10 @@ const ClientsSection: React.FC = () => {
                     />
                   ))}
                 </div>
-              </div>
+              </div> */}
 
               {/* Stats */}
-              <motion.div
+              {/* <motion.div
                 className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -127,7 +126,7 @@ const ClientsSection: React.FC = () => {
                   </div>
                   <div className="text-text">Years Experience</div>
                 </div>
-              </motion.div>
+              </motion.div> */}
             </div>
           </div>
         </div>
