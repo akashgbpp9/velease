@@ -5,35 +5,35 @@ import { Instagram, Twitter, Facebook } from "lucide-react";
 const TeamSection: React.FC = () => {
   const teamMembers = [
     {
-      name: "harry R. blackston",
-      position: "co-founder & CEO",
-      image: "/images/team-1.jpg",
+      name: "Amaan Kazi",
+      position: "Founder",
+      image: "/images/team-1.png",
       social: {
-        instagram: "#",
-        twitter: "#",
-        facebook: "#",
+        // instagram: "#",
+        // twitter: "#",
+        linkdin: "https://ae.linkedin.com/in/amaankazi",
       },
     },
     {
-      name: "alexa brook",
-      position: "human resoures manager",
+      name: "Pratiek Phand",
+      position: "Co-founder, Strategy & Design",
       image: "/images/team-2.jpg",
       social: {
-        instagram: "#",
-        twitter: "#",
-        facebook: "#",
+        // instagram: "#",
+        // twitter: "#",
+        linkdin: "https://in.linkedin.com/in/pratiek-phand-1020331b1",
       },
     },
-    {
-      name: "suzen hilly",
-      position: "civil engineering",
-      image: "/images/team-3.jpg",
-      social: {
-        instagram: "#",
-        twitter: "#",
-        facebook: "#",
-      },
-    },
+    // {
+    //   name: "suzen hilly",
+    //   position: "civil engineering",
+    //   image: "/images/team-3.jpg",
+    //   social: {
+    //     instagram: "#",
+    //     twitter: "#",
+    //     facebook: "#",
+    //   },
+    // },
   ];
 
   return (
@@ -84,7 +84,7 @@ const TeamSection: React.FC = () => {
 
         <div className="row">
           {teamMembers.map((member, index) => (
-            <div className="col-lg-4 col-md-6">
+            <div className="col-lg-6 col-md-6">
               <motion.div
                 key={index}
                 className="team-member-item mb-8"
@@ -140,7 +140,7 @@ const TeamSection: React.FC = () => {
                   <div className="team-social-list">
                     <div className="team-social-icon">
                       <ul>
-                        <li>
+                        {/* <li>
                           <a href="#">
                             <i className="fa-brands fa-instagram"></i>
                           </a>
@@ -153,6 +153,11 @@ const TeamSection: React.FC = () => {
                         <li>
                           <a href="#">
                             <i className="fab fa-facebook-f"></i>
+                          </a>
+                        </li> */}
+                        <li>
+                          <a href={member.social.linkdin}>
+                            <i className="fa-brands fa-linkedin"></i>
                           </a>
                         </li>
                       </ul>

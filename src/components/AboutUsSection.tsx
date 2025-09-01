@@ -77,7 +77,7 @@ const AboutUsSection: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                 </motion.figure>
 
                 {/* Experience Counter Start */}
-                <div className="experience-counter absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-lg shadow-lg">
+                <div className="experience-counter absolute -bottom-6 -right-6  text-white p-6 rounded-lg shadow-lg">
                   <h3 className="text-3xl font-bold">
                     <span
                       className="counter"
@@ -96,7 +96,7 @@ const AboutUsSection: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
               {/* About Image 2 End */}
 
               {/* Feedback Counter Start */}
-              <div className="feedback-counter absolute -top-6 -left-6 bg-accent text-white p-6 rounded-lg shadow-lg">
+              <div className="feedback-counter absolute -top-6 -left-6 text-white p-6 ">
                 <p className="text-3xl font-bold">
                   <span
                     className="counter"
@@ -130,14 +130,12 @@ const AboutUsSection: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                   about us
                 </motion.h3>
                 <motion.h2
-                  className="text-4xl font-bold text-primary mb-6"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 }}
                   viewport={{ once: true }}
                 >
-                  Our passion for design, your{" "}
-                  <span className="text-accent">vision realized</span>
+                  Our passion for design, your <span>vision realized</span>
                 </motion.h2>
                 <motion.p
                   className="text-lg text-text leading-relaxed"
@@ -189,7 +187,7 @@ const AboutUsSection: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                   >
                     <a
                       href="/contact"
-                      className="btn-default inline-block bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition-colors"
+                      className="btn-default inline-block text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition-colors"
                     >
                       contact now
                     </a>
@@ -213,15 +211,15 @@ const AboutUsSection: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                     </div>
                     <div className="about-contact-content">
                       <p className="text-sm text-text">need any help?</p>
-                      <h3 className="text-lg font-semibold text-primary">
-                        +(1) 235 800 999
+                      <h3 className="text-lg font-semibold ">
+                        +91 989 090 7614
                       </h3>
                     </div>
                   </motion.div>
                   {/* About Contact Item End */}
 
                   {/* About Contact Item Start */}
-                  <motion.div
+                  {/* <motion.div
                     className="about-contact-item flex items-center"
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -243,7 +241,7 @@ const AboutUsSection: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                       </h3>
                       <p className="text-sm text-text">co founder</p>
                     </div>
-                  </motion.div>
+                  </motion.div> */}
                   {/* About Contact Item End */}
                 </div>
                 {/* About Content List End */}
@@ -259,7 +257,7 @@ const AboutUsSection: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
               {facilities.map((facility, index) => (
                 <motion.div
                   key={index}
-                  className="about-facility-item text-center"
+                  className="about-facility-item"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -273,7 +271,7 @@ const AboutUsSection: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                     />
                   </div>
                   <div className="about-facility-content">
-                    <h3 className="text-xl font-semibold text-primary mb-3 capitalize">
+                    <h3 className="text-xl font-semibold mb-3 capitalize">
                       {facility.title}
                     </h3>
                     <p className="text-text leading-relaxed">

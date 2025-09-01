@@ -5,10 +5,10 @@ import {
   VisionMissionSection,
   OurEdge,
   TeamSection,
-  HowWeWorkSection,
   AboutFAQSection,
   ClientsSection,
   Testimonials,
+  HowWeWork,
 } from "../components";
 
 const About: React.FC = () => {
@@ -101,7 +101,7 @@ const About: React.FC = () => {
       <TeamSection />
 
       {/* How We Work Section */}
-      <HowWeWorkSection />
+      <HowWeWork imageRefs={imageRefs} />
 
       {/* About FAQ Section */}
       <AboutFAQSection />

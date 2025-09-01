@@ -5,7 +5,6 @@ export { default as AboutFacilityList } from "./AboutFacilityList";
 export { default as AboutUsSection } from "./AboutUsSection";
 export { default as OurEdge } from "./OurEdge";
 export { default as ClientsSection } from "./ClientsSection";
-export { default as HowWeWorkSection } from "./HowWeWorkSection";
 export { default as PageHeader } from "./PageHeader";
 export { default as TeamSection } from "./TeamSection";
 export { default as VisionMissionSection } from "./VisionMissionSection";
