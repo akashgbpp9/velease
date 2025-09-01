@@ -139,7 +139,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                     </div>
                     <div className="about-contact-content">
                       <p>need any help?</p>
-                      <h3>+(1) 235 800 999</h3>
+                      <h3>+91 989 090 7614</h3>
                     </div>
                   </div>
                   {/* About Contact Item End */}
@@ -151,14 +151,11 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                   >
                     <div className="icon-box">
                       <figure className="image-anime">
-                        <img
-                          src="/images/author-1.jpg"
-                          alt="Leslie Alexander"
-                        />
+                        <img src="/images/author-1.jpg" alt="Amaan Kazi" />
                       </figure>
                     </div>
                     <div className="about-contact-content">
-                      <h3>leslie alexander</h3>
+                      <h3>Amaan Kazi</h3>
                       <p>co founder</p>
                     </div>
                   </div>
