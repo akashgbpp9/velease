@@ -3,23 +3,50 @@ import { Link } from "react-router-dom";
 
 const Hero: React.FC = () => {
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
+  const [currentText, setCurrentText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [typingSpeed, setTypingSpeed] = useState(150);
   
   const phrases = [
-    "Here.",
-    "OpEx > CapEx.",
-    "Scalable Interiors.",
-    "Unrestricted Growth."
+    "Here",
+    "OpEx > CapEx",
+    "Scalable Interiors",
+    "Unrestricted Growth"
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentPhraseIndex((prevIndex) => 
-        (prevIndex + 1) % phrases.length
-      );
-    }, 3000); // Change every 3 seconds
-
-    return () => clearInterval(interval);
-  }, []);
+    const currentPhrase = phrases[currentPhraseIndex];
+    
+    if (!isDeleting) {
+      // Typing effect
+      if (currentText.length < currentPhrase.length) {
+        const timeout = setTimeout(() => {
+          setCurrentText(currentPhrase.slice(0, currentText.length + 1));
+        }, typingSpeed);
+        return () => clearTimeout(timeout);
+      } else {
+        // Pause before deleting
+        const timeout = setTimeout(() => {
+          setIsDeleting(true);
+          setTypingSpeed(100); // Faster deletion
+        }, 2000);
+        return () => clearTimeout(timeout);
+      }
+    } else {
+      // Deleting effect
+      if (currentText.length > 0) {
+        const timeout = setTimeout(() => {
+          setCurrentText(currentText.slice(0, -1));
+        }, typingSpeed);
+        return () => clearTimeout(timeout);
+      } else {
+        // Move to next phrase
+        setIsDeleting(false);
+        setTypingSpeed(150); // Reset typing speed
+        setCurrentPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
+      }
+    }
+  }, [currentText, currentPhraseIndex, isDeleting, typingSpeed, phrases]);
 
   return (
     <div
@@ -37,11 +64,9 @@ const Hero: React.FC = () => {
                 <h1 className="text-anime-style-2" data-cursor="-opaque">
                   The Future of Office Leasing is <br/>
                   <div className="animated-text-container">
-                    <span 
-                      className="animated-text"
-                      key={currentPhraseIndex}
-                    >
-                      {phrases[currentPhraseIndex]}
+                    <span className="animated-text">
+                      {currentText}
+                      <span className="typewriter-cursor">.</span>
                     </span>
                   </div>
                 </h1>

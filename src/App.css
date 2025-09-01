@@ -51,7 +51,23 @@
   left: 0;
   right: 0;
   display: inline-block;
-  animation: slideUpAndIn 3s ease-in-out infinite;
+}
+
+/* Typewriter Cursor */
+.typewriter-cursor {
+  animation: blink 1s infinite;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
 }
 
 @keyframes slideUpAndIn {
