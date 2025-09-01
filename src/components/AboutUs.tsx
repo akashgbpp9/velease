@@ -145,7 +145,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                   {/* About Contact Item End */}
 
                   {/* About Contact Item Start */}
-                  <div
+                  {/* <div
                     className="about-contact-item wow fadeInUp"
                     data-wow-delay="0.6s"
                   >
@@ -158,7 +158,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                       <h3>Amaan Kazi</h3>
                       <p>co founder</p>
                     </div>
-                  </div>
+                  </div> */}
                   {/* About Contact Item End */}
                 </div>
                 {/* About Content List End */}
