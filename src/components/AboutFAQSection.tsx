@@ -1,217 +1,225 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Plus, Minus } from "lucide-react";
+import React from "react";
 
-const AboutFAQSection: React.FC = () => {
-  const [openIndex, setOpenIndex] = useState(0);
+interface AboutFAQSectionProps {
+  imageRefs: React.MutableRefObject<(HTMLElement | null)[]>;
+}
 
-  const aboutFAQs = [
-    {
-      question: "How long has VeLease been in business?",
-      answer:
-        "VeLease has been transforming spaces and lives for over 15 years. We started as a small design studio and have grown into a full-service interior design and architecture firm, serving clients across the region with exceptional design solutions.",
-    },
-    {
-      question:
-        "What makes VeLease different from other interior design firms?",
-      answer:
-        "Our unique approach combines creative expertise with a client-centered methodology. We focus on understanding your vision and bringing it to life with thoughtful attention to detail, whether it's transforming a single room or an entire home.",
-    },
-    {
-      question: "What types of projects does VeLease handle?",
-      answer:
-        "We handle a diverse range of projects, from beautifully crafted residential spaces to functional and stylish commercial interiors. Our portfolio includes luxury home designs, residential interior design, commercial space design, and renovation projects.",
-    },
-    {
-      question: "How does the design process work at VeLease?",
-      answer:
-        "Our comprehensive process includes initial consultation to understand your vision, design planning with material selection and 3D renderings, project execution with full coordination, and final review with thorough walkthrough.",
-    },
-    {
-      question: "What is VeLease's design philosophy?",
-      answer:
-        "Our vision is rooted in the belief that thoughtfully designed spaces can transform lives. We create interiors that reflect our clients' unique identities, blending comfort, functionality, and beauty with timeless design and modern innovations.",
-    },
-    {
-      question: "Does VeLease work with existing furniture and decor?",
-      answer:
-        "Absolutely! We believe in sustainable design and can incorporate your existing furniture and decor into new designs. Our team will assess your current pieces and suggest how to integrate them seamlessly with new elements.",
-    },
-  ];
-
-  const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? -1 : index);
-  };
-
+const AboutFAQSection: React.FC<AboutFAQSectionProps> = ({ imageRefs }) => {
   return (
-    <div className="about-faqs py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <div className="our-faqs">
+      <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-7">
-            {/* About FAQ Content */}
-            <div className="about-faqs-content">
-              {/* Section Title */}
-              <div className="section-title mb-12">
-                <motion.h3
-                  className="text-accent text-lg font-semibold uppercase tracking-wider mb-4"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true }}
-                >
-                  frequently asked questions
-                </motion.h3>
-                <motion.h2
-                  className="text-4xl font-bold text-primary mb-6"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  Everything you need to know{" "}
-                  <span className="text-accent">about VeLease</span>
-                </motion.h2>
-                <motion.p
-                  className="text-lg text-text leading-relaxed"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  Get answers to the most common questions about our services,
-                  process, and what makes VeLease the right choice for your
-                  interior design needs.
-                </motion.p>
-              </div>
-
-              {/* FAQ Accordion */}
-              <div className="faq-accordion">
-                {aboutFAQs.map((faq, index) => (
-                  <motion.div
-                    key={index}
-                    className="accordion-item border border-gray-200 rounded-lg mb-4 overflow-hidden hover:shadow-md transition-shadow duration-300"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <h2 className="accordion-header">
-                      <button
-                        className="accordion-button w-full p-6 text-left bg-white hover:bg-gray-50 transition-colors flex items-center justify-between"
-                        type="button"
-                        onClick={() => toggleFAQ(index)}
-                      >
-                        <span className="flex items-center text-left">
-                          <span className="text-accent font-bold mr-3">
-                            {String(index + 1).padStart(2, "0")}.
-                          </span>
-                          <span className="text-primary font-semibold">
-                            {faq.question}
-                          </span>
-                        </span>
-                        <div className="flex-shrink-0 ml-4">
-                          {openIndex === index ? (
-                            <Minus size={20} className="text-accent" />
-                          ) : (
-                            <Plus size={20} className="text-accent" />
-                          )}
-                        </div>
-                      </button>
-                    </h2>
-                    <AnimatePresence>
-                      {openIndex === index && (
-                        <motion.div
-                          className="accordion-collapse"
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          <div className="accordion-body p-6 pt-0 bg-gray-50">
-                            <p className="text-text leading-relaxed">
-                              {faq.answer}
-                            </p>
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* Contact CTA */}
-              <motion.div
-                className="mt-8 p-6 bg-primary rounded-lg text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-white text-xl font-semibold mb-2">
-                  Still have questions?
+            {/* Our Faq Content Start */}
+            <div className="our-faqs-content">
+              {/* Section Title Start */}
+              <div className="section-title">
+                <h3 className="wow fadeInUp">
+                  Frequently Asked Questions (FAQs)
                 </h3>
-                <p className="text-gray-200 mb-4">
-                  Our team is here to help you with any questions about our
-                  services.
+                <h2 className="text-anime-style-2" data-cursor="-opaque">
+                  Have a question? Here's clarity!
+                </h2>
+                <p className="wow fadeInUp" data-wow-delay="0.2s">
+                  We know landlords, tenants, and IPCs want certainty before
+                  committing. Here are answers to the most frequent questions:
                 </p>
-                <a
-                  href="/contact"
-                  className="btn-default inline-block bg-accent text-white px-8 py-3 rounded-lg font-semibold hover:bg-accent-dark transition-colors"
+              </div>
+              {/* Section Title End */}
+
+              {/* FAQ Accordion Start */}
+              <div className="faq-accordion" id="accordion">
+                {/* FAQ Item Start */}
+                <div className="accordion-item wow fadeInUp">
+                  <h2 className="accordion-header" id="heading1">
+                    <button
+                      className="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse1"
+                      aria-expanded="true"
+                      aria-controls="collapse1"
+                    >
+                      <span>Q1.</span> How does veLease differ from traditional
+                      interior firms?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapse1"
+                    className="accordion-collapse collapse show"
+                    aria-labelledby="heading1"
+                    data-bs-parent="#accordion"
+                  >
+                    <div className="accordion-body">
+                      <p>
+                        We shift interiors from CapEx to OpEx, offering
+                        predictable leases, faster ROI, and hassle-free
+                        scalability — unlike CapEx-heavy firms.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                {/* FAQ Item End */}
+
+                {/* FAQ Item Start */}
+                <div
+                  className="accordion-item wow fadeInUp"
+                  data-wow-delay="0.2s"
                 >
-                  Contact Us Today
-                </a>
-              </motion.div>
+                  <h2 className="accordion-header" id="heading2">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse2"
+                      aria-expanded="false"
+                      aria-controls="collapse2"
+                    >
+                      <span>Q2.</span> What's the typical process for starting a
+                      project?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapse2"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="heading2"
+                    data-bs-parent="#accordion"
+                  >
+                    <div className="accordion-body">
+                      <p>
+                        We begin with consultation, test fits, and financial
+                        modeling, followed by design concepts, execution
+                        planning, and plug-and-play handover.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                {/* FAQ Item End */}
+
+                {/* FAQ Item Start */}
+                <div
+                  className="accordion-item wow fadeInUp"
+                  data-wow-delay="0.4s"
+                >
+                  <h2 className="accordion-header" id="heading3">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse3"
+                      aria-expanded="false"
+                      aria-controls="collapse3"
+                    >
+                      <span>Q3.</span> How long does a project usually take?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapse3"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="heading3"
+                    data-bs-parent="#accordion"
+                  >
+                    <div className="accordion-body">
+                      <p>
+                        Timelines range from 6–10 weeks depending on size,
+                        complexity, and customization. Larger builds may require
+                        additional coordination.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                {/* FAQ Item End */}
+
+                {/* FAQ Item Start */}
+                <div
+                  className="accordion-item wow fadeInUp"
+                  data-wow-delay="0.6s"
+                >
+                  <h2 className="accordion-header" id="heading4">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse4"
+                      aria-expanded="false"
+                      aria-controls="collapse4"
+                    >
+                      <span>Q4.</span> Do you work with landlords as well as
+                      tenants?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapse4"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="heading4"
+                    data-bs-parent="#accordion"
+                  >
+                    <div className="accordion-body">
+                      <p>
+                        Yes. We help landlords convert bare shells into
+                        market-ready spaces, boosting occupancy, rental yield,
+                        and long-term tenant retention.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                {/* FAQ Item End */}
+
+                {/* FAQ Item Start */}
+                <div
+                  className="accordion-item wow fadeInUp"
+                  data-wow-delay="0.8s"
+                >
+                  <h2 className="accordion-header" id="heading5">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse5"
+                      aria-expanded="false"
+                      aria-controls="collapse5"
+                    >
+                      <span>Q5.</span> What support do you provide after
+                      handover?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapse5"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="heading5"
+                    data-bs-parent="#accordion"
+                  >
+                    <div className="accordion-body">
+                      <p>
+                        Furniture swaps, maintenance, and upgrades are built
+                        into your lease — ensuring your workspace stays fresh
+                        and functional over time.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                {/* FAQ Item End */}
+              </div>
+              {/* FAQ Accordion End */}
             </div>
+            {/* Our Faq Content End */}
           </div>
 
           <div className="col-lg-5">
-            {/* About FAQ Image */}
-            <div className="about-faqs-image">
-              <motion.figure
-                className="image-anime"
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+            {/* Our Faq Image Start */}
+            <div className="our-faqs-image">
+              <figure
+                className="image-anime reveal"
+                ref={(el) => {
+                  if (el && !imageRefs.current.includes(el)) {
+                    imageRefs.current.push(el);
+                  }
+                }}
               >
-                <img
-                  src="/images/faqs-image.jpg"
-                  alt="About VeLease FAQ"
-                  className="w-full h-96 object-cover rounded-lg shadow-lg"
-                />
-              </motion.figure>
-
-              {/* Additional Info Card */}
-              <motion.div
-                className="mt-8 p-6 bg-gray-100 rounded-lg"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <h4 className="text-primary text-lg font-semibold mb-3">
-                  Why Choose VeLease?
-                </h4>
-                <ul className="space-y-2 text-text">
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-accent rounded-full mr-3"></span>
-                    15+ years of experience
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-accent rounded-full mr-3"></span>
-                    1000+ successful projects
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-accent rounded-full mr-3"></span>
-                    95% client satisfaction rate
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-accent rounded-full mr-3"></span>
-                    Verified suppliers only
-                  </li>
-                </ul>
-              </motion.div>
+                <img src="/images/faqs-image.jpg" alt="" />
+              </figure>
             </div>
+            {/* Our Faq Image End */}
           </div>
         </div>
       </div>
