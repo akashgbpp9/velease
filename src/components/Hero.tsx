@@ -3,50 +3,26 @@ import { Link } from "react-router-dom";
 
 const Hero: React.FC = () => {
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
-  const [currentText, setCurrentText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [typingSpeed, setTypingSpeed] = useState(150);
-  
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
   const phrases = [
-    "Here",
-    "OpEx > CapEx",
-    "Scalable Interiors",
-    "Unrestricted Growth"
+    "Here.",
+    "OpEx > CapEx.",
+    "Scalable Interiors.",
+    "Unrestricted Growth.",
   ];
 
   useEffect(() => {
-    const currentPhrase = phrases[currentPhraseIndex];
-    
-    if (!isDeleting) {
-      // Typing effect
-      if (currentText.length < currentPhrase.length) {
-        const timeout = setTimeout(() => {
-          setCurrentText(currentPhrase.slice(0, currentText.length + 1));
-        }, typingSpeed);
-        return () => clearTimeout(timeout);
-      } else {
-        // Pause before deleting
-        const timeout = setTimeout(() => {
-          setIsDeleting(true);
-          setTypingSpeed(100); // Faster deletion
-        }, 2000);
-        return () => clearTimeout(timeout);
-      }
-    } else {
-      // Deleting effect
-      if (currentText.length > 0) {
-        const timeout = setTimeout(() => {
-          setCurrentText(currentText.slice(0, -1));
-        }, typingSpeed);
-        return () => clearTimeout(timeout);
-      } else {
-        // Move to next phrase
-        setIsDeleting(false);
-        setTypingSpeed(150); // Reset typing speed
+    const interval = setInterval(() => {
+      setIsTransitioning(true);
+      setTimeout(() => {
         setCurrentPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
-      }
-    }
-  }, [currentText, currentPhraseIndex, isDeleting, typingSpeed, phrases]);
+        setIsTransitioning(false);
+      }, 300); // Half of the transition time
+    }, 3000); // Change every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div
@@ -62,12 +38,26 @@ const Hero: React.FC = () => {
               <div className="section-title">
                 <h3 className="wow fadeInUp">Furniture-as-a-Service (FaaS)</h3>
                 <h1 className="text-anime-style-2" data-cursor="-opaque">
-                  The Future of Office Leasing is <br/>
+                  The Future of Office Leasing is <br />
                   <div className="animated-text-container">
-                    <span className="animated-text">
-                      {currentText}
-                      <span className="typewriter-cursor">.</span>
+                    <span
+                      className={`animated-text ${
+                        isTransitioning ? "fade-out" : "fade-in"
+                      }`}
+                      key={`current-${currentPhraseIndex}`}
+                    >
+                      {phrases[currentPhraseIndex]}
                     </span>
+                    {isTransitioning && (
+                      <span
+                        className="animated-text fade-in"
+                        key={`next-${
+                          (currentPhraseIndex + 1) % phrases.length
+                        }`}
+                      >
+                        {phrases[(currentPhraseIndex + 1) % phrases.length]}
+                      </span>
+                    )}
                   </div>
                 </h1>
                 <p className="wow fadeInUp" data-wow-delay="0.2s">
