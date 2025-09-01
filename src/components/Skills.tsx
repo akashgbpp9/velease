@@ -21,8 +21,9 @@ const Skills: React.FC<SkillsProps> = ({ imageRefs }) => {
                 </h2>
                 <p className="wow fadeInUp" data-wow-delay="0.2s">
                   We integrate world-class design with a financial model that
-                  puts your capital back where it belongs — in your business. No
-                  heavy upfront costs, just predictable monthly rentals that
+                  puts your capital back where it belongs — in your business.
+                  <br /> <br />
+                  No heavy upfront costs, just predictable monthly rentals that
                   grow with you.
                 </p>
               </div>
