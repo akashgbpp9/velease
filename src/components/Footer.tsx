@@ -86,17 +86,13 @@ const Footer: React.FC = () => {
               <h3>Solutions</h3>
               <ul>
                 <li>
-                  <Link to="/project-single">
-                    Office Interiors Consultation
-                  </Link>
+                  <Link to="/services/1">Office Interiors Consultation</Link>
                 </li>
                 <li>
-                  <Link to="/project-single">Design & Build Execution</Link>
+                  <Link to="/services/2">Design & Build Execution</Link>
                 </li>
                 <li>
-                  <Link to="/project-single">
-                    Furniture-as-a-Service (FaaS)
-                  </Link>
+                  <Link to="/services/3">Furniture-as-a-Service (FaaS)</Link>
                 </li>
                 {/* <li>
                   <Link to="/project-single">residential interior design</Link>
