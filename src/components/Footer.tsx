@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
                   <Link to="/about">About Us</Link>
                 </li>
                 <li>
-                  <Link to="/services">Careers</Link>
+                  <Link to="/solutions">Careers</Link>
                 </li>
                 <li>
                   <a href="#">Blogs & Resources</a>
@@ -86,13 +86,13 @@ const Footer: React.FC = () => {
               <h3>Solutions</h3>
               <ul>
                 <li>
-                  <Link to="/services/1">Office Interiors Consultation</Link>
+                  <Link to="/solutions/1">Office Interiors Consultation</Link>
                 </li>
                 <li>
-                  <Link to="/services/2">Design & Build Execution</Link>
+                  <Link to="/solutions/2">Design & Build Execution</Link>
                 </li>
                 <li>
-                  <Link to="/services/3">Furniture-as-a-Service (FaaS)</Link>
+                  <Link to="/solutions/3">Furniture-as-a-Service (FaaS)</Link>
                 </li>
                 {/* <li>
                   <Link to="/project-single">residential interior design</Link>

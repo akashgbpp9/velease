@@ -55,7 +55,7 @@ const Services: React.FC = () => {
               {/* Page Header Box Start */}
               <div className="page-header-box">
                 <h1 className="text-anime-style-2" data-cursor="-opaque">
-                  Services
+                  Solutions
                 </h1>
                 <nav className="wow fadeInUp">
                   <ol className="breadcrumb">
@@ -63,7 +63,7 @@ const Services: React.FC = () => {
                       <a href="./">home</a>
                     </li>
                     <li className="breadcrumb-item active" aria-current="page">
-                      services
+                      solutions
                     </li>
                   </ol>
                 </nav>
@@ -83,7 +83,7 @@ const Services: React.FC = () => {
               <div className="service-item">
                 {/* Service Image Start */}
                 <div className="service-image">
-                  <a href="/services/1" data-cursor-text="View">
+                  <a href="/solutions/1" data-cursor-text="View">
                     <figure>
                       <img
                         src="images/service-1.jpg"
@@ -96,7 +96,7 @@ const Services: React.FC = () => {
 
                 {/* Service Button Start */}
                 <div className="service-btn">
-                  <a href="/services/1">
+                  <a href="/solutions/1">
                     <img src="/images/arrow-white.svg" alt="View Service" />
                   </a>
                 </div>
@@ -105,7 +105,7 @@ const Services: React.FC = () => {
                 {/* Service Content Start */}
                 <div className="service-content">
                   <h3>
-                    <a href="/services/1">Office Interiors Consultation</a>
+                    <a href="/solutions/1">Office Interiors Consultation</a>
                   </h3>
                   <p>
                     We design offices aligned to business goals, offering smart
@@ -122,7 +122,7 @@ const Services: React.FC = () => {
               <div className="service-item">
                 {/* Service Image Start */}
                 <div className="service-image">
-                  <a href="/services/2" data-cursor-text="View">
+                  <a href="/solutions/2" data-cursor-text="View">
                     <figure>
                       <img
                         src="images/service-2.jpg"
@@ -135,7 +135,7 @@ const Services: React.FC = () => {
 
                 {/* Service Button Start */}
                 <div className="service-btn">
-                  <a href="/services/2">
+                  <a href="/solutions/2">
                     <img src="/images/arrow-white.svg" alt="View Service" />
                   </a>
                 </div>
@@ -144,7 +144,7 @@ const Services: React.FC = () => {
                 {/* Service Content Start */}
                 <div className="service-content">
                   <h3>
-                    <a href="/services/2">Design & Build Execution</a>
+                    <a href="/solutions/2">Design & Build Execution</a>
                   </h3>
                   <p>
                     From design to fit-out and furnishing, we handle it
@@ -161,7 +161,7 @@ const Services: React.FC = () => {
               <div className="service-item">
                 {/* Service Image Start */}
                 <div className="service-image">
-                  <a href="/services/3" data-cursor-text="View">
+                  <a href="/solutions/3" data-cursor-text="View">
                     <figure>
                       <img
                         src="images/service-3.jpg"
@@ -174,7 +174,7 @@ const Services: React.FC = () => {
 
                 {/* Service Button Start */}
                 <div className="service-btn">
-                  <a href="/services/3">
+                  <a href="/solutions/3">
                     <img src="/images/arrow-white.svg" alt="View Service" />
                   </a>
                 </div>
@@ -183,7 +183,7 @@ const Services: React.FC = () => {
                 {/* Service Content Start */}
                 <div className="service-content">
                   <h3>
-                    <a href="/services/3">Furniture-as-a-Service (FaaS)</a>
+                    <a href="/solutions/3">Furniture-as-a-Service (FaaS)</a>
                   </h3>
                   <p>
                     Lease premium furniture & interiors—no upfront cost. Monthly

@@ -21,29 +21,12 @@ const Header: React.FC = () => {
 
             {/* Main Menu Start */}
             <div className="collapse navbar-collapse justify-content-end main-menu">
-              {/* <div className="nav-menu-wrapper">
+              <div className="nav-menu-wrapper">
                 <ul className="navbar-nav mr-auto" id="menu">
-                  <li className="nav-item submenu">
+                  <li className="nav-item">
                     <Link className="nav-link" to="/">
                       Home
                     </Link>
-                    <ul>
-                      <li className="nav-item">
-                        <Link className="nav-link" to="/">
-                          Home - Image
-                        </Link>
-                      </li>
-                      <li className="nav-item">
-                        <Link className="nav-link" to="/">
-                          Home - Video
-                        </Link>
-                      </li>
-                      <li className="nav-item">
-                        <Link className="nav-link" to="/">
-                          Home - Slider
-                        </Link>
-                      </li>
-                    </ul>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link" to="/about">
@@ -51,27 +34,27 @@ const Header: React.FC = () => {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/services">
-                      Services
+                    <Link className="nav-link" to="/solutions">
+                      Solutions
                     </Link>
                   </li>
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <Link className="nav-link" to="/projects">
                       Projects
                     </Link>
-                  </li>
-                  <li className="nav-item">
+                  </li> */}
+                  {/* <li className="nav-item">
                     <Link className="nav-link" to="/blog">
                       Blog
                     </Link>
-                  </li>
-                  <li className="nav-item submenu">
+                  </li> */}
+                  {/* <li className="nav-item submenu">
                     <Link className="nav-link" to="#">
                       Pages
                     </Link>
                     <ul>
                       <li className="nav-item">
-                        <Link className="nav-link" to="/services/1">
+                        <Link className="nav-link" to="/solutions/1">
                           Service Details
                         </Link>
                       </li>
@@ -101,14 +84,14 @@ const Header: React.FC = () => {
                         </Link>
                       </li>
                     </ul>
-                  </li>
+                  </li> */}
                   <li className="nav-item">
                     <Link className="nav-link" to="/contact">
                       Contact Us
                     </Link>
                   </li>
                 </ul>
-              </div> */}
+              </div>
               {/* Header Btn Start */}
               <div className="header-btn d-inline-flex ml-auto">
                 <Link to="/contact" className="btn-default">

@@ -23,7 +23,7 @@ const Services: React.FC = () => {
               <p>
                 We go beyond interiors to offer flexible, finance-first
                 solutions that help companies move in faster, scale smarter, and
-                preserve their capital. <br />
+                preserve their capital. <br /> <br />
                 From tailored fit-outs to furniture leasing, veLease makes
                 office expansion effortless.
               </p>
@@ -38,7 +38,7 @@ const Services: React.FC = () => {
             <div className="service-item">
               {/* Service Image Start */}
               <div className="service-image">
-                <a href="/services/1" data-cursor-text="View">
+                <a href="/solutions/1" data-cursor-text="View">
                   <figure>
                     <img
                       src="images/service-1.jpg"
@@ -51,7 +51,7 @@ const Services: React.FC = () => {
 
               {/* Service Button Start */}
               <div className="service-btn">
-                <a href="/services/1">
+                <a href="/solutions/1">
                   <img src="/images/arrow-white.svg" alt="View Service" />
                 </a>
               </div>
@@ -60,7 +60,7 @@ const Services: React.FC = () => {
               {/* Service Content Start */}
               <div className="service-content">
                 <h3>
-                  <a href="/services/1">Office Interiors Consultation</a>
+                  <a href="/solutions/1">Office Interiors Consultation</a>
                 </h3>
                 <p>
                   We design offices aligned to business goals, offering smart
@@ -77,7 +77,7 @@ const Services: React.FC = () => {
             <div className="service-item">
               {/* Service Image Start */}
               <div className="service-image">
-                <a href="/services/2" data-cursor-text="View">
+                <a href="/solutions/2" data-cursor-text="View">
                   <figure>
                     <img
                       src="images/service-2.jpg"
@@ -90,7 +90,7 @@ const Services: React.FC = () => {
 
               {/* Service Button Start */}
               <div className="service-btn">
-                <a href="/services/2">
+                <a href="/solutions/2">
                   <img src="/images/arrow-white.svg" alt="View Service" />
                 </a>
               </div>
@@ -99,7 +99,7 @@ const Services: React.FC = () => {
               {/* Service Content Start */}
               <div className="service-content">
                 <h3>
-                  <a href="/services/2">Design & Build Execution</a>
+                  <a href="/solutions/2">Design & Build Execution</a>
                 </h3>
                 <p>
                   From design to fit-out and furnishing, we handle it
@@ -116,7 +116,7 @@ const Services: React.FC = () => {
             <div className="service-item">
               {/* Service Image Start */}
               <div className="service-image">
-                <a href="/services/3" data-cursor-text="View">
+                <a href="/solutions/3" data-cursor-text="View">
                   <figure>
                     <img
                       src="images/service-3.jpg"
@@ -129,7 +129,7 @@ const Services: React.FC = () => {
 
               {/* Service Button Start */}
               <div className="service-btn">
-                <a href="/services/3">
+                <a href="/solutions/3">
                   <img src="/images/arrow-white.svg" alt="View Service" />
                 </a>
               </div>
@@ -138,7 +138,7 @@ const Services: React.FC = () => {
               {/* Service Content Start */}
               <div className="service-content">
                 <h3>
-                  <a href="/services/3">Furniture-as-a-Service (FaaS)</a>
+                  <a href="/solutions/3">Furniture-as-a-Service (FaaS)</a>
                 </h3>
                 <p>
                   Lease premium furniture & interiors—no upfront cost. Monthly
@@ -153,7 +153,7 @@ const Services: React.FC = () => {
           <div className="col-lg-12">
             {/* All Services Button Start */}
             <div className="all-services-btn">
-              <a href="/services" className="btn-default">
+              <a href="/solutions" className="btn-default">
                 see all solutions
               </a>
             </div>

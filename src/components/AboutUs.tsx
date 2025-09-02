@@ -87,7 +87,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                   className="text-anime-style-2 gradient-text"
                   data-cursor="-opaque"
                 >
-                  Design without debt, growth without <span>compromise.</span>
+                  Design without debt, growth <span> without compromise.</span>
                 </h2>
                 <p className="wow fadeInUp" data-wow-delay="0.2s">
                   We believe workspaces should accelerate business, not drain

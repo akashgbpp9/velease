@@ -327,7 +327,7 @@ const ServiceSingle: React.FC = () => {
                       <Link to="/">home</Link>
                     </li>
                     <li className="breadcrumb-item">
-                      <Link to="/services">services</Link>
+                      <Link to="/solutions">services</Link>
                     </li>
                     <li className="breadcrumb-item active" aria-current="page">
                       {serviceData[currentIndex].title}

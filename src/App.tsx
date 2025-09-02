@@ -6,8 +6,8 @@ import Preloader from "./components/Preloader";
 import AdvancedAnimatedCursor from "./components/AdvancedAnimatedCursor";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Services from "./pages/Services";
-import ServiceSingle from "./pages/ServiceSingle";
+import Solutions from "./pages/Solutions";
+import SolutionSingle from "./pages/SolutionSingle";
 import Projects from "./pages/Projects";
 import ProjectSingle from "./pages/ProjectSingle";
 import Blog from "./pages/Blog";
@@ -28,8 +28,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/services/:id" element={<ServiceSingle />} />
+            <Route path="/solutions" element={<Solutions />} />
+            <Route path="/solutions/:id" element={<SolutionSingle />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:id" element={<ProjectSingle />} />
             <Route path="/blog" element={<Blog />} />
