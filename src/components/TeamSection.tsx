@@ -17,7 +17,7 @@ const TeamSection: React.FC = () => {
     {
       name: "Pratiek Phand",
       position: "Co-founder, Strategy & Design",
-      image: "/images/team-2.jpg",
+      image: "/images/team-2.jpeg",
       social: {
         // instagram: "#",
         // twitter: "#",
@@ -95,7 +95,7 @@ const TeamSection: React.FC = () => {
               >
                 {/* Team Image */}
                 <div className="team-image relative group overflow-hidden rounded-lg mb-6">
-                  <a href="/team-single" className="block">
+                  <a href={member.social.linkdin} className="block">
                     <motion.figure
                       className="image-anime"
                       whileHover={{ scale: 1.05 }}

@@ -3589,7 +3589,11 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .faq-accordion .accordion-button:not(.collapsed)::after {
-  content: "\f068";
+  content: "\f068"; /* fa-minus in solid */
+  font-family: FontAwesome;
+  font-weight: 900; /* solid */
+  font-style: normal;
+  display: inline-block;
 }
 
 .faq-accordion .accordion-body {
