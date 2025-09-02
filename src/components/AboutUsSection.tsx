@@ -11,21 +11,21 @@ const AboutUsSection: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
   const facilities = [
     {
       icon: "/images/icon-about-facility-1.svg",
-      title: "reasonable prices",
+      title: "Capital-Friendly Model",
       description:
-        "We produce furniture to fulfill needs of all people and offer it at affordable prices.",
+        "We eliminate heavy upfront CapEx with flexible leasing models, converting interiors into predictable monthly operating expenses.",
     },
     {
       icon: "/images/icon-about-facility-2.svg",
-      title: "exclusive design",
+      title: "Design That Performs",
       description:
-        "Mixture of imagination, experience and professionalism is the secret of our design!",
+        "Our blend of design expertise and financial insight ensures every office is functional, scalable, and aligned with your brand.",
     },
     {
       icon: "/images/icon-about-facility-2.svg",
-      title: "professional team",
+      title: "Partner-Led Execution",
       description:
-        "We are proud of our amicable, professional and always developing team!",
+        "From consultation to handover, our professional team manages every stage, creating consistent experiences for tenants, landlords, and IPC partners.",
     },
   ];
 
@@ -135,7 +135,7 @@ const AboutUsSection: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                   transition={{ duration: 0.6, delay: 0.1 }}
                   viewport={{ once: true }}
                 >
-                  Our passion for design, your <span>vision realized</span>
+                  Smart interiors, built for <span>business growth</span>
                 </motion.h2>
                 <motion.p
                   className="text-lg text-text leading-relaxed"
@@ -144,10 +144,12 @@ const AboutUsSection: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   viewport={{ once: true }}
                 >
-                  Our dedicated team of designers works closely with you to
-                  understand your vision and bring it to life with thoughtful
-                  attention to detail. Whether it's transforming a single room
-                  or an entire home.
+                  At veLease, we believe offices shouldn’t drain capital or slow
+                  expansion. Our team brings together expertise in design,
+                  leasing, and financial structuring to help companies and
+                  landlords unlock the true value of their spaces. From
+                  bare-shell transformations to scalable interiors, we turn
+                  workplaces into growth engines.
                 </motion.p>
               </div>
               {/* Section Title End */}
@@ -167,11 +169,15 @@ const AboutUsSection: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                     <ul className="space-y-2">
                       <li className="flex items-center text-text">
                         <span className="w-2 h-2 bg-accent rounded-full mr-3"></span>
-                        creative expertise
+                        financially smart solutions
                       </li>
                       <li className="flex items-center text-text">
                         <span className="w-2 h-2 bg-accent rounded-full mr-3"></span>
-                        client-centered approach
+                        growth-focused approach
+                      </li>
+                      <li className="flex items-center text-text">
+                        <span className="w-2 h-2 bg-accent rounded-full mr-3"></span>
+                        flexible, future-ready models
                       </li>
                     </ul>
                   </motion.div>
@@ -189,7 +195,7 @@ const AboutUsSection: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                       href="/contact"
                       className="btn-default inline-block text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition-colors"
                     >
-                      contact now
+                      Talk to Us
                     </a>
                   </motion.div>
                   {/* About Us Content Button End */}

@@ -44,7 +44,8 @@ const OurEdge: React.FC = () => {
                   transition={{ duration: 0.6, delay: 0.1 }}
                   viewport={{ once: true }}
                 >
-                  Design <span>verified suppliers</span>, Build without Burden.
+                  Design <span>without Debt</span>, Build{" "}
+                  <span>without Burden</span>.
                 </motion.h2>
                 <motion.p
                   className="text-lg text-text leading-relaxed"
