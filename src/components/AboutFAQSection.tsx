@@ -18,7 +18,7 @@ const AboutFAQSection: React.FC<AboutFAQSectionProps> = ({ imageRefs }) => {
                   Frequently Asked Questions (FAQs)
                 </h3>
                 <h2 className="text-anime-style-2" data-cursor="-opaque">
-                  Have a question? Here's clarity!
+                  Have a question? <span>Here's clarity!</span>
                 </h2>
                 <p className="wow fadeInUp" data-wow-delay="0.2s">
                   We know landlords, tenants, and IPCs want certainty before

@@ -34,16 +34,7 @@ const ContactForm = () => {
             <h3 className="wow fadeInUp">contact form</h3>
             <h2 className="text-anime-style-2" data-cursor="-opaque">
               Turn your office into a growth engine — <br />
-              <span
-                style={{
-                  color: "var(--text)!important",
-                  backgroundClip: "unset",
-                  background: "none",
-                  WebkitTextFillColor: "unset",
-                }}
-              >
-                not a cost center.
-              </span>
+              <span>not a cost center.</span>
             </h2>
             <p className="wow fadeInUp" data-wow-delay="0.2s">
               Unlock premium interiors without the upfront drain. One partner,

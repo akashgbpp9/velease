@@ -18,7 +18,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ imageRefs }) => {
                   Frequently Asked Questions (FAQs)
                 </h3>
                 <h2 className="text-anime-style-2" data-cursor="-opaque">
-                  Got questions? We've got answers!
+                  Got questions? <span>We've got answers!</span>
                 </h2>
                 <p className="wow fadeInUp" data-wow-delay="0.2s">
                   Explore these common questions to understand how veLease

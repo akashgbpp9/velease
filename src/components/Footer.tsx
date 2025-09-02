@@ -2,6 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <footer className="main-footer">
       <div className="container">
@@ -61,16 +67,24 @@ const Footer: React.FC = () => {
               <h3>Our Firm</h3>
               <ul>
                 <li>
-                  <Link to="/about">About Us</Link>
+                  <Link to="/about" onClick={scrollToTop}>
+                    About Us
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/solutions">Careers</Link>
+                  <Link to="/solutions" onClick={scrollToTop}>
+                    Careers
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">Blogs & Resources</a>
+                  <a href="#" onClick={scrollToTop}>
+                    Blogs & Resources
+                  </a>
                 </li>
                 <li>
-                  <Link to="#">Portfolio</Link>
+                  <Link to="#" onClick={scrollToTop}>
+                    Portfolio
+                  </Link>
                 </li>
                 {/* <li>
                   <Link to="/projects">our latest projects</Link>
@@ -86,13 +100,19 @@ const Footer: React.FC = () => {
               <h3>Solutions</h3>
               <ul>
                 <li>
-                  <Link to="/solutions/1">Office Interiors Consultation</Link>
+                  <Link to="/solutions/1" onClick={scrollToTop}>
+                    Office Interiors Consultation
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/solutions/2">Design & Build Execution</Link>
+                  <Link to="/solutions/2" onClick={scrollToTop}>
+                    Design & Build Execution
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/solutions/3">Furniture-as-a-Service (FaaS)</Link>
+                  <Link to="/solutions/3" onClick={scrollToTop}>
+                    Furniture-as-a-Service (FaaS)
+                  </Link>
                 </li>
                 {/* <li>
                   <Link to="/project-single">residential interior design</Link>
@@ -187,7 +207,7 @@ const Footer: React.FC = () => {
             <div className="col-md-12">
               {/* Footer Copyright Start */}
               <div className="footer-copyright-text">
-                <p>Copyright © 2024 All Rights Reserved.</p>
+                <p>Copyright © 2025 All Rights Reserved.</p>
               </div>
               {/* Footer Copyright End */}
             </div>

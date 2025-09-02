@@ -59,7 +59,7 @@ const TeamSection: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                Creative minds always <span>think something</span>
+                The minds shaping <span>future-ready workspaces.</span>
               </motion.h2>
             </div>
           </div>
@@ -74,9 +74,9 @@ const TeamSection: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                We offer a range of bespoke interior design services tailored to
-                your unique needs. From concept development to final
-                installation.
+                We blend design, real estate, and strategic financing models to
+                craft workspaces that are both visually inspiring and
+                financially strategic, ensuring long-term business value.
               </motion.p>
             </div>
           </div>
