@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
                   <a href="#">Blogs & Resources</a>
                 </li>
                 <li>
-                  <Link to="/blog">Portfolio</Link>
+                  <Link to="#">Portfolio</Link>
                 </li>
                 {/* <li>
                   <Link to="/projects">our latest projects</Link>
