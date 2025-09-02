@@ -1,20 +1,18 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
+import PageHeader from "../components/PageHeader";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    subject: "",
     message: "",
   });
 
   const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData({
       ...formData,
@@ -28,254 +26,297 @@ const Contact: React.FC = () => {
     console.log("Form submitted:", formData);
   };
 
-  const contactInfo = [
-    {
-      icon: <MapPin size={24} className="text-accent" />,
-      title: "Our Location",
-      details: "123 Design Street, Creative City, CC 12345",
-    },
-    {
-      icon: <Phone size={24} className="text-accent" />,
-      title: "Phone Number",
-      details: "+1 (555) 123-4567",
-    },
-    {
-      icon: <Mail size={24} className="text-accent" />,
-      title: "Email Address",
-      details: "info@velease.com",
-    },
-    {
-      icon: <Clock size={24} className="text-accent" />,
-      title: "Working Hours",
-      details: "Mon - Fri: 9:00 AM - 6:00 PM",
-    },
-  ];
-
   return (
-    <div className="contact-page pt-20">
+    <div className="contact-page">
       {/* Page Header */}
-      <section className="page-header bg-primary text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <motion.h1
-            className="text-5xl font-bold mb-4"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            Contact Us
-          </motion.h1>
-          <motion.p
-            className="text-xl text-gray-200 max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            Get in touch with us to discuss your project and start creating your
-            dream space
-          </motion.p>
-        </div>
-      </section>
+      <PageHeader
+        title="Contact us"
+        breadcrumbs={[
+          { label: "home", href: "/" },
+          { label: "contact us", href: "/contact" },
+        ]}
+      />
 
-      {/* Contact Info */}
-      <section className="contact-info py-20 bg-secondary">
+      {/* Page Contact Us */}
+      <div className="page-contact-us py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {contactInfo.map((info, index) => (
+          <div className="row">
+            {/* Contact Us Image */}
+            <div className="col-lg-6">
+              <div className="contact-us-image">
+                <motion.figure
+                  className="image-anime reveal"
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                >
+                  <img
+                    src="/images/service-entry-img.jpg"
+                    alt="Contact Us"
+                    className="w-full h-auto rounded-lg"
+                  />
+                </motion.figure>
+              </div>
+            </div>
+
+            {/* Contact Us Form */}
+            <div className="col-lg-6">
+              <div className="contact-us-form">
+                {/* Section Title */}
+                <div className="section-title mb-8">
+                  <motion.h3
+                    className="text-lg font-medium text-accent mb-2"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true }}
+                  >
+                    contact form
+                  </motion.h3>
+                  <motion.h2
+                    className="text-4xl font-bold  mb-4"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    We would love to hear{" "}
+                    <span className="text-accent">from you</span>
+                  </motion.h2>
+                  <motion.p
+                    className="text-text"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    viewport={{ once: true }}
+                  >
+                    Your email address will not be published. Required fields
+                    are marked *
+                  </motion.p>
+                </div>
+
+                {/* Contact Form */}
+                <motion.div
+                  className="contact-form"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  viewport={{ once: true }}
+                >
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="form-group">
+                        <input
+                          type="text"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleChange}
+                          required
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
+                          placeholder="Name*"
+                        />
+                      </div>
+
+                      <div className="form-group">
+                        <input
+                          type="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          required
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
+                          placeholder="Email Address*"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="form-group">
+                      <input
+                        type="text"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
+                        placeholder="Your Phone"
+                      />
+                    </div>
+
+                    <div className="form-group">
+                      <textarea
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        rows={4}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 resize-none"
+                        placeholder="Your Message"
+                      />
+                    </div>
+
+                    <div>
+                      <button type="submit" className="btn-default">
+                        submit
+                      </button>
+                    </div>
+                  </form>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Google Map Section */}
+      <div className="google-map py-20">
+        <div className="container mx-auto px-4">
+          <div className="row">
+            <div className="col-lg-12">
+              {/* Section Title */}
+              <div className="section-title text-center mb-12">
+                <motion.h3
+                  className="text-lg font-medium text-accent mb-2"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                >
+                  Our contact
+                </motion.h3>
+                <motion.h2
+                  className="text-4xl font-bold  mb-4"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  Get in touch with us
+                </motion.h2>
+                <motion.p
+                  className="text-text max-w-3xl mx-auto"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  Get in touch to discuss your employee wellbeing needs today.
+                  Please give us a call, drop us an email or fill out the
+                  contact form and we'll get back to you.
+                </motion.p>
+              </div>
+            </div>
+
+            <div className="col-lg-12">
+              {/* Google Map IFrame */}
               <motion.div
-                key={index}
-                className="bg-white p-6 rounded-lg shadow-lg text-center"
+                className="google-map-iframe mb-12"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                <div className="flex justify-center mb-4">{info.icon}</div>
-                <h3 className="text-lg font-bold text-primary mb-2">
-                  {info.title}
-                </h3>
-                <p className="text-text">{info.details}</p>
+                {/* <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96737.10562045308!2d-74.08535042841811!3d40.739265258395164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1703158537552!5m2!1sen!2sin"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Google Maps - New York Location"
+                  className="w-full h-96 rounded-lg"
+                /> */}
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11642.76212806078!2d73.9012288652697!3d18.566357035004167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1004fe79edf%3A0x7bdea6756fd3ea95!2sGiga%20Space%20IT%20Park%20Exit%20Gate!5e0!3m2!1sen!2sin!4v1756848354114!5m2!1sen!2sin"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-96 rounded-lg"
+                ></iframe>
               </motion.div>
-            ))}
+            </div>
           </div>
-        </div>
-      </section>
 
-      {/* Contact Form & Map */}
-      <section className="contact-form-map py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <motion.div
-              className="contact-form"
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <div className="mb-8">
-                <h2 className="text-3xl font-bold text-primary mb-4">
-                  Send us a message
-                </h2>
-                <p className="text-text">
-                  Fill out the form below and we'll get back to you as soon as
-                  possible.
-                </p>
-              </div>
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium text-primary mb-2"
-                    >
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
-                      placeholder="Enter your full name"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-primary mb-2"
-                    >
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
-                      placeholder="Enter your email"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label
-                      htmlFor="phone"
-                      className="block text-sm font-medium text-primary mb-2"
-                    >
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
-                      placeholder="Enter your phone number"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="subject"
-                      className="block text-sm font-medium text-primary mb-2"
-                    >
-                      Subject *
-                    </label>
-                    <select
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300"
-                    >
-                      <option value="">Select a subject</option>
-                      <option value="interior-design">Interior Design</option>
-                      <option value="architecture">Architecture</option>
-                      <option value="renovation">Renovation</option>
-                      <option value="consultation">Consultation</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-primary mb-2"
-                  >
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 resize-none"
-                    placeholder="Tell us about your project..."
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="btn-default flex items-center justify-center w-full md:w-auto"
+          <div className="row">
+            <div className="col-lg-12">
+              {/* Contact Info Box */}
+              <div className="contact-info-box">
+                {/* Phone Number Contact Info */}
+                <motion.div
+                  className="contact-info-item"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0 }}
+                  viewport={{ once: true }}
                 >
-                  <Send size={20} className="mr-2" />
-                  Send Message
-                </button>
-              </form>
-            </motion.div>
+                  {/* Icon Box */}
+                  <div className="icon-box flex justify-center mb-4">
+                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center">
+                      <i className="fa-solid fa-phone"></i>
+                    </div>
+                  </div>
 
-            {/* Map */}
-            <motion.div
-              className="contact-map"
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <div className="bg-gray-200 h-96 rounded-lg flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <MapPin size={48} className="mx-auto mb-4" />
-                  <p className="text-lg font-medium">Interactive Map</p>
-                  <p className="text-sm">Map integration would go here</p>
-                </div>
+                  {/* Contact Info Content */}
+                  <div className="contact-info-content">
+                    <h3 className="text-lg font-bold mb-3 capitalize">
+                      phone number
+                    </h3>
+                    <p className="text-text mb-1">+91 989 090 7614</p>
+                  </div>
+                </motion.div>
+
+                {/* Email Support Contact Info */}
+                <motion.div
+                  className="contact-info-item"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  {/* Icon Box */}
+                  <div className="icon-box flex justify-center mb-4">
+                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center">
+                      <i className="fa-regular fa-envelope"></i>
+                    </div>
+                  </div>
+
+                  {/* Contact Info Content */}
+                  <div className="contact-info-content">
+                    <h3 className="text-lg font-bold mb-3 capitalize">
+                      e-mail support
+                    </h3>
+                    <p className="text-text mb-1">sales@velease.com</p>
+                  </div>
+                </motion.div>
+
+                {/* Headquarter Contact Info */}
+                <motion.div
+                  className="contact-info-item"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  viewport={{ once: true }}
+                >
+                  {/* Icon Box */}
+                  <div className="icon-box flex justify-center mb-4">
+                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center">
+                      <i className="fa-solid fa-house"></i>
+                    </div>
+                  </div>
+
+                  {/* Contact Info Content */}
+                  <div className="contact-info-content">
+                    <h3 className="text-lg font-bold mb-3 capitalize">
+                      headquarter
+                    </h3>
+                    <p className="text-text mb-1">
+                      101-B, Gamma-1, Giga Space IT Park, Viman Nagar, Pune,
+                      India
+                    </p>
+                  </div>
+                </motion.div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
-      </section>
-
-      {/* FAQ Preview */}
-      <section className="faq-preview py-20 bg-secondary">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            className="max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold text-primary mb-6">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-lg text-text mb-8">
-              Find answers to common questions about our services and process.
-            </p>
-            <a href="/faqs" className="btn-default">
-              View All FAQs
-            </a>
-          </motion.div>
-        </div>
-      </section>
+      </div>
     </div>
   );
 };
