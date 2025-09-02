@@ -16,7 +16,7 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ imageRefs }) => {
               <div className="section-title">
                 <h3>why choose us</h3>
                 <h2>
-                  Workspaces that don't drain your <span>capital.</span>
+                  Workspaces that don't drain<span> your capital.</span>
                 </h2>
                 <p>
                   With veLease, interiors shift from CapEx to OpEx — giving you
