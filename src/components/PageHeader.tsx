@@ -62,9 +62,9 @@ const PageHeader: React.FC<PageHeaderProps> = ({
                           {crumb.label}
                         </span>
                       )}
-                      {index < breadcrumbs.length - 1 && (
+                      {/* {index < breadcrumbs.length - 1 && (
                         <span className="mx-2 text-gray-400">/</span>
-                      )}
+                      )} */}
                     </li>
                   ))}
                 </ol>
