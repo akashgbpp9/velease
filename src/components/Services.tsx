@@ -38,7 +38,7 @@ const Services: React.FC = () => {
             <div className="service-item">
               {/* Service Image Start */}
               <div className="service-image">
-                <a href="/solutions/1" data-cursor-text="View">
+                <a href="/solutions/office-interiors-consultation" data-cursor-text="View">
                   <figure>
                     <img
                       src="images/service-1.jpg"
@@ -51,7 +51,7 @@ const Services: React.FC = () => {
 
               {/* Service Button Start */}
               <div className="service-btn">
-                <a href="/solutions/1">
+                <a href="/solutions/office-interiors-consultation">
                   <img src="/images/arrow-white.svg" alt="View Service" />
                 </a>
               </div>
@@ -60,7 +60,7 @@ const Services: React.FC = () => {
               {/* Service Content Start */}
               <div className="service-content">
                 <h3>
-                  <a href="/solutions/1">Office Interiors Consultation</a>
+                  <a href="/solutions/office-interiors-consultation">Office Interiors Consultation</a>
                 </h3>
                 <p>
                   We design offices aligned to business goals, offering smart
@@ -77,7 +77,7 @@ const Services: React.FC = () => {
             <div className="service-item">
               {/* Service Image Start */}
               <div className="service-image">
-                <a href="/solutions/2" data-cursor-text="View">
+                <a href="/solutions/design-and-build-execution" data-cursor-text="View">
                   <figure>
                     <img
                       src="images/service-2.jpg"
@@ -90,7 +90,7 @@ const Services: React.FC = () => {
 
               {/* Service Button Start */}
               <div className="service-btn">
-                <a href="/solutions/2">
+                <a href="/solutions/design-and-build-execution">
                   <img src="/images/arrow-white.svg" alt="View Service" />
                 </a>
               </div>
@@ -99,7 +99,7 @@ const Services: React.FC = () => {
               {/* Service Content Start */}
               <div className="service-content">
                 <h3>
-                  <a href="/solutions/2">Design & Build Execution</a>
+                  <a href="/solutions/design-and-build-execution">Design & Build Execution</a>
                 </h3>
                 <p>
                   From design to fit-out and furnishing, we handle it
@@ -116,7 +116,7 @@ const Services: React.FC = () => {
             <div className="service-item">
               {/* Service Image Start */}
               <div className="service-image">
-                <a href="/solutions/3" data-cursor-text="View">
+                <a href="/solutions/furniture-as-a-service" data-cursor-text="View">
                   <figure>
                     <img
                       src="images/service-3.jpg"
@@ -129,7 +129,7 @@ const Services: React.FC = () => {
 
               {/* Service Button Start */}
               <div className="service-btn">
-                <a href="/solutions/3">
+                <a href="/solutions/furniture-as-a-service">
                   <img src="/images/arrow-white.svg" alt="View Service" />
                 </a>
               </div>
@@ -138,7 +138,7 @@ const Services: React.FC = () => {
               {/* Service Content Start */}
               <div className="service-content">
                 <h3>
-                  <a href="/solutions/3">Furniture-as-a-Service (FaaS)</a>
+                  <a href="/solutions/furniture-as-a-service">Furniture-as-a-Service (FaaS)</a>
                 </h3>
                 <p>
                   Lease premium furniture & interiors—no upfront cost. Monthly

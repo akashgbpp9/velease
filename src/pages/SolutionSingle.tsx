@@ -2,14 +2,16 @@ import React, { useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const ServiceSingle: React.FC = () => {
-  const { id } = useParams();
+const SolutionSingle: React.FC = () => {
+  const { id } = useParams() as { id: "office-interiors-consultation" | "design-and-build-execution" | "furniture-as-a-service"};
   const imageRefs = useRef<(HTMLElement | null)[]>([]);
+
+
 
   // Service data - in a real app, this would come from an API
   const serviceData = [
     {
-      title: "Residential Design",
+      title: "Office Interiors Consultation",
       description:
         "Our consultation services are designed to give businesses and landlords a clear, actionable strategy for their workspaces. We go beyond aesthetics to ensure every decision — from layout to financial structure — aligns with your long-term business goals. With our expertise, clients gain clarity on how to maximize space efficiency, forecast growth, and protect their capital while securing high-quality interiors.",
       extendedDescription:
@@ -287,7 +289,14 @@ const ServiceSingle: React.FC = () => {
       ],
     },
   ];
-  const currentIndex = Number(id) - 1;
+  // Map string IDs to array indices
+  const idToIndexMap: Record<string, number> = {
+    "office-interiors-consultation": 0,
+    "design-and-build-execution": 1,
+    "furniture-as-a-service": 2,
+  };
+  
+  const currentIndex = idToIndexMap[id] || 0;
   return (
     <>
       {/* Page Header Start */}
@@ -660,4 +669,4 @@ const ServiceSingle: React.FC = () => {
   );
 };
 
-export default ServiceSingle;
+export default SolutionSingle;
