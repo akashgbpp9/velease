@@ -15,14 +15,14 @@ const SolutionSingle: React.FC = () => {
       description:
         "Our consultation services are designed to give businesses and landlords a clear, actionable strategy for their workspaces. We go beyond aesthetics to ensure every decision — from layout to financial structure — aligns with your long-term business goals. With our expertise, clients gain clarity on how to maximize space efficiency, forecast growth, and protect their capital while securing high-quality interiors.",
       extendedDescription:
-        "We focus on creating strategies that not only address immediate needs but also anticipate the future. By combining design thinking with financial insight, we make office interiors a tool for business scalability. Whether you’re a company seeking to optimize a new office or a landlord aiming to attract premium tenants, our consultation ensures your space becomes a competitive advantage.",
+        "We focus on creating strategies that not only address immediate needs but also anticipate the future. By combining design thinking with financial insight, we make office interiors a tool for business scalability. Whether you're a company seeking to optimize a new office or a landlord aiming to attract premium tenants, our consultation ensures your space becomes a competitive advantage.",
       features: [
-        "Streamline fit-outs with one trusted partner",
-        "Visualize your workspace before execution begins",
-        "Deliver plug-and-play offices on time and on budget",
-        "Blend design creativity with functional efficiency",
-        "Infuse brand identity into every corner of the workspace",
-        "Transform bare shells into high-performing environments",
+        "Simplify growth with smarter workspace planning",
+        "Bridge design and financial strategy",
+        "Transform bare shells into revenue assets",
+        "Anticipate growth with scalable solutions",
+        "Reshape how landlords, tenants view interiors",
+        "Pioneer shift from CapEx-heavy to OpEx-smart",
       ],
       whyChoose: [
         {
@@ -44,46 +44,46 @@ const SolutionSingle: React.FC = () => {
             "By shifting interiors from CapEx to OpEx, we keep your capital free while providing predictable monthly costs and built-in scalability.",
         },
       ],
-      whyChooseDescription:
-        "Our team ensures every step — from consultation to handover — is transparent, predictable, and aligned with your business goals.",
-      faqs: [
-        {
-          question:
-            "How does veLease differ from a traditional interiors company?",
-          answer:
-            "Traditional firms charge heavy upfront CapEx. veLease converts interiors into OpEx, so you pay predictable monthly rent and preserve capital.",
-        },
-        {
-          question: "What is the typical process for starting a project?",
-          answer:
-            "We begin with a consultation to understand your business, then provide test fits, 3D concepts, and a tailored lease model before execution.",
-        },
-        {
-          question: "How long does it take to deliver a workspace?",
-          answer:
-            "Depending on scope, we hand over fully functional offices in as little as 6–10 weeks.",
-        },
-        {
-          question: "Can my existing furniture be integrated?",
-          answer:
-            "Yes. We can blend your current assets with leased furniture to balance cost efficiency and brand consistency.",
-        },
-        {
-          question: "What lease terms do you offer?",
-          answer:
-            "Standard lock-ins are 3 or 5 years, but we can create custom terms depending on your growth plans.",
-        },
-        {
-          question: "How do landlords benefit from veLease?",
-          answer:
-            "Absolutely. We help landlords convert bare shells into plug-and-play spaces, increasing marketability and rental yield.",
-        },
-        {
-          question: "What happens if my business grows mid-lease?",
-          answer:
-            "Your interiors scale with you. Furniture upgrades, reconfiguration, or additional fit-outs are all built into our model.",
-        },
-      ],
+              whyChooseDescription:
+          "From bare shell to business-ready, veLease combines design excellence with financial innovation — giving you a workspace that fuels growth without draining capital.",
+        faqs: [
+          {
+            question:
+              "How does veLease differ from a traditional interiors company?",
+            answer:
+              "Traditional firms demand heavy upfront CapEx, often locking businesses into inflexible assets. veLease transforms interiors into an OpEx model — you pay a predictable monthly rent instead of draining capital. This preserves cash for core business priorities while still giving you a premium workspace that evolves as you grow.",
+          },
+          {
+            question: "What is the typical process for starting a project?",
+            answer:
+              "We begin with a consultation to understand your culture, headcount plans, and business goals. From there, we provide test fits and 3D concepts that show how your future office will look and function. Finally, we structure a tailored lease model — covering furniture, fit-out, and ongoing support — before moving into execution.",
+          },
+          {
+            question: "How long does it take to deliver a workspace?",
+            answer:
+              "Depending on the scope, we can hand over fully functional offices in as little as 6–10 weeks. Because our model integrates design, financing, and execution under one roof, timelines are shorter and you avoid the delays common in piecemeal vendor approaches.",
+          },
+          {
+            question: "Can my existing furniture be integrated?",
+            answer:
+              "Yes. We often blend your current assets with leased furniture to balance cost efficiency and brand consistency. This hybrid approach lets you retain investments you value, while upgrading the rest to modern, ergonomic, and scalable solutions.",
+          },
+          {
+            question: "What lease terms do you offer?",
+            answer:
+              "Our standard lock-ins are 3 or 5 years, designed to give stability while maintaining flexibility. For high-growth companies, we also create custom terms that match expansion or consolidation plans — ensuring your workspace never becomes a constraint.",
+          },
+          {
+            question: "How do landlords benefit from veLease?",
+            answer:
+              `We help landlords convert bare shells into plug-and-play spaces. This not only accelerates occupancy but also commands higher rental yields by positioning the property as "ready-to-move-in." In effect, veLease makes buildings more marketable and competitive without landlords shouldering CapEx.`,
+          },
+          {
+            question: "What happens if my business grows mid-lease?",
+            answer:
+              "Your interiors scale with you. Whether it's upgrading furniture, reconfiguring layouts, or adding new fit-outs, our model ensures your workspace keeps pace with your business. Instead of starting from scratch, you simply adapt within the same lease — saving time, money, and disruption.",
+          },
+        ],
     },
     {
       title: "Design & Build Execution",
@@ -126,37 +126,37 @@ const SolutionSingle: React.FC = () => {
           question:
             "How does veLease differ from a traditional interiors company?",
           answer:
-            "Traditional firms charge heavy upfront CapEx. veLease converts interiors into OpEx, so you pay predictable monthly rent and preserve capital.",
+            "Traditional firms demand heavy upfront CapEx, often locking businesses into inflexible assets. veLease transforms interiors into an OpEx model — you pay a predictable monthly rent instead of draining capital. This preserves cash for core business priorities while still giving you a premium workspace that evolves as you grow.",
         },
         {
           question: "What is the typical process for starting a project?",
           answer:
-            "We begin with a consultation to understand your business, then provide test fits, 3D concepts, and a tailored lease model before execution.",
+            "We begin with a consultation to understand your culture, headcount plans, and business goals. From there, we provide test fits and 3D concepts that show how your future office will look and function. Finally, we structure a tailored lease model — covering furniture, fit-out, and ongoing support — before moving into execution.",
         },
         {
           question: "How long does it take to deliver a workspace?",
           answer:
-            "Depending on scope, we hand over fully functional offices in as little as 6–10 weeks.",
+            "Depending on the scope, we can hand over fully functional offices in as little as 6–10 weeks. Because our model integrates design, financing, and execution under one roof, timelines are shorter and you avoid the delays common in piecemeal vendor approaches.",
         },
         {
           question: "Can my existing furniture be integrated?",
           answer:
-            "Yes. We can blend your current assets with leased furniture to balance cost efficiency and brand consistency.",
+            "Yes. We often blend your current assets with leased furniture to balance cost efficiency and brand consistency. This hybrid approach lets you retain investments you value, while upgrading the rest to modern, ergonomic, and scalable solutions.",
         },
         {
           question: "What lease terms do you offer?",
           answer:
-            "Standard lock-ins are 3 or 5 years, but we can create custom terms depending on your growth plans.",
+            "Our standard lock-ins are 3 or 5 years, designed to give stability while maintaining flexibility. For high-growth companies, we also create custom terms that match expansion or consolidation plans — ensuring your workspace never becomes a constraint.",
         },
         {
           question: "How do landlords benefit from veLease?",
           answer:
-            "Absolutely. We help landlords convert bare shells into plug-and-play spaces, increasing marketability and rental yield.",
+            `We help landlords convert bare shells into plug-and-play spaces. This not only accelerates occupancy but also commands higher rental yields by positioning the property as "ready-to-move-in." In effect, veLease makes buildings more marketable and competitive without landlords shouldering CapEx.`,
         },
         {
           question: "What happens if my business grows mid-lease?",
           answer:
-            "Your interiors scale with you. Furniture upgrades, reconfiguration, or additional fit-outs are all built into our model.",
+            "Your interiors scale with you. Whether it's upgrading furniture, reconfiguring layouts, or adding new fit-outs, our model ensures your workspace keeps pace with your business. Instead of starting from scratch, you simply adapt within the same lease — saving time, money, and disruption.",
         },
       ],
     },
@@ -336,7 +336,7 @@ const SolutionSingle: React.FC = () => {
                       <Link to="/">home</Link>
                     </li>
                     <li className="breadcrumb-item">
-                      <Link to="/solutions">services</Link>
+                      <Link to="/solutions">solutions</Link>
                     </li>
                     <li className="breadcrumb-item active" aria-current="page">
                       {serviceData[currentIndex].title}
@@ -371,7 +371,7 @@ const SolutionSingle: React.FC = () => {
                       (category, index) => (
                         <li key={index}>
                           <a href="#">{category}</a>
-                          <p className="">
+                          <p className="" style={{textTransform: 'none', fontSize: '14px'}}>
                             {
                               servicesSidebar[currentIndex]
                                 .serviceCategoriesDescription[index]
@@ -404,7 +404,7 @@ const SolutionSingle: React.FC = () => {
                   <div className="sidebar-cta-Body">
                     {/* Sidebar CTA Content Start */}
                     <div className="sidebar-cta-content">
-                      <h3>how can we help</h3>
+                      <h3>Still Have Questions?</h3>
                       <p>Feel free to call or drop us an email!</p>
                     </div>
                     {/* Sidebar CTA Content End */}
@@ -587,7 +587,7 @@ const SolutionSingle: React.FC = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6 }}
                     >
-                      asked question
+                      Frequently Asked Questions (FAQs)'
                     </motion.h3>
                     <motion.h2
                       className="text-anime-style-2"
@@ -596,7 +596,7 @@ const SolutionSingle: React.FC = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: 0.1 }}
                     >
-                      Have your any question look <span>here now</span>
+                      Your questions, answered <span>with clarity</span>
                     </motion.h2>
                     <motion.p
                       className="wow fadeInUp"
@@ -605,9 +605,7 @@ const SolutionSingle: React.FC = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                      Nostra turma dedicata consilium arctius operatur ut
-                      visionem tuam intelligat et eam ad vitam adducat cum magna
-                      cura in singula
+                      Our team ensures every step — from consultation to handover — is transparent, predictable, and aligned with your business goals.
                     </motion.p>
                   </div>
                   {/* Section Title End */}
