@@ -6,7 +6,7 @@ interface HowWeWorkProps {
 
 const HowWeWork: React.FC<HowWeWorkProps> = ({ imageRefs }) => {
   return (
-    <div className="how-we-work">
+    <div id="how-it-works" className="how-we-work">
       <div className="container">
         <div className="row section-row align-items-center">
           <div className="col-lg-6">

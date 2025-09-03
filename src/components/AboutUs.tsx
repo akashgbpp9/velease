@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 interface AboutUsProps {
   imageRefs: React.MutableRefObject<(HTMLElement | null)[]>;
@@ -120,9 +119,20 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                     className="about-us-content-btn wow fadeInUp"
                     data-wow-delay="0.6s"
                   >
-                    <Link to="/about" className="btn-default">
+                    <button 
+                      className="btn-default"
+                      onClick={() => {
+                        const element = document.getElementById('how-it-works');
+                        if (element) {
+                          element.scrollIntoView({ 
+                            behavior: 'smooth',
+                            block: 'start'
+                          });
+                        }
+                      }}
+                    >
                       How it Works
-                    </Link>
+                    </button>
                   </div>
                   {/* About Us Content Button End */}
                 </div>
@@ -140,6 +150,20 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                     <div className="about-contact-content">
                       <p>need any help?</p>
                       <h3>+91 989 090 7614</h3>
+                    </div>
+                  </div>
+                  {/* About Contact Item End */}
+                  {/* About Contact Item Start */}
+                  <div
+                    className="about-contact-item wow fadeInUp"
+                    data-wow-delay="0.4s"
+                  >
+                    <div className="icon-box">
+                      <i className="fa-solid fa-envelope"></i>
+                    </div>
+                    <div className="about-contact-content " >
+                      
+                      <h3 style={{ textTransform: 'lowercase' }}>sales@velease.com"</h3>
                     </div>
                   </div>
                   {/* About Contact Item End */}

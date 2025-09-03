@@ -122,8 +122,8 @@ const Hero: React.FC = () => {
                 <Link to="/about" className="btn-default">
                   Find your Workspace
                 </Link>
-                <Link to="/projects" className="btn-default btn-highlighted">
-                  View Projects
+                <Link to="/solutions" className="btn-default btn-highlighted">
+                  View Solutions
                 </Link>
               </div>
               {/* Hero Button End */}
