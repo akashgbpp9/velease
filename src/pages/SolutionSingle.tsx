@@ -299,6 +299,12 @@ const SolutionSingle: React.FC = () => {
     "furniture-as-a-service": 2,
   };
 
+  const servicesImage = [
+    "/images/service-1.jpg",
+    "/images/service-2.jpg",
+    "/images/service-3.jpg",
+  ];
+
   const currentIndex = idToIndexMap[id] || 0;
   const currentService = serviceData[currentIndex];
 
@@ -470,7 +476,7 @@ const SolutionSingle: React.FC = () => {
                   transition={{ duration: 0.6 }}
                 >
                   <figure className="image-anime reveal">
-                    <img src="/images/service-1.jpg" alt="" />
+                    <img src={servicesImage[currentIndex]} alt="" />
                   </figure>
                 </motion.div>
                 {/* Service Feature Image End */}
