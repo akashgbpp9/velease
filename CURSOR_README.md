@@ -116,7 +116,7 @@ The cursor automatically responds to these CSS classes:
 
 - `.hero` - Difference blend mode with white cursor
 - `.about-us` - Multiply blend mode
-- `.our-services` - Overlay blend mode
+- `.our-solutions` - Overlay blend mode
 - `.projects` - Soft-light blend mode
 
 ## Interactive Elements

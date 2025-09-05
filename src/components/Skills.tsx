@@ -6,12 +6,12 @@ interface SkillsProps {
 
 const Skills: React.FC<SkillsProps> = ({ imageRefs }) => {
   return (
-    <div className="our-skill">
+    <div className="our-edge">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6">
             {/* Our Skill Content Start */}
-            <div className="our-skill-content">
+            <div className="our-edge-content">
               {/* Section Title Start */}
               <div className="section-title">
                 <h3 className="wow fadeInUp">our edge</h3>
@@ -30,7 +30,7 @@ const Skills: React.FC<SkillsProps> = ({ imageRefs }) => {
               {/* Section Title End */}
 
               {/* About SkillBar Start */}
-              <div className="our-skillbar">
+              <div className="our-edgebar">
                 {/* Skills Progress Bar Start */}
                 <div className="skills-progress-bar">
                   {/* Skill Item Start */}
@@ -86,8 +86,8 @@ const Skills: React.FC<SkillsProps> = ({ imageRefs }) => {
 
           <div className="col-lg-6">
             {/* Our Skill Image Start */}
-            <div className="our-skill-image">
-              <div className="our-skill-img-1">
+            <div className="our-edge-image">
+              <div className="our-edge-img-1">
                 <figure
                   className="image-anime reveal"
                   ref={(el) => {
@@ -96,11 +96,11 @@ const Skills: React.FC<SkillsProps> = ({ imageRefs }) => {
                     }
                   }}
                 >
-                  <img src="/images/our-skill-img-1.jpg" alt="" />
+                  <img src="/images/our-edge-img-1.jpg" alt="" />
                 </figure>
               </div>
 
-              <div className="our-skill-img-2">
+              <div className="our-edge-img-2">
                 <figure
                   className="image-anime reveal"
                   ref={(el) => {
@@ -109,11 +109,11 @@ const Skills: React.FC<SkillsProps> = ({ imageRefs }) => {
                     }
                   }}
                 >
-                  <img src="/images/our-skill-img-2.jpg" alt="" />
+                  <img src="/images/our-edge-img-2.jpg" alt="" />
                 </figure>
               </div>
 
-              <div className="our-skill-img-3">
+              <div className="our-edge-img-3">
                 <figure
                   className="image-anime reveal"
                   ref={(el) => {
@@ -122,7 +122,7 @@ const Skills: React.FC<SkillsProps> = ({ imageRefs }) => {
                     }
                   }}
                 >
-                  <img src="/images/our-skill-img-3.jpg" alt="" />
+                  <img src="/images/our-edge-img-3.jpg" alt="" />
                 </figure>
               </div>
             </div>

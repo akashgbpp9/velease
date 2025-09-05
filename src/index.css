@@ -256,7 +256,7 @@ select:focus ~ .react-animated-cursor .cursor-inner {
   mix-blend-mode: multiply;
 }
 
-.our-services ~ .react-animated-cursor {
+.our-solutions ~ .react-animated-cursor {
   mix-blend-mode: overlay;
 }
 
@@ -1269,7 +1269,7 @@ header.main-header .header-sticky.active .navbar {
 /************************************/
 
 /* Services Section */
-.our-services {
+.our-solutions {
   padding: 100px 0;
 }
 
@@ -1654,7 +1654,7 @@ header.main-header .header-sticky.active .navbar {
 /************************************/
 
 /* Skills Section */
-.our-skill {
+.our-edge {
   padding: 100px 0;
   background: url("../public/images/section-bg-shape-2.svg");
   background-repeat: no-repeat;
@@ -1662,7 +1662,7 @@ header.main-header .header-sticky.active .navbar {
   background-size: contain;
 }
 
-.our-skill-content {
+.our-edge-content {
   padding-right: 50px;
 }
 
@@ -1713,55 +1713,55 @@ header.main-header .header-sticky.active .navbar {
 }
 
 /* Skills Images Layout */
-.our-skill-image {
+.our-edge-image {
   position: relative;
   padding-bottom: 155px;
   margin-left: 65px;
 }
 
-.our-skill-img-1 {
+.our-edge-img-1 {
   width: 333px;
   position: relative;
-  background: url("../public/images/our-skill-img-bg-dot.svg");
+  background: url("../public/images/our-edge-img-bg-dot.svg");
   background-repeat: no-repeat;
   background-position: top left;
   background-size: 84px auto;
   padding: 30px 0 0 30px;
 }
 
-.our-skill-img-1 figure,
-.our-skill-img-2 figure,
-.our-skill-img-3 figure {
+.our-edge-img-1 figure,
+.our-edge-img-2 figure,
+.our-edge-img-3 figure {
   display: block;
 }
 
-.our-skill-img-1 img {
+.our-edge-img-1 img {
   width: 100%;
   aspect-ratio: 1/1.37;
   object-fit: cover;
 }
 
-.our-skill-img-2 {
+.our-edge-img-2 {
   width: 202px;
   position: absolute;
   top: 70px;
   right: 0;
 }
 
-.our-skill-img-2 img {
+.our-edge-img-2 img {
   width: 100%;
   aspect-ratio: 1/0.93;
   object-fit: cover;
 }
 
-.our-skill-img-3 {
+.our-edge-img-3 {
   width: 333px;
   position: absolute;
   bottom: 0;
   right: 0;
 }
 
-.our-skill-img-3 img {
+.our-edge-img-3 img {
   width: 100%;
   aspect-ratio: 1/0.97;
   object-fit: cover;
@@ -2715,7 +2715,7 @@ header.main-header .header-sticky.active .navbar {
 /***      11. Our Skills css      ***/
 /************************************/
 
-.our-skill {
+.our-edge {
   padding: 100px 0;
   background: url("../public/images/section-bg-shape-2.svg");
   background-repeat: no-repeat;
@@ -2766,55 +2766,55 @@ header.main-header .header-sticky.active .navbar {
   border-radius: 99px;
 }
 
-.our-skill-image {
+.our-edge-image {
   position: relative;
   padding-bottom: 155px;
   margin-left: 65px;
 }
 
-.our-skill-img-1 {
+.our-edge-img-1 {
   width: 333px;
   position: relative;
-  background: url("../public/images/our-skill-img-bg-dot.svg");
+  background: url("../public/images/our-edge-img-bg-dot.svg");
   background-repeat: no-repeat;
   background-position: top left;
   background-size: 84px auto;
   padding: 30px 0 0 30px;
 }
 
-.our-skill-img-1 figure,
-.our-skill-img-2 figure,
-.our-skill-img-3 figure {
+.our-edge-img-1 figure,
+.our-edge-img-2 figure,
+.our-edge-img-3 figure {
   display: block;
 }
 
-.our-skill-img-1 img {
+.our-edge-img-1 img {
   width: 100%;
   aspect-ratio: 1/1.37;
   object-fit: cover;
 }
 
-.our-skill-img-2 {
+.our-edge-img-2 {
   width: 202px;
   position: absolute;
   top: 70px;
   right: 0;
 }
 
-.our-skill-img-2 img {
+.our-edge-img-2 img {
   width: 100%;
   aspect-ratio: 1/0.93;
   object-fit: cover;
 }
 
-.our-skill-img-3 {
+.our-edge-img-3 {
   width: 333px;
   position: absolute;
   bottom: 0;
   right: 0;
 }
 
-.our-skill-img-3 img {
+.our-edge-img-3 img {
   width: 100%;
   aspect-ratio: 1/0.97;
   object-fit: cover;
@@ -3366,7 +3366,7 @@ header.main-header .header-sticky.active .navbar {
   margin-bottom: 0;
 }
 
-.vision-mission {
+.velease-advantage {
   padding: 100px 0 12px;
   background: linear-gradient(
     180deg,
@@ -3375,7 +3375,7 @@ header.main-header .header-sticky.active .navbar {
   );
 }
 
-.vision-mission-box {
+.velease-advantage-box {
   background-color: var(--secondery-color);
   padding: 45px 60px;
   display: flex;
@@ -3383,12 +3383,12 @@ header.main-header .header-sticky.active .navbar {
   gap: 30px 150px;
 }
 
-.vision-mission-item {
+.velease-advantage-item {
   position: relative;
   width: calc(50% - 75px);
 }
 
-.vision-mission-item::before {
+.velease-advantage-item::before {
   content: "";
   position: absolute;
   height: 100%;
@@ -3400,12 +3400,12 @@ header.main-header .header-sticky.active .navbar {
   z-index: 1;
 }
 
-.vision-mission-item:nth-child(2n + 2)::before,
-.vision-mission-item:last-child::before {
+.velease-advantage-item:nth-child(2n + 2)::before,
+.velease-advantage-item:last-child::before {
   display: none;
 }
 
-.vision-mission-item .icon-box {
+.velease-advantage-item .icon-box {
   position: relative;
   width: 95px;
   height: 95px;
@@ -3417,7 +3417,7 @@ header.main-header .header-sticky.active .navbar {
   margin-bottom: 20px;
 }
 
-.vision-mission-item .icon-box:before {
+.velease-advantage-item .icon-box:before {
   content: "";
   display: block;
   position: absolute;
@@ -3432,28 +3432,28 @@ header.main-header .header-sticky.active .navbar {
   z-index: 0;
 }
 
-.vision-mission-item:hover .icon-box:before {
+.velease-advantage-item:hover .icon-box:before {
   transform: scale(1);
 }
 
-.vision-mission-item .icon-box img {
+.velease-advantage-item .icon-box img {
   position: relative;
   max-width: 36px;
   z-index: 1;
   transition: all 0.4s ease-in-out;
 }
 
-.vision-mission-item:hover .icon-box img {
+.velease-advantage-item:hover .icon-box img {
   filter: brightness(0) invert(1);
 }
 
-.vision-mission-content h3 {
+.velease-advantage-content h3 {
   font-size: 20px;
   text-transform: capitalize;
   margin-bottom: 20px;
 }
 
-.vision-mission-content p {
+.velease-advantage-content p {
   margin: 0;
 }
 
@@ -3654,9 +3654,9 @@ header.main-header .header-sticky.active .navbar {
 .faq-accordion .accordion-item .accordion-button::after,
 .faq-accordion .accordion-item .accordion-button.collapsed::after {
   content: "\2b";
-  font-family: "Font Awesome 6 Free";
+  font-family: "FontAwesome";
   position: absolute;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 900;
   color: var(--primary-color);
   text-align: right;
@@ -4896,7 +4896,7 @@ header.main-header .header-sticky.active .navbar {
     margin-left: 0;
   }
 
-  .our-services {
+  .our-solutions {
     padding: 50px 0;
   }
 
@@ -4988,11 +4988,11 @@ header.main-header .header-sticky.active .navbar {
     font-size: 14px;
   }
 
-  .our-skill {
+  .our-edge {
     padding: 50px 0;
   }
 
-  .our-skill-content {
+  .our-edge-content {
     margin-bottom: 30px;
   }
 
@@ -5000,40 +5000,40 @@ header.main-header .header-sticky.active .navbar {
     margin-bottom: 30px;
   }
 
-  .our-skill-image {
+  .our-edge-image {
     max-width: 555px;
     margin: 0 auto;
   }
 
-  .our-skill-img-1 {
+  .our-edge-img-1 {
     width: 250px;
     padding: 20px 0 0 20px;
   }
 
-  .our-skill-img-2 {
+  .our-edge-img-2 {
     width: 150px;
     top: 50px;
   }
 
-  .our-skill-img-3 {
+  .our-edge-img-3 {
     width: 250px;
   }
 
-  .our-skill-image {
+  .our-edge-image {
     padding-bottom: 83px;
   }
 
-  .our-skill-img-1 {
+  .our-edge-img-1 {
     width: 200px;
     padding: 20px 0 0 20px;
   }
 
-  .our-skill-img-2 {
+  .our-edge-img-2 {
     width: 130px;
     top: 20px;
   }
 
-  .our-skill-img-3 {
+  .our-edge-img-3 {
     width: 200px;
   }
 
@@ -5247,33 +5247,33 @@ header.main-header .header-sticky.active .navbar {
     font-size: 18px;
   }
 
-  .vision-mission {
+  .velease-advantage {
     padding: 50px 0 25px;
   }
 
-  .vision-mission-box {
+  .velease-advantage-box {
     padding: 30px 15px;
     gap: 30px 40px;
   }
 
-  .vision-mission-item {
+  .velease-advantage-item {
     width: calc(50% - 20px);
   }
 
-  .vision-mission-item::before {
+  .velease-advantage-item::before {
     right: -20px;
   }
 
-  .vision-mission-item .icon-box {
+  .velease-advantage-item .icon-box {
     width: 70px;
     height: 70px;
   }
 
-  .vision-mission-item .icon-box img {
+  .velease-advantage-item .icon-box img {
     max-width: 30px;
   }
 
-  .vision-mission-content h3 {
+  .velease-advantage-content h3 {
     margin-bottom: 15px;
   }
 
@@ -5792,21 +5792,21 @@ header.main-header .header-sticky.active .navbar {
     gap: 15px;
   }
 
-  .our-skill-image {
+  .our-edge-image {
     padding-bottom: 83px;
   }
 
-  .our-skill-img-1 {
+  .our-edge-img-1 {
     width: 200px;
     padding: 20px 0 0 20px;
   }
 
-  .our-skill-img-2 {
+  .our-edge-img-2 {
     width: 130px;
     top: 20px;
   }
 
-  .our-skill-img-3 {
+  .our-edge-img-3 {
     width: 200px;
   }
 
@@ -5888,7 +5888,7 @@ header.main-header .header-sticky.active .navbar {
     width: 100%;
   }
 
-  .vision-mission {
+  .velease-advantage {
     background: linear-gradient(
       180deg,
       var(--primary-color) 40%,
@@ -5896,16 +5896,16 @@ header.main-header .header-sticky.active .navbar {
     );
   }
 
-  .vision-mission-box {
+  .velease-advantage-box {
     padding: 20px;
     gap: 40px;
   }
 
-  .vision-mission-item {
+  .velease-advantage-item {
     width: 100%;
   }
 
-  .vision-mission-item::before {
+  .velease-advantage-item::before {
     height: 1px;
     width: 100%;
     top: auto;
@@ -5913,15 +5913,15 @@ header.main-header .header-sticky.active .navbar {
     bottom: -20px;
   }
 
-  .vision-mission-item:nth-child(2n + 2)::before {
+  .velease-advantage-item:nth-child(2n + 2)::before {
     display: block;
   }
 
-  .vision-mission-item:last-child::before {
+  .velease-advantage-item:last-child::before {
     display: none;
   }
 
-  .vision-mission-content h3 {
+  .velease-advantage-content h3 {
     font-size: 18px;
   }
 

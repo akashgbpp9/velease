@@ -72,7 +72,7 @@ const AdvancedAnimatedCursor: React.FC = () => {
       }
 
       // Services section - overlay blend mode
-      else if (target.closest(".our-services")) {
+      else if (target.closest(".our-solutions")) {
         newState = {
           ...newState,
 

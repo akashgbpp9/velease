@@ -7,7 +7,7 @@ interface AdvantagesProps {
 export const Advantages: React.FC<AdvantagesProps> = ({ imageRefs }) => {
   return (
     <>
-      <div className="vision-mission">
+      <div className="velease-advantage">
         <div className="container">
           <div className="row section-row align-items-center">
             <div className="col-lg-6">
@@ -38,9 +38,9 @@ export const Advantages: React.FC<AdvantagesProps> = ({ imageRefs }) => {
           <div className="row">
             <div className="col-lg-12">
               {/* Vision Mission Box Start */}
-              <div className="vision-mission-box">
+              <div className="velease-advantage-box">
                 {/* Vision Mission Item Start */}
-                <div className="vision-mission-item wow fadeInUp">
+                <div className="velease-advantage-item wow fadeInUp">
                   <div
                     className="icon-box"
                     ref={(el) => {
@@ -52,7 +52,7 @@ export const Advantages: React.FC<AdvantagesProps> = ({ imageRefs }) => {
                       alt="Financial Freedom Icon"
                     />
                   </div>
-                  <div className="vision-mission-content">
+                  <div className="velease-advantage-content">
                     <h3>financial freedom</h3>
                     <p>
                       Our approach is rooted in the belief that your capital
@@ -69,7 +69,7 @@ export const Advantages: React.FC<AdvantagesProps> = ({ imageRefs }) => {
 
                 {/* Vision Mission Item Start */}
                 <div
-                  className="vision-mission-item wow fadeInUp"
+                  className="velease-advantage-item wow fadeInUp"
                   data-wow-delay="0.2s"
                 >
                   <div
@@ -83,7 +83,7 @@ export const Advantages: React.FC<AdvantagesProps> = ({ imageRefs }) => {
                       alt="Asset-Backed Interiors Icon"
                     />
                   </div>
-                  <div className="vision-mission-content">
+                  <div className="velease-advantage-content">
                     <h3>asset-backed interiors</h3>
                     <p>
                       Unlike traditional fit-outs, veLease retains ownership of

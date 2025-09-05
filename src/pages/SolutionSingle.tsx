@@ -603,7 +603,8 @@ const SolutionSingle: React.FC = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6 }}
                     >
-                      Frequently Asked Questions (FAQs)'
+                      Frequently Asked Questions{" "}
+                      <span style={{ textTransform: "none" }}>(FAQs)</span>'
                     </motion.h3>
                     <motion.h2
                       className="text-anime-style-2"

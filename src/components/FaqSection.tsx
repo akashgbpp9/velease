@@ -15,7 +15,8 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ imageRefs }) => {
               {/* Section Title Start */}
               <div className="section-title">
                 <h3 className="wow fadeInUp">
-                Frequently Asked Questions (FAQs)
+                  Frequently Asked Questions{" "}
+                  <span style={{ textTransform: "none" }}>(FAQs)</span>
                 </h3>
                 <h2 className="text-anime-style-2" data-cursor="-opaque">
                   Got questions? <span>We've got answers!</span>

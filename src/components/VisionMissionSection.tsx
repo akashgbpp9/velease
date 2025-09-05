@@ -6,7 +6,7 @@ interface AdvantagesProps {
 const VisionMissionSection: React.FC<AdvantagesProps> = ({ imageRefs }) => {
   return (
     <>
-      <div className="vision-mission">
+      <div className="velease-advantage">
         <div className="container">
           <div className="row section-row align-items-center">
             <div className="col-lg-6">
@@ -35,9 +35,9 @@ const VisionMissionSection: React.FC<AdvantagesProps> = ({ imageRefs }) => {
           <div className="row">
             <div className="col-lg-12">
               {/* Vision Mission Box Start */}
-              <div className="vision-mission-box">
+              <div className="velease-advantage-box">
                 {/* Vision Mission Item Start */}
-                <div className="vision-mission-item wow fadeInUp">
+                <div className="velease-advantage-item wow fadeInUp">
                   <div
                     className="icon-box"
                     ref={(el) => {
@@ -49,7 +49,7 @@ const VisionMissionSection: React.FC<AdvantagesProps> = ({ imageRefs }) => {
                       alt="Financial Freedom Icon"
                     />
                   </div>
-                  <div className="vision-mission-content">
+                  <div className="velease-advantage-content">
                     <h3>Our Vision</h3>
                     <p>
                       Our vision is to redefine office interiors as strategic
@@ -63,7 +63,7 @@ const VisionMissionSection: React.FC<AdvantagesProps> = ({ imageRefs }) => {
 
                 {/* Vision Mission Item Start */}
                 <div
-                  className="vision-mission-item wow fadeInUp"
+                  className="velease-advantage-item wow fadeInUp"
                   data-wow-delay="0.2s"
                 >
                   <div
@@ -77,7 +77,7 @@ const VisionMissionSection: React.FC<AdvantagesProps> = ({ imageRefs }) => {
                       alt="Asset-Backed Interiors Icon"
                     />
                   </div>
-                  <div className="vision-mission-content">
+                  <div className="velease-advantage-content">
                     <h3>Our Mission</h3>
                     <p>
                       Our mission is to deliver world-class, plug-and-play
