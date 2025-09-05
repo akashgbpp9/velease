@@ -7,6 +7,10 @@ const Hero: React.FC = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
 
+  // Background image slider state
+  const [currentBgIndex, setCurrentBgIndex] = useState(0);
+  const backgroundImages = ["/images/hero-bg-1.jpg", "/images/hero-bg-2.jpg"];
+
   const phrases = useMemo(
     () => ["Here", "OpEx > CapEx", "Scalable Interiors", "Unrestricted Growth"],
     []
@@ -86,6 +90,17 @@ const Hero: React.FC = () => {
     }
   }, [currentText, currentPhraseIndex, isDeleting, getTypingSpeed, phrases]);
 
+  // Background image slider effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentBgIndex(
+        (prevIndex) => (prevIndex + 1) % backgroundImages.length
+      );
+    }, 5000); // Change background every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [backgroundImages.length]);
+
   // Smooth scroll function
   const scrollToContact = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -104,7 +119,13 @@ const Hero: React.FC = () => {
   return (
     <div
       className="hero parallaxie"
-      style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
+      style={{
+        backgroundImage: `url('${backgroundImages[currentBgIndex]}')`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center center",
+        backgroundSize: "cover",
+        transition: "background-image 1s ease-in-out",
+      }}
     >
       <div className="container">
         <div className="row align-items-center">

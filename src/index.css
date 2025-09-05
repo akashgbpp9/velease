@@ -749,7 +749,6 @@ header.main-header .header-sticky.active .navbar {
 /* Hero Section */
 .hero {
   position: relative;
-  background: url("../public/images/hero-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

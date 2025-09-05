@@ -23,11 +23,11 @@ const SEO: React.FC<SEOProps> = ({
   canonical,
   ogTitle,
   ogDescription,
-  ogImage = "/images/hero-bg.jpg",
+  ogImage = "/images/hero-bg-1.jpg",
   ogUrl,
   twitterTitle,
   twitterDescription,
-  twitterImage = "/images/hero-bg.jpg",
+  twitterImage = "/images/hero-bg-1.jpg",
   noIndex = false,
 }) => {
   const siteUrl = "https://velease.com";
