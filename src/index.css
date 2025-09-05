@@ -743,7 +743,72 @@ header.main-header .header-sticky.active .navbar {
 }
 
 /************************************/
-/*** 	   04. Hero css		  ***/
+/*** 	   04. Quote Section css	  ***/
+/************************************/
+
+/* Quote Section */
+.quote-section {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+.quote-content {
+  position: relative;
+  z-index: 2;
+}
+
+.quote-section blockquote {
+  background: url("../public/images/icon-blockquote.svg"), var(--accent-color);
+  background-repeat: no-repeat;
+  background-position: 35px 30px;
+  background-size: 58px;
+  border-radius: 0;
+  padding: 30px 30px 30px 100px;
+  margin-bottom: 30px;
+  border: none;
+  font-style: italic;
+}
+
+.quote-section blockquote p {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4em;
+  color: var(--white-color);
+  margin-bottom: 20px;
+}
+
+.quote-section blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.quote-section blockquote cite {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--white-color);
+  font-style: normal;
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .quote-section {
+    padding: 60px 0;
+  }
+
+  .quote-section blockquote {
+    padding: 20px 20px 20px 80px;
+    background-position: 25px 25px;
+    background-size: 45px;
+  }
+
+  .quote-section blockquote p {
+    font-size: 18px;
+  }
+}
+
+/************************************/
+/*** 	   05. Hero css		  ***/
 /************************************/
 
 /* Hero Section */

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import {
   Hero,
+  QuoteSection,
   AboutUs,
   WhyChooseUs,
   Services,
@@ -149,6 +150,7 @@ const Home: React.FC = () => {
         canonical="/"
       />
       <Hero />
+      <QuoteSection />
       <AboutUs imageRefs={imageRefs} counterRefs={counterRefs} />
       <Services />
       <WhyChooseUs imageRefs={imageRefs} />

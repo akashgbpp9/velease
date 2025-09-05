@@ -119,14 +119,14 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                     className="about-us-content-btn wow fadeInUp"
                     data-wow-delay="0.6s"
                   >
-                    <button 
+                    <button
                       className="btn-default"
                       onClick={() => {
-                        const element = document.getElementById('how-it-works');
+                        const element = document.getElementById("how-it-works");
                         if (element) {
-                          element.scrollIntoView({ 
-                            behavior: 'smooth',
-                            block: 'start'
+                          element.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
                           });
                         }
                       }}
@@ -161,9 +161,10 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                     <div className="icon-box">
                       <i className="fa-solid fa-envelope"></i>
                     </div>
-                    <div className="about-contact-content " >
-                      
-                      <h3 style={{ textTransform: 'lowercase' }}>sales@velease.com"</h3>
+                    <div className="about-contact-content ">
+                      <h3 style={{ textTransform: "lowercase" }}>
+                        sales@velease.com
+                      </h3>
                     </div>
                   </div>
                   {/* About Contact Item End */}
