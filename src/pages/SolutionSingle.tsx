@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import SEO from "../components/SEO";
+import { ContactForm } from "../components";
 
 const SolutionSingle: React.FC = () => {
   const { id } = useParams() as {
@@ -126,39 +127,39 @@ const SolutionSingle: React.FC = () => {
         "From concept sketches to final handover, veLease provides a unified design-build service that eliminates delays, reduces cost overruns, and guarantees quality.",
       faqs: [
         {
-          question:
-            "How does veLease differ from a traditional interiors company?",
+          question: "How is veLease different from traditional contractors?",
           answer:
-            "Traditional firms demand heavy upfront CapEx, often locking businesses into inflexible assets. veLease transforms interiors into an OpEx model — you pay a predictable monthly rent instead of draining capital. This preserves cash for core business priorities while still giving you a premium workspace that evolves as you grow.",
+            "Traditional contractors focus only on building. veLease integrates design, execution, and financing under one roof, meaning you don't juggle multiple agencies or vendors. This unified approach reduces miscommunication, accelerates timelines, and ensures your budget is managed holistically—delivering consistency and cost-efficiency from start to finish.",
         },
         {
-          question: "What is the typical process for starting a project?",
+          question: "How long does a build take?",
           answer:
-            "We begin with a consultation to understand your culture, headcount plans, and business goals. From there, we provide test fits and 3D concepts that show how your future office will look and function. Finally, we structure a tailored lease model — covering furniture, fit-out, and ongoing support — before moving into execution.",
+            "Project timelines vary with scope and complexity. Standard office builds are typically delivered in 6–12 weeks, while larger or highly customized projects may take longer due to approvals, material sourcing, or advanced design elements. Regardless of scale, we use a structured project management approach to keep you updated and minimize delays.",
         },
         {
-          question: "How long does it take to deliver a workspace?",
+          question: "Can you integrate my own vendors or furniture?",
           answer:
-            "Depending on the scope, we can hand over fully functional offices in as little as 6–10 weeks. Because our model integrates design, financing, and execution under one roof, timelines are shorter and you avoid the delays common in piecemeal vendor approaches.",
+            "Yes. veLease operates on a collaborative model. If you already have preferred vendors, legacy furniture, or specialized suppliers, we can seamlessly incorporate them into the project plan. This allows you to retain continuity, reduce costs, and maintain brand familiarity while still benefiting from our design and execution expertise.",
         },
         {
-          question: "Can my existing furniture be integrated?",
+          question: "Do you handle compliance and building approvals?",
           answer:
-            "Yes. We often blend your current assets with leased furniture to balance cost efficiency and brand consistency. This hybrid approach lets you retain investments you value, while upgrading the rest to modern, ergonomic, and scalable solutions.",
+            "Absolutely. Compliance is one of our core strengths. We manage MEP (mechanical, electrical, plumbing), fire safety certifications, and all regulatory approvals required by local authorities. Our goal is to ensure your workspace isn't just beautiful but also safe, compliant, and hassle-free from a legal standpoint.",
         },
         {
-          question: "What lease terms do you offer?",
+          question: "What happens if my scope changes mid-project?",
           answer:
-            "Our standard lock-ins are 3 or 5 years, designed to give stability while maintaining flexibility. For high-growth companies, we also create custom terms that match expansion or consolidation plans — ensuring your workspace never becomes a constraint.",
+            "Business needs evolve, and our modular execution model is built for that. Whether it's expanding the floor plan, upgrading finishes, or adjusting layouts, we re-align resources and workflows without derailing your overall timelines or budget expectations. Flexibility is built into our DNA.",
         },
         {
-          question: "How do landlords benefit from veLease?",
-          answer: `We help landlords convert bare shells into plug-and-play spaces. This not only accelerates occupancy but also commands higher rental yields by positioning the property as "ready-to-move-in." In effect, veLease makes buildings more marketable and competitive without landlords shouldering CapEx.`,
+          question: "How do you ensure quality during execution?",
+          answer:
+            "We set strict standards for every vendor and material partner we work with. Multiple quality checks are conducted at each stage, from structural work to finishing. Alongside this, clients receive transparent progress reports, ensuring that every element delivered meets world-class benchmarks and aligns with your brand vision.",
         },
         {
-          question: "What happens if my business grows mid-lease?",
+          question: "Can you handle multi-location office projects?",
           answer:
-            "Your interiors scale with you. Whether it's upgrading furniture, reconfiguring layouts, or adding new fit-outs, our model ensures your workspace keeps pace with your business. Instead of starting from scratch, you simply adapt within the same lease — saving time, money, and disruption.",
+            "Yes. veLease is equipped to deliver projects across multiple cities. We standardize design guidelines, material sourcing, and quality benchmarks to ensure consistency in branding and execution—so whether it's two offices or twenty, your company enjoys the same look, feel, and delivery standards everywhere.",
         },
       ],
     },
@@ -682,6 +683,7 @@ const SolutionSingle: React.FC = () => {
         </div>
       </div>
       {/* Page Service Single End */}
+      <ContactForm />
     </>
   );
 };
