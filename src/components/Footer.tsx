@@ -100,17 +100,26 @@ const Footer: React.FC = () => {
               <h3>Solutions</h3>
               <ul>
                 <li>
-                  <Link to="/solutions/office-interiors-consultation" onClick={scrollToTop}>
+                  <Link
+                    to="/solutions/office-interiors-consultation"
+                    onClick={scrollToTop}
+                  >
                     Office Interiors Consultation
                   </Link>
                 </li>
                 <li>
-                  <Link to="/solutions/design-and-build-execution" onClick={scrollToTop}>
+                  <Link
+                    to="/solutions/design-and-build-execution"
+                    onClick={scrollToTop}
+                  >
                     Design & Build Execution
                   </Link>
                 </li>
                 <li>
-                  <Link to="/solutions/furniture-as-a-service" onClick={scrollToTop}>
+                  <Link
+                    to="/solutions/furniture-as-a-service"
+                    onClick={scrollToTop}
+                  >
                     Furniture-as-a-Service (FaaS)
                   </Link>
                 </li>
@@ -160,7 +169,8 @@ const Footer: React.FC = () => {
                 </div>
                 <div className="footer-contact-content">
                   <p>
-                    101-B, Gamma-1, Giga Space IT Park, Viman Nagar, Pune, India
+                    Pune Experience Center <br /> 101-B, Gamma-1, Giga Space IT
+                    Park, Viman Nagar, Pune, India
                   </p>
                 </div>
               </div>
