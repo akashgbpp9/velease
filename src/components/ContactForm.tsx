@@ -38,8 +38,8 @@ const ContactForm = () => {
             </h2>
             <p className="wow fadeInUp" data-wow-delay="0.2s">
               Unlock premium interiors without the upfront drain. One partner,
-              one predictable lease, endless possibilities for growth. Let’s
-              create your future workspace today.
+              one predictable lease, endless possibilities for growth.
+              <br /> Let’s create your future workspace today.
             </p>
           </div>
           {/* Section Title End */}
