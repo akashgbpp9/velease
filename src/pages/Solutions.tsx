@@ -10,7 +10,7 @@ import {
   Lightbulb,
 } from "lucide-react";
 import WhyChooseUs from "../components/WhyChooseUs";
-import { ContactForm } from "../components";
+import { ContactForm, HowWeWork, OurEdge } from "../components";
 import SEO from "../components/SEO";
 
 const Services: React.FC = () => {
@@ -48,8 +48,7 @@ const Services: React.FC = () => {
       <div
         className="page-header parallaxie"
         style={{
-          backgroundImage:
-            "url(https://html.awaikenthemes.com/inspaire/images/page-header-bg.jpg)",
+          backgroundImage: "url(/images/solution-hero-bg.jpg)",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundAttachment: "fixed",
@@ -90,7 +89,10 @@ const Services: React.FC = () => {
               <div className="service-item">
                 {/* Service Image Start */}
                 <div className="service-image">
-                  <a href="/solutions/office-interiors-consultation" data-cursor-text="View">
+                  <a
+                    href="/solutions/office-interiors-consultation"
+                    data-cursor-text="View"
+                  >
                     <figure>
                       <img
                         src="images/service-1.jpg"
@@ -112,7 +114,9 @@ const Services: React.FC = () => {
                 {/* Service Content Start */}
                 <div className="service-content">
                   <h3>
-                    <a href="/solutions/office-interiors-consultation">Office Interiors Consultation</a>
+                    <a href="/solutions/office-interiors-consultation">
+                      Office Interiors Consultation
+                    </a>
                   </h3>
                   <p>
                     We design offices aligned to business goals, offering smart
@@ -129,7 +133,10 @@ const Services: React.FC = () => {
               <div className="service-item">
                 {/* Service Image Start */}
                 <div className="service-image">
-                  <a href="/solutions/design-and-build-execution" data-cursor-text="View">
+                  <a
+                    href="/solutions/design-and-build-execution"
+                    data-cursor-text="View"
+                  >
                     <figure>
                       <img
                         src="images/service-2.jpg"
@@ -151,7 +158,9 @@ const Services: React.FC = () => {
                 {/* Service Content Start */}
                 <div className="service-content">
                   <h3>
-                    <a href="/solutions/design-and-build-execution">Design & Build Execution</a>
+                    <a href="/solutions/design-and-build-execution">
+                      Design & Build Execution
+                    </a>
                   </h3>
                   <p>
                     From design to fit-out and furnishing, we handle it
@@ -168,7 +177,10 @@ const Services: React.FC = () => {
               <div className="service-item">
                 {/* Service Image Start */}
                 <div className="service-image">
-                  <a href="/solutions/furniture-as-a-service" data-cursor-text="View">
+                  <a
+                    href="/solutions/furniture-as-a-service"
+                    data-cursor-text="View"
+                  >
                     <figure>
                       <img
                         src="images/service-3.jpg"
@@ -190,7 +202,9 @@ const Services: React.FC = () => {
                 {/* Service Content Start */}
                 <div className="service-content">
                   <h3>
-                    <a href="/solutions/furniture-as-a-service">Furniture-as-a-Service (FaaS)</a>
+                    <a href="/solutions/furniture-as-a-service">
+                      Furniture-as-a-Service (FaaS)
+                    </a>
                   </h3>
                   <p>
                     Lease premium furniture & interiors—no upfront cost. Monthly
@@ -207,7 +221,8 @@ const Services: React.FC = () => {
 
       {/* Process Section */}
       <WhyChooseUs imageRefs={imageRefs} />
-
+      <HowWeWork imageRefs={imageRefs} />
+      <OurEdge />
       {/* CTA Section */}
       <ContactForm />
     </div>

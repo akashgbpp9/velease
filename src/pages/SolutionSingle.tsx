@@ -546,7 +546,7 @@ const SolutionSingle: React.FC = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: 0.1 }}
                     >
-                      A smarter look at how <span>we work</span>
+                      A smarter look at how <span>we work.</span>
                     </motion.h2>
                     <motion.p
                       className="wow fadeInUp"
@@ -604,7 +604,7 @@ const SolutionSingle: React.FC = () => {
                       transition={{ duration: 0.6 }}
                     >
                       Frequently Asked Questions{" "}
-                      <span style={{ textTransform: "none" }}>(FAQs)</span>'
+                      <span style={{ textTransform: "none" }}>(FAQs)</span>
                     </motion.h3>
                     <motion.h2
                       className="text-anime-style-2"
@@ -613,7 +613,7 @@ const SolutionSingle: React.FC = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: 0.1 }}
                     >
-                      Your questions, answered <span>with clarity</span>
+                      Your questions, answered <span>with clarity.</span>
                     </motion.h2>
                     <motion.p
                       className="wow fadeInUp"

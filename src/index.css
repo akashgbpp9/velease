@@ -3730,6 +3730,9 @@ header.main-header .header-sticky.active .navbar {
 .page-service-single {
   padding: 100px 0;
 }
+.page-service-single p {
+  font-size: 18px;
+}
 
 .service-sidebar {
   position: sticky;
