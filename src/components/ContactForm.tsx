@@ -26,7 +26,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="page-contact-us">
+    <div className="page-contact-us" id="contact-us">
       <div className="container">
         <div className="contact-us-form">
           {/* Section Title Start */}

@@ -86,6 +86,21 @@ const Hero: React.FC = () => {
     }
   }, [currentText, currentPhraseIndex, isDeleting, getTypingSpeed, phrases]);
 
+  // Smooth scroll function
+  const scrollToContact = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>) => {
+      e.preventDefault();
+      const contactSection = document.getElementById("contact-us");
+      if (contactSection) {
+        contactSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    },
+    []
+  );
+
   return (
     <div
       className="hero parallaxie"
@@ -119,9 +134,13 @@ const Hero: React.FC = () => {
 
               {/* Hero Button Start */}
               <div className="hero-btn wow fadeInUp" data-wow-delay="0.4s">
-                <Link to="/about" className="btn-default">
+                <a
+                  href="#contact-us"
+                  className="btn-default"
+                  onClick={scrollToContact}
+                >
                   Find your Workspace
-                </Link>
+                </a>
                 <Link to="/solutions" className="btn-default btn-highlighted">
                   View Solutions
                 </Link>
