@@ -1,12 +1,19 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
+import SEO from "../components/SEO";
 
 const BlogSingle: React.FC = () => {
   const { id } = useParams();
 
   return (
     <div className="blog-single-page pt-20">
+      <SEO
+        title={`Blog Post ${id} | Office Interior Design | veLease`}
+        description="Read our latest blog post about office interior design, workspace trends, and flexible leasing solutions in Pune."
+        keywords="office interior design blog, workspace trends, office design insights, veLease blog post"
+        canonical={`/blog/${id}`}
+      />
       <div className="container mx-auto px-4 py-20">
         <motion.div
           className="text-center"

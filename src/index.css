@@ -279,6 +279,7 @@ select:focus ~ .react-animated-cursor .cursor-inner {
 
 .section-title-content p {
   margin: 0;
+  font-size: 18px;
 }
 
 .project-image:hover ~ .react-animated-cursor .cursor-outer {
@@ -724,7 +725,7 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .section-title p {
-  font-size: 22px;
+  font-size: 18px;
   color: var(--text);
   line-height: 1.6;
 }
@@ -785,7 +786,7 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .hero-content .section-title p {
-  font-size: 22px;
+  font-size: 18px;
   color: var(--white-color);
   width: 100%;
   max-width: 600px;
@@ -4710,6 +4711,9 @@ header.main-header .header-sticky.active .navbar {
     margin-left: 0;
     margin-top: 15px;
   }
+  .section-title-content p {
+    font-size: 18px;
+  }
 
   .section-btn {
     text-align: left;
@@ -4733,6 +4737,7 @@ header.main-header .header-sticky.active .navbar {
   }
 
   .section-title p {
+    font-size: 18px;
     margin-top: 15px;
   }
 
@@ -4753,7 +4758,7 @@ header.main-header .header-sticky.active .navbar {
   }
 
   .hero-content .section-title p {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .about-us {

@@ -1,9 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
+import SEO from "../components/SEO";
 
 const ImageGallery: React.FC = () => {
   return (
     <div className="image-gallery-page pt-20">
+      <SEO
+        title="Office Interior Design Gallery | veLease Pune"
+        description="Browse our gallery of office interior design projects in Pune. See stunning workspace transformations and modern office designs by veLease."
+        keywords="office interior design gallery, workspace photos, office design images, veLease gallery, Pune office interiors"
+        canonical="/gallery"
+      />
       <div className="container mx-auto px-4 py-20">
         <motion.div
           className="text-center"

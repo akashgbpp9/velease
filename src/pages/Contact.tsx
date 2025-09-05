@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
 import PageHeader from "../components/PageHeader";
+import SEO from "../components/SEO";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -28,6 +29,12 @@ const Contact: React.FC = () => {
 
   return (
     <div className="contact-page">
+      <SEO
+        title="Contact veLease - Office Interior Design in Pune"
+        description="Get in touch with veLease for office interior design services in Pune. Contact us for consultation, design, and flexible leasing solutions for your workspace."
+        keywords="contact veLease, office interior design contact, Pune, workspace consultation, get quote, office design inquiry"
+        canonical="/contact"
+      />
       {/* Page Header */}
       <PageHeader
         title="Contact us"

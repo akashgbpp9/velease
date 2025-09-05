@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "veLease",
+  "name": "veLease - Office Interior Design in Pune",
+  "description": "Discover modern office interior design in Pune with veLease. We transform bare shells into plug-and-play workspaces with flexible leasing and no upfront cost.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#192324",
   "background_color": "#ffffff"
 }

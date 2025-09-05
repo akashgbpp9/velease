@@ -1,9 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
+import SEO from "../components/SEO";
 
 const Blog: React.FC = () => {
   return (
     <div className="blog-page pt-20">
+      <SEO
+        title="Office Interior Design Blog | veLease Insights"
+        description="Read the latest insights on office interior design, workspace trends, and flexible leasing solutions from veLease experts in Pune."
+        keywords="office interior design blog, workspace trends, office design insights, veLease blog, workplace design tips"
+        canonical="/blog"
+      />
       <div className="container mx-auto px-4 py-20">
         <motion.div
           className="text-center"

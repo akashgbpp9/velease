@@ -2,10 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Home, ArrowLeft } from "lucide-react";
+import SEO from "../components/SEO";
 
 const NotFound: React.FC = () => {
   return (
     <div className="not-found-page pt-20 min-h-screen bg-secondary flex items-center">
+      <SEO
+        title="Page Not Found | veLease"
+        description="The page you're looking for doesn't exist. Return to veLease for office interior design services in Pune."
+        noIndex={true}
+      />
       <div className="container mx-auto px-4 text-center">
         <motion.div
           className="max-w-2xl mx-auto"

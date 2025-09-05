@@ -10,6 +10,7 @@ import {
   Testimonials,
   HowWeWork,
 } from "../components";
+import SEO from "../components/SEO";
 
 const About: React.FC = () => {
   const breadcrumbs = [
@@ -78,6 +79,12 @@ const About: React.FC = () => {
   }, []);
   return (
     <div className="about-page">
+      <SEO
+        title="About veLease - Office Interior Design Company in Pune"
+        description="Learn about veLease, Pune's leading office interior design company. We specialize in flexible leasing solutions, transforming workspaces with modern design and furniture-as-a-service."
+        keywords="about veLease, office interior design company, Pune, workspace transformation, team, mission, vision, company history"
+        canonical="/about"
+      />
       {/* Page Header */}
       <PageHeader
         title="About us"

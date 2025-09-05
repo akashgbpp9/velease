@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import WhyChooseUs from "../components/WhyChooseUs";
 import { ContactForm } from "../components";
+import SEO from "../components/SEO";
 
 const Services: React.FC = () => {
   const imageRefs = useRef<(HTMLElement | null)[]>([]);
@@ -37,6 +38,12 @@ const Services: React.FC = () => {
 
   return (
     <div className="services-page pt-20">
+      <SEO
+        title="Office Interior Solutions in Pune | veLease Services"
+        description="Explore veLease's comprehensive office interior solutions in Pune. From consultation and design to furniture-as-a-service, we provide complete workspace transformation services."
+        keywords="office interior solutions, Pune, workspace consultation, design and build, furniture as a service, office fit-out, workspace transformation"
+        canonical="/solutions"
+      />
       {/* Page Header */}
       <div
         className="page-header parallaxie"
