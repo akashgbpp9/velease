@@ -27,3 +27,4 @@ export { default as Gallery } from "./Gallery";
 export { default as ContactForm } from "./ContactForm";
 export { default as QuoteSection } from "./QuoteSection";
 export { default as SEO } from "./SEO";
+export { default as NumbersThatMatter } from "./NumbersThatMatter";

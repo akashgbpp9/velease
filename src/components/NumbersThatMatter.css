@@ -1,0 +1,182 @@
+.numbers-that-matter-section {
+  padding-top: 80px;
+  padding-bottom: 40px;
+  background: #f7f7f7;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  /* sizing variables used to align labels with value rows */
+  --ntm-head-h: 56px; /* header block height (increases on smaller screens) */
+  --ntm-gap: 24px;    /* vertical gap between header and first value row */
+  --ntm-card-h: 92px; /* card min-height */
+
+}
+
+.numbers-that-matter-section .section-title .sub-heading {
+  font-size: 34px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 16px;
+}
+
+.numbers-that-matter-section .section-title .copy {
+  max-width: 1080px;
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #6b7280;
+}
+
+/* Grid */
+.ntm-grid {
+  display: grid;
+  grid-template-columns: minmax(110px, 180px) repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+  align-items: stretch;
+  max-width: 100%;
+  padding-inline: 15px;
+  position: relative;
+}
+
+.ntm-labels {
+  display: grid;
+  grid-template-rows: var(--ntm-head-h) var(--ntm-card-h) var(--ntm-card-h);
+  /* gap: 24px; */
+  align-items: center;
+  width: 300px;
+
+}
+
+.ntm-label {
+  font-size: 28px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.ntm-label-head {
+  /* background: #7e8781; */
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  /* border-radius: 6px 6px 0 0; */
+  text-transform: none;
+}
+
+
+.ntm-label.capex { color: #f04848; }
+.ntm-label.opex { color: #22c55e; }
+
+.ntm-col {
+  display: grid;
+  grid-template-rows: var(--ntm-head-h) 1fr 1fr;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.ntm-col-head {
+  background: #7e8781;
+  color: #fff;
+  font-weight: 700;
+  padding: 0 16px;
+  text-align: center;
+  text-transform: none;
+  line-height: 1.25;
+  word-break: break-word;
+  hyphens: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ntm-card {
+  background: #ffffff;
+  border: 2px solid #d1d5db;
+  border-top-width: 0;
+  padding: 20px 16px;
+  /* border-radius: 0 0 6px 6px; */
+  min-height: 92px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Horizontal dashed connectors from labels to the columns */
+.ntm-label, .ntm-label-head { position: relative; }
+.ntm-label.capex::after,
+.ntm-label.opex::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(30% + 12px);
+  width: 100px; /* large value clipped by section overflow */
+  border-top: 2px dashed currentColor;
+  opacity: 0.6;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.ntm-card.value.big {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.ntm-strong {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.ntm-muted {
+  font-size: 16px;
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+.ntm-card.text {
+  font-size: 22px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .numbers-that-matter-section { padding-top: 60px; --ntm-head-h: 72px; }
+  .ntm-grid {
+    grid-template-columns: 110px repeat(4, 1fr);
+    gap: 16px;
+  }
+  .ntm-card.value.big { font-size: 28px; }
+  .ntm-strong { font-size: 26px; }
+  .ntm-card.text { font-size: 18px; }
+}
+
+@media (max-width: 767px) {
+  .numbers-that-matter-section { --ntm-head-h: 84px; }
+  .ntm-grid {
+    grid-template-columns: 1fr;
+  }
+  .ntm-labels {
+    grid-template-rows: none;
+    grid-auto-rows: minmax(0, auto);
+    grid-row-gap: 0;
+    padding-top: 0;
+    display: none; /* use inline labels on mobile for simplicity */
+  }
+  .ntm-col {
+    grid-template-rows: auto auto auto;
+  }
+  .ntm-col-head { border-radius: 8px 8px 0 0; }
+  .ntm-card { border-radius: 0 0 8px 8px; }
+}
+
+

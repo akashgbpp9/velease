@@ -1,4 +1,5 @@
 import React from "react";
+import NumbersThatMatter from "./NumbersThatMatter";
 
 interface AdvantagesProps {
   imageRefs: React.MutableRefObject<(HTMLElement | null)[]>;
@@ -103,20 +104,7 @@ export const Advantages: React.FC<AdvantagesProps> = ({ imageRefs }) => {
         </div>
       </div>
       {/* Numbers That Matter Section */}
-      <div className="numbers-that-matter-section mb-5 py-20 bg-gray-50">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-9 text-center">
-              <img
-                src="/images/numbers_that_matters.png"
-                alt="Numbers that matters"
-                className="img-fluid"
-                style={{ maxWidth: "100%" }}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+      <NumbersThatMatter />
     </>
   );
 };
