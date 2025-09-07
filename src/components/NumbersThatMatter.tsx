@@ -5,7 +5,7 @@ const NumbersThatMatter: React.FC = () => {
   return (
     <section className="numbers-that-matter-section wow fadeInUp">
       <div className="container">
-        <div className="row section-row justify-content-center">
+        <div className="row section-row justify-content-center mb-2">
           <div className="col-lg-11">
             {/* <div className="section-title dark-section">
                 <h3 className="wow fadeInUp">the veLease advantage</h3>

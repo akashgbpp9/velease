@@ -32,7 +32,7 @@
   display: grid;
   grid-template-columns: minmax(110px, 180px) repeat(4, minmax(0, 1fr));
   gap: 24px;
-  margin-top: 48px;
+  margin-top: 0px;
   align-items: stretch;
   max-width: 100%;
   padding-inline: 15px;
