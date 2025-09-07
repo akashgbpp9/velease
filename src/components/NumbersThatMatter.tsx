@@ -40,8 +40,16 @@ const NumbersThatMatter: React.FC = () => {
           {/* Upfront Investment */}
           <div className="ntm-col">
             <div className="ntm-col-head">Upfront Investment</div>
-            <div className="ntm-card value big">₹1 Cr</div>
-            <div className="ntm-card value big">₹0</div>
+            <div className="ntm-card value big">₹1 Cr upfront</div>
+            <div className="ntm-card value big">₹0 upfront</div>
+            {/* <div className="ntm-card">
+              <div className="ntm-strong">₹1 Cr </div>
+              <div className="ntm-muted">upfront</div>
+            </div>
+            <div className="ntm-card">
+              <div className="ntm-strong">₹0</div>
+              <div className="ntm-muted">upfront</div>
+            </div> */}
           </div>
 
           {/* Tax Benefits */}
