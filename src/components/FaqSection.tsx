@@ -55,10 +55,12 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ imageRefs }) => {
                   >
                     <div className="accordion-body">
                       <p>
-                        A traditional firm charges large upfront CapEx for
-                        fit-outs. veLease converts this into a monthly OpEx
-                        model, preserving your capital while still delivering
-                        premium interiors.
+                        Traditional firms charge large upfront CapEx for
+                        fit-outs, locking your capital in depreciating assets.
+                        veLease converts this into predictable monthly OpEx,
+                        freeing liquidity while delivering world-class
+                        interiors, upgrades, and maintenance under one
+                        transparent agreement.
                       </p>
                     </div>
                   </div>
@@ -90,9 +92,11 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ imageRefs }) => {
                   >
                     <div className="accordion-body">
                       <p>
-                        veLease retains ownership, which means you don't bear
-                        depreciation costs. We also handle upgrades, swaps, and
-                        maintenance.
+                        veLease retains full ownership of all furniture and
+                        fit-outs. This means you avoid depreciation costs, while
+                        upgrades, swaps, and maintenance are included. You enjoy
+                        premium, functional interiors without the long-term
+                        burden of ownership or hidden financial risks.
                       </p>
                     </div>
                   </div>
@@ -124,9 +128,12 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ imageRefs }) => {
                   >
                     <div className="accordion-body">
                       <p>
-                        We typically work with 3-year and 5-year lock-ins, but
-                        can create custom terms depending on your business
-                        needs.
+                        Our standard lock-ins are 3 or 5 years, providing
+                        stability and predictability. However, we also create
+                        custom terms tailored to your business size, growth
+                        projections, and capital needs, ensuring flexibility
+                        without compromising long-term financial or operational
+                        efficiency.
                       </p>
                     </div>
                   </div>
@@ -159,9 +166,11 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ imageRefs }) => {
                   >
                     <div className="accordion-body">
                       <p>
-                        Your workspace scales with you. We can expand or
-                        reconfigure interiors, with adjustments reflected in
-                        your lease.
+                        Your workspace scales with you. Whether you need to
+                        expand, reduce, or reconfigure, we adapt interiors
+                        accordingly. Lease terms are adjusted to reflect
+                        changes, ensuring your office evolves seamlessly
+                        alongside your business without fresh CapEx investments.
                       </p>
                     </div>
                   </div>
@@ -193,8 +202,11 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ imageRefs }) => {
                   >
                     <div className="accordion-body">
                       <p>
-                        No. We design and lease for companies of all sizes —
-                        from 5,000 sq.ft. startups to 50,000 sq.ft. enterprises.
+                        No. We work with businesses of all sizes. Whether you
+                        need a 5,000 sq.ft. startup hub or a 50,000 sq.ft.
+                        enterprise headquarters, veLease ensures flexible,
+                        premium interiors that align with your growth stage and
+                        financial strategy.
                       </p>
                     </div>
                   </div>
@@ -226,8 +238,11 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ imageRefs }) => {
                   >
                     <div className="accordion-body">
                       <p>
-                        Depending on the project size, we deliver fully
-                        functional, branded offices in as little as 6–10 weeks.
+                        Timelines vary by scope, but we deliver fully branded,
+                        functional offices in as little as 6–10 weeks. Our
+                        turnkey process — from design to handover — eliminates
+                        delays, giving you a plug-and-play workspace ready for
+                        immediate use.
                       </p>
                     </div>
                   </div>
@@ -260,9 +275,11 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ imageRefs }) => {
                   >
                     <div className="accordion-body">
                       <p>
-                        Your monthly rent is 100% deductible as a business
-                        expense. This gives you faster tax savings compared to
-                        slow depreciation under CapEx.
+                        All monthly rentals paid to veLease are 100% deductible
+                        as business expenses in the same year. This creates
+                        faster tax savings, greater cash flow flexibility, and
+                        stronger investor appeal compared to slow depreciation
+                        from traditional CapEx-heavy interior investments.
                       </p>
                     </div>
                   </div>

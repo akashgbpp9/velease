@@ -51,6 +51,7 @@ export const Advantages: React.FC<AdvantagesProps> = ({ imageRefs }) => {
                     <img
                       src="/images/icon-our-vision.svg"
                       alt="Financial Freedom Icon"
+                      style={{ height: "50px", width: "50px" }}
                     />
                   </div>
                   <div className="velease-advantage-content">
@@ -82,6 +83,7 @@ export const Advantages: React.FC<AdvantagesProps> = ({ imageRefs }) => {
                     <img
                       src="/images/icon-our-mission.svg"
                       alt="Asset-Backed Interiors Icon"
+                      style={{ height: "50px", width: "50px" }}
                     />
                   </div>
                   <div className="velease-advantage-content">

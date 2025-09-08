@@ -1,9 +1,45 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./NumbersThatMatter.css";
 
 const NumbersThatMatter: React.FC = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [isAnimated, setIsAnimated] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !isAnimated) {
+            setIsAnimated(true);
+            // Remove observer after animation triggers
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.3, // Trigger when 30% of the section is visible
+      }
+    );
+
+    const currentSection = sectionRef.current;
+    if (currentSection) {
+      observer.observe(currentSection);
+    }
+
+    return () => {
+      if (currentSection) {
+        observer.unobserve(currentSection);
+      }
+    };
+  }, [isAnimated]);
+
   return (
-    <section className="numbers-that-matter-section wow fadeInUp">
+    <section
+      ref={sectionRef}
+      className={`numbers-that-matter-section wow fadeInUp ${
+        isAnimated ? "animate" : ""
+      }`}
+    >
       <div className="container">
         <div className="row section-row justify-content-center mb-2">
           <div className="col-lg-11">
@@ -14,10 +50,13 @@ const NumbersThatMatter: React.FC = () => {
                 </h2>
               </div> */}
             <div className="section-title ">
-              <h2 className="sub-heading">CapEx vs. OpEx: <span>Numbers That Matter</span></h2>
-              <p >
-                Owning interiors locks your capital in depreciating assets. Leasing with veLease
-                preserves cash, provides higher tax shields, and keeps your balance sheet light.
+              <h2 className="sub-heading">
+                CapEx vs. OpEx: <span>Numbers That Matter</span>
+              </h2>
+              <p>
+                Owning interiors locks your capital in depreciating assets.
+                Leasing with veLease preserves cash, provides higher tax
+                shields, and keeps your balance sheet light.
               </p>
             </div>
           </div>
@@ -40,8 +79,12 @@ const NumbersThatMatter: React.FC = () => {
           {/* Upfront Investment */}
           <div className="ntm-col">
             <div className="ntm-col-head">Upfront Investment</div>
-            <div className="ntm-card value big">₹1 Cr upfront</div>
-            <div className="ntm-card value big">₹0 upfront</div>
+            <div className="ntm-card value big" style={{ lineHeight: "1.4" }}>
+              ₹1 Cr upfront
+            </div>
+            <div className="ntm-card value big" style={{ lineHeight: "1.4" }}>
+              ₹0 upfront
+            </div>
             {/* <div className="ntm-card">
               <div className="ntm-strong">₹1 Cr </div>
               <div className="ntm-muted">upfront</div>
@@ -79,11 +122,12 @@ const NumbersThatMatter: React.FC = () => {
             <div className="ntm-card text">Predictable, capital preserved</div>
           </div>
         </div>
+
+        {/* Disclaimer */}
+        <div className="ntm-disclaimer">for representation purposes only</div>
       </div>
     </section>
   );
 };
 
 export default NumbersThatMatter;
-
-
