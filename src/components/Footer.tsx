@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/solutions" onClick={scrollToTop}>
+                  <Link to="#" onClick={scrollToTop}>
                     Careers
                   </Link>
                 </li>
@@ -81,11 +81,7 @@ const Footer: React.FC = () => {
                     Blogs & Resources
                   </a>
                 </li>
-                <li>
-                  <Link to="#" onClick={scrollToTop}>
-                    Portfolio
-                  </Link>
-                </li>
+
                 {/* <li>
                   <Link to="/projects">our latest projects</Link>
                 </li> */}
@@ -173,8 +169,9 @@ const Footer: React.FC = () => {
                 </div>
                 <div className="footer-contact-content">
                   <p>
-                    Pune Experience Center <br /> 101-B, Gamma-1, Giga Space IT
-                    Park, Viman Nagar, Pune, India
+                    <b>Pune Experience Center </b>
+                    <br /> 101-B, Gamma-1, Giga Space IT Park, Viman Nagar,
+                    Pune, India
                   </p>
                 </div>
               </div>

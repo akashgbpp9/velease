@@ -302,7 +302,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ imageRefs }) => {
                   }
                 }}
               >
-                <img src="/images/faqs-image.jpg" alt="" />
+                <img src="/images/faqs-image-2.jpg" alt="" />
               </figure>
             </div>
             {/* Our Faq Image End */}
