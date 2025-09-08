@@ -2,14 +2,13 @@
   padding-top: 80px;
   padding-bottom: 40px;
   background: #f7f7f7;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   overflow: hidden;
   /* sizing variables used to align labels with value rows */
   --ntm-head-h: 56px; /* header block height (increases on smaller screens) */
-  --ntm-gap: 24px;    /* vertical gap between header and first value row */
+  --ntm-gap: 24px; /* vertical gap between header and first value row */
   --ntm-card-h: 92px; /* card min-height */
-
 }
 
 .numbers-that-matter-section .section-title .sub-heading {
@@ -45,7 +44,6 @@
   /* gap: 24px; */
   align-items: center;
   width: 300px;
-
 }
 
 .ntm-label {
@@ -69,9 +67,12 @@
   text-transform: none;
 }
 
-
-.ntm-label.capex { color: #f04848; }
-.ntm-label.opex { color: #22c55e; }
+.ntm-label.capex {
+  color: #f04848;
+}
+.ntm-label.opex {
+  color: #22c55e;
+}
 
 .ntm-col {
   display: grid;
@@ -112,7 +113,10 @@
 }
 
 /* Horizontal dashed connectors from labels to the columns */
-.ntm-label, .ntm-label-head { position: relative; }
+.ntm-label,
+.ntm-label-head {
+  position: relative;
+}
 .ntm-label.capex::after,
 .ntm-label.opex::after {
   content: "";
@@ -150,18 +154,29 @@
 
 /* Responsive */
 @media (max-width: 991px) {
-  .numbers-that-matter-section { padding-top: 60px; --ntm-head-h: 72px; }
+  .numbers-that-matter-section {
+    padding-top: 60px;
+    --ntm-head-h: 72px;
+  }
   .ntm-grid {
     grid-template-columns: 110px repeat(4, 1fr);
     gap: 16px;
   }
-  .ntm-card.value.big { font-size: 28px; }
-  .ntm-strong { font-size: 26px; }
-  .ntm-card.text { font-size: 18px; }
+  .ntm-card.value.big {
+    font-size: 28px;
+  }
+  .ntm-strong {
+    font-size: 26px;
+  }
+  .ntm-card.text {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 767px) {
-  .numbers-that-matter-section { --ntm-head-h: 84px; }
+  .numbers-that-matter-section {
+    --ntm-head-h: 84px;
+  }
   .ntm-grid {
     grid-template-columns: 1fr;
   }
@@ -175,8 +190,10 @@
   .ntm-col {
     grid-template-rows: auto auto auto;
   }
-  .ntm-col-head { border-radius: 8px 8px 0 0; }
-  .ntm-card { border-radius: 0 0 8px 8px; }
+  .ntm-col-head {
+    border-radius: 8px 8px 0 0;
+  }
+  .ntm-card {
+    border-radius: 0 0 8px 8px;
+  }
 }
-
-
