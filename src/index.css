@@ -333,6 +333,16 @@ select:focus ~ .react-animated-cursor .cursor-inner {
   transform: scale(0.3);
   background-color: var(--button-hover);
 }
+.abt-btn-default:hover ~ .react-animated-cursor .cursor-outer {
+  transform: scale(3);
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.abt-btn-default:hover ~ .react-animated-cursor .cursor-inner {
+  transform: scale(0.3);
+  background-color: var(--button-hover);
+}
 
 /* Form element focus effects */
 input:focus ~ .react-animated-cursor .cursor-outer,
@@ -648,6 +658,21 @@ header.main-header .header-sticky.active .navbar {
   width: 0;
   height: 106%;
   background: var(--button-hover);
+  transform: skew(45deg);
+  transition: all 0.4s ease-in-out;
+  z-index: -1;
+}
+.abt-btn-default::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -15%;
+  right: 0;
+  width: 0;
+  height: 106%;
+  background: var(--primary);
   transform: skew(45deg);
   transition: all 0.4s ease-in-out;
   z-index: -1;

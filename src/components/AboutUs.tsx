@@ -7,7 +7,15 @@ interface AboutUsProps {
 
 const AboutUs: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
   return (
-    <div className="about-us">
+    <div
+      className="about-us"
+      style={
+        {
+          "--accent": "#FFC958",
+          "--accent-color": "#FFC958",
+        } as React.CSSProperties
+      }
+    >
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6">
@@ -120,7 +128,19 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                     data-wow-delay="0.6s"
                   >
                     <button
-                      className="btn-default"
+                      className="btn-default abt-btn-default"
+                      style={{
+                        backgroundColor: "#C958FF",
+                        color: "#FFFFFF",
+                        border: "none",
+                        transition: "all 0.3s ease",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = "#192324";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = "#C958FF";
+                      }}
                       onClick={() => {
                         const element = document.getElementById("how-it-works");
                         if (element) {
