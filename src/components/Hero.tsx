@@ -127,9 +127,9 @@ const Hero: React.FC = () => {
         transition: "background-image 1s ease-in-out",
       }}
     >
-      <div className="container">
+      <div className="px-5">
         <div className="row align-items-center">
-          <div className="col-lg-10">
+          <div className="col-lg-12">
             {/* Hero Content Start */}
             <div className="hero-content">
               {/* Section Title Start */}
