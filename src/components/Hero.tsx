@@ -136,15 +136,15 @@ const Hero: React.FC = () => {
               <div className="section-title">
                 <h3 className="wow fadeInUp">Furniture-as-a-Service (FaaS)</h3>
                 <h1 className="text-anime-style-2" data-cursor="-opaque">
-                  The Future of Office Leasing is <br />
-                  <div className="animated-text-container">
+                  The Future of Office Leasing is{" "}
+                  <span className="animated-text-container">
                     <span
                       className={`animated-text ${isTyping ? "typing" : ""}`}
                     >
                       {currentText}
                       <span className="typewriter-cursor">.</span>
                     </span>
-                  </div>
+                  </span>
                 </h1>
                 <p className="wow fadeInUp" data-wow-delay="0.2s">
                   We design, build, and furnish plug-and-play workspaces — you
