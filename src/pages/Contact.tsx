@@ -212,7 +212,91 @@ const Contact: React.FC = () => {
                 </motion.p>
               </div>
             </div>
+            <div className="row mb-5">
+              <div className="col-lg-12">
+                {/* Contact Info Box */}
+                <div className="contact-info-box">
+                  {/* Phone Number Contact Info */}
+                  <motion.div
+                    className="contact-info-item"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0 }}
+                    viewport={{ once: true }}
+                  >
+                    {/* Icon Box */}
+                    <div className="icon-box flex justify-center mb-4">
+                      <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center">
+                        <i className="fa-solid fa-phone"></i>
+                      </div>
+                    </div>
 
+                    {/* Contact Info Content */}
+                    <div className="contact-info-content">
+                      <h3 className="text-lg font-bold mb-3 capitalize">
+                        phone number
+                      </h3>
+                      <p className="text-text mb-1">
+                        <a href="tel:+919890907614">+91 989 090 7614</a>
+                      </p>
+                    </div>
+                  </motion.div>
+
+                  {/* Email Support Contact Info */}
+                  <motion.div
+                    className="contact-info-item"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    viewport={{ once: true }}
+                  >
+                    {/* Icon Box */}
+                    <div className="icon-box flex justify-center mb-4">
+                      <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center">
+                        <i className="fa-regular fa-envelope"></i>
+                      </div>
+                    </div>
+
+                    {/* Contact Info Content */}
+                    <div className="contact-info-content">
+                      <h3 className="text-lg font-bold mb-3 capitalize">
+                        e-mail support
+                      </h3>
+                      <p className="text-text mb-1">
+                        <a href="mailto:sales@velease.com">sales@velease.com</a>
+                      </p>
+                    </div>
+                  </motion.div>
+
+                  {/* Headquarter Contact Info */}
+                  <motion.div
+                    className="contact-info-item"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    viewport={{ once: true }}
+                  >
+                    {/* Icon Box */}
+                    <div className="icon-box flex justify-center mb-4">
+                      <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center">
+                        <i className="fa-solid fa-house"></i>
+                      </div>
+                    </div>
+
+                    {/* Contact Info Content */}
+                    <div className="contact-info-content">
+                      <h3 className="text-lg font-bold mb-3 capitalize">
+                        Pune Experience Center
+                      </h3>
+                      <p className="text-text mb-1">
+                        101-B, Gamma-1, Giga Space IT Park, Viman Nagar, Pune,
+                        India
+                      </p>
+                    </div>
+                  </motion.div>
+                </div>
+              </div>
+            </div>
             <div className="col-lg-12">
               {/* Google Map IFrame */}
               <motion.div
@@ -238,92 +322,6 @@ const Contact: React.FC = () => {
                   className="w-full h-96 rounded-lg"
                 ></iframe>
               </motion.div>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col-lg-12">
-              {/* Contact Info Box */}
-              <div className="contact-info-box">
-                {/* Phone Number Contact Info */}
-                <motion.div
-                  className="contact-info-item"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0 }}
-                  viewport={{ once: true }}
-                >
-                  {/* Icon Box */}
-                  <div className="icon-box flex justify-center mb-4">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center">
-                      <i className="fa-solid fa-phone"></i>
-                    </div>
-                  </div>
-
-                  {/* Contact Info Content */}
-                  <div className="contact-info-content">
-                    <h3 className="text-lg font-bold mb-3 capitalize">
-                      phone number
-                    </h3>
-                    <p className="text-text mb-1">
-                      <a href="tel:+919890907614">+91 989 090 7614</a>
-                    </p>
-                  </div>
-                </motion.div>
-
-                {/* Email Support Contact Info */}
-                <motion.div
-                  className="contact-info-item"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  {/* Icon Box */}
-                  <div className="icon-box flex justify-center mb-4">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center">
-                      <i className="fa-regular fa-envelope"></i>
-                    </div>
-                  </div>
-
-                  {/* Contact Info Content */}
-                  <div className="contact-info-content">
-                    <h3 className="text-lg font-bold mb-3 capitalize">
-                      e-mail support
-                    </h3>
-                    <p className="text-text mb-1">
-                      <a href="mailto:sales@velease.com">sales@velease.com</a>
-                    </p>
-                  </div>
-                </motion.div>
-
-                {/* Headquarter Contact Info */}
-                <motion.div
-                  className="contact-info-item"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  viewport={{ once: true }}
-                >
-                  {/* Icon Box */}
-                  <div className="icon-box flex justify-center mb-4">
-                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center">
-                      <i className="fa-solid fa-house"></i>
-                    </div>
-                  </div>
-
-                  {/* Contact Info Content */}
-                  <div className="contact-info-content">
-                    <h3 className="text-lg font-bold mb-3 capitalize">
-                      headquarter
-                    </h3>
-                    <p className="text-text mb-1">
-                      101-B, Gamma-1, Giga Space IT Park, Viman Nagar, Pune,
-                      India
-                    </p>
-                  </div>
-                </motion.div>
-              </div>
             </div>
           </div>
         </div>

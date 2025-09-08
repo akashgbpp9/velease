@@ -300,31 +300,75 @@ const SolutionSingle: React.FC = () => {
   };
 
   const servicesImage = [
-    "/images/service-1.jpg",
-    "/images/service-2.jpg",
-    "/images/service-3.jpg",
+    "/images/oic-solutions-banner.jpg",
+    "/images/dbe-banner-image.jpg",
+    "/images/faas-banner-img.jpg",
+  ];
+
+  const servicesHeroBG = [
+    "/images/oic-solutions-bkg.jpg",
+    "/images/dbe-bkg-image.jpg",
+    "/images/faas-bkg-img.jpg",
+  ];
+
+  const serviceEntryImg = [
+    "/images/service-entry-img.jpg",
+    "/images/dbe-secondary-image.jpg",
+    "/images/faas-secondary-img.jpg",
   ];
 
   const currentIndex = idToIndexMap[id] || 0;
   const currentService = serviceData[currentIndex];
 
+  // Custom SEO data for each solution page
+  const seoData = {
+    "office-interiors-consultation": {
+      title:
+        "Office Interiors Consultation in Pune | Workspace Strategy by veLease",
+      description:
+        "Looking for office interiors consultation in Pune? veLease helps with workspace strategy, space planning, and financial structuring to fuel business growth.",
+      keywords:
+        "office interiors consultation, workspace strategy, space planning, financial structuring, Pune, veLease, office design consultation",
+    },
+    "design-and-build-execution": {
+      title:
+        "Office Design & Build Execution Pune | Turnkey Fit-Outs by veLease",
+      description:
+        "Transform bare shells into plug-and-play offices. veLease offers end-to-end design and build execution in Pune — interiors, furniture, branding, and handover.",
+      keywords:
+        "office design build execution, turnkey fit-outs, office interiors, furniture, branding, Pune, veLease, design build",
+    },
+    "furniture-as-a-service": {
+      title:
+        "Furniture-as-a-Service in Pune | Flexible Office Leasing | veLease",
+      description:
+        "Lease premium office furniture in Pune with veLease. Upgrades, swaps, and maintenance included — flexible lock-ins that convert CapEx into predictable OpEx.",
+      keywords:
+        "furniture as a service, office furniture leasing, flexible leasing, CapEx to OpEx, Pune, veLease, office furniture",
+    },
+  };
+
+  const currentSeo = seoData[id as keyof typeof seoData] || {
+    title: `${currentService?.title} | Office Interior Design in Pune | veLease`,
+    description:
+      currentService?.description ||
+      "Professional office interior design services in Pune with flexible leasing solutions by veLease.",
+    keywords: `${currentService?.title}, office interior design, Pune, veLease, workspace design, flexible leasing`,
+  };
+
   return (
     <>
       <SEO
-        title={`${currentService?.title} | Office Interior Design in Pune | veLease`}
-        description={
-          currentService?.description ||
-          "Professional office interior design services in Pune with flexible leasing solutions by veLease."
-        }
-        keywords={`${currentService?.title}, office interior design, Pune, veLease, workspace design, flexible leasing`}
+        title={currentSeo.title}
+        description={currentSeo.description}
+        keywords={currentSeo.keywords}
         canonical={`/solutions/${id}`}
       />
       {/* Page Header Start */}
       <div
         className="page-header parallaxie"
         style={{
-          backgroundImage:
-            "url(https://html.awaikenthemes.com/inspaire/images/page-header-bg.jpg)",
+          backgroundImage: `url(${servicesHeroBG[currentIndex]})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundAttachment: "fixed",
@@ -513,7 +557,7 @@ const SolutionSingle: React.FC = () => {
                     {/* Service Entry Image Start */}
                     <div className="service-entry-image">
                       <figure className="image-anime reveal">
-                        <img src="/images/service-entry-img.jpg" alt="" />
+                        <img src={serviceEntryImg[currentIndex]} alt="" />
                       </figure>
                     </div>
                     {/* Service Entry Image End */}
