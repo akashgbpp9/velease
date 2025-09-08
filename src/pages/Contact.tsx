@@ -265,7 +265,9 @@ const Contact: React.FC = () => {
                     <h3 className="text-lg font-bold mb-3 capitalize">
                       phone number
                     </h3>
-                    <p className="text-text mb-1">+91 989 090 7614</p>
+                    <p className="text-text mb-1">
+                      <a href="tel:+919890907614">+91 989 090 7614</a>
+                    </p>
                   </div>
                 </motion.div>
 
@@ -289,7 +291,9 @@ const Contact: React.FC = () => {
                     <h3 className="text-lg font-bold mb-3 capitalize">
                       e-mail support
                     </h3>
-                    <p className="text-text mb-1">sales@velease.com</p>
+                    <p className="text-text mb-1">
+                      <a href="mailto:sales@velease.com">sales@velease.com</a>
+                    </p>
                   </div>
                 </motion.div>
 

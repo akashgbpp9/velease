@@ -3,9 +3,9 @@ import React from "react";
 const QuoteSection: React.FC = () => {
   return (
     <section className="quote-section">
-      <div className="container">
+      <div className="h-100">
         <div className="row justify-content-center">
-          <div className="col-lg-10">
+          <div className="col-lg-12">
             <div className="quote-content">
               <blockquote className="wow fadeInUp" data-wow-delay="0.4s">
                 <p>

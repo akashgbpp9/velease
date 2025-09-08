@@ -440,7 +440,9 @@ const SolutionSingle: React.FC = () => {
                           <img src="/images/icon-phone.svg" alt="" />
                         </div>
                         <div className="cta-contact-item-content">
-                          <p>+91 989 090 7614</p>
+                          <p>
+                            <a href="tel:+919890907614">+91 989 090 7614</a>
+                          </p>
                         </div>
                       </div>
                       {/* Sidebar CTA Contact Item Start */}
@@ -451,7 +453,11 @@ const SolutionSingle: React.FC = () => {
                           <img src="/images/icon-mail.svg" alt="" />
                         </div>
                         <div className="cta-contact-item-content">
-                          <p>sales@velease.com</p>
+                          <p>
+                            <a href="mailto:sales@velease.com">
+                              sales@velease.com
+                            </a>
+                          </p>
                         </div>
                       </div>
                       {/* Sidebar CTA Contact Item Start */}

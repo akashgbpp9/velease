@@ -218,7 +218,7 @@ const AboutUsSection: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                     <div className="about-contact-content">
                       <p className="text-sm text-text">need any help?</p>
                       <h3 className="text-lg font-semibold ">
-                        +91 989 090 7614
+                        <a href="tel:+919890907614">+91 989 090 7614</a>
                       </h3>
                     </div>
                   </motion.div>

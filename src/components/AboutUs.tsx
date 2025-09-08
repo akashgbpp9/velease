@@ -149,7 +149,9 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                     </div>
                     <div className="about-contact-content">
                       <p>need any help?</p>
-                      <h3>+91 989 090 7614</h3>
+                      <h3>
+                        <a href="tel:+919890907614">+91 989 090 7614</a>
+                      </h3>
                     </div>
                   </div>
                   {/* About Contact Item End */}
@@ -163,7 +165,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                     </div>
                     <div className="about-contact-content ">
                       <h3 style={{ textTransform: "lowercase" }}>
-                        sales@velease.com
+                        <a href="mailto:sales@velease.com">sales@velease.com</a>
                       </h3>
                     </div>
                   </div>

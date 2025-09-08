@@ -146,7 +146,9 @@ const Footer: React.FC = () => {
                   <i className="fa-solid fa-phone"></i>
                 </div>
                 <div className="footer-contact-content">
-                  <p>+91 989 090 7614</p>
+                  <p>
+                    <a href="tel:+919890907614">+91 989 090 7614</a>
+                  </p>
                 </div>
               </div>
               {/* Footer Contact Item End */}
@@ -157,7 +159,9 @@ const Footer: React.FC = () => {
                   <i className="fa-solid fa-envelope"></i>
                 </div>
                 <div className="footer-contact-content">
-                  <p>sales@velease.com</p>
+                  <p>
+                    <a href="mailto:sales@velease.com">sales@velease.com</a>
+                  </p>
                 </div>
               </div>
               {/* Footer Contact Item End */}

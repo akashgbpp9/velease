@@ -102,6 +102,20 @@ a:hover {
   outline: 0;
 }
 
+/* Contact link styles */
+a[href^="tel:"]:hover,
+a[href^="mailto:"]:hover {
+  color: var(--button-hover);
+  text-decoration: none;
+}
+
+a[href^="tel:"],
+a[href^="mailto:"] {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
 a:focus {
   text-decoration: none;
   outline: 0;
@@ -758,25 +772,26 @@ header.main-header .header-sticky.active .navbar {
 .quote-content {
   position: relative;
   z-index: 2;
+  height: 100%;
 }
 
 .quote-section blockquote {
-  background: url("../public/images/icon-blockquote.svg"), var(--accent-color);
+  background: url("../public/images/icon-blockquote.svg"), #ffc958;
   background-repeat: no-repeat;
   background-position: 35px 30px;
   background-size: 58px;
   border-radius: 0;
   padding: 30px 30px 30px 100px;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   border: none;
   font-style: italic;
 }
 
 .quote-section blockquote p {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 300;
   line-height: 1.4em;
-  color: var(--white-color);
+  color: #192324;
   margin-bottom: 20px;
 }
 
@@ -785,9 +800,9 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .quote-section blockquote cite {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--white-color);
+  font-size: 24px;
+  font-weight: 300;
+  color: #192324;
   font-style: normal;
   display: block;
 }
