@@ -120,7 +120,7 @@
 
 /* Gradient Text Styles */
 .gradient-text {
-  background: linear-gradient(135deg, #00cfff 0%, #f500c0 100%);
+  background: linear-gradient(135deg, #ffc958 0%, #c958ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -128,9 +128,46 @@
 }
 
 .gradient-text span {
-  background: linear-gradient(135deg, #00cfff 0%, #f500c0 100%);
+  background: linear-gradient(135deg, #ffc958 0%, #c958ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
+}
+
+/* Button Styles */
+.btn-default {
+  background-color: var(--button-color, #ffc958);
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn-default:hover {
+  background-color: var(--button-hover, #c958ff);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--button-color, #ffc958);
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--button-hover, #c958ff);
+  color: #ffffff;
+  text-decoration: none;
 }

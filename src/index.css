@@ -47,6 +47,8 @@
   --shine-opacity: 0;
   --primary-color: #192324;
   --accent-color: #7c877f;
+  --button-color: #ffc958;
+  --button-hover: #c958ff;
   --white-color: #ffffff;
   --dark-divider-color: rgba(255, 255, 255, 0.1);
   --secondery-color: #f8f8f8;
@@ -309,13 +311,13 @@ select:focus ~ .react-animated-cursor .cursor-inner {
 /* Button hover effects */
 .btn-default:hover ~ .react-animated-cursor .cursor-outer {
   transform: scale(3);
-  background-color: rgba(124, 135, 127, 0.25);
-  border-color: var(--accent-color);
+  background-color: var(--button-hover);
+  border-color: var(--button-hover);
 }
 
 .btn-default:hover ~ .react-animated-cursor .cursor-inner {
   transform: scale(0.3);
-  background-color: var(--accent-color);
+  background-color: var(--button-hover);
 }
 
 /* Form element focus effects */
@@ -587,7 +589,7 @@ header.main-header .header-sticky.active .navbar {
 .btn-default {
   position: relative;
   display: inline-block;
-  background: var(--accent-color);
+  background: var(--button-color);
   color: var(--white-color);
   font-size: 16px;
   font-weight: 700;
@@ -631,7 +633,7 @@ header.main-header .header-sticky.active .navbar {
   right: 0;
   width: 0;
   height: 106%;
-  background: var(--primary-color);
+  background: var(--button-hover);
   transform: skew(45deg);
   transition: all 0.4s ease-in-out;
   z-index: -1;
@@ -648,7 +650,7 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .btn-default:hover {
-  background: transparent;
+  background: var(--button-hover);
   color: var(--white-color);
   text-decoration: none;
 }
@@ -663,7 +665,7 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .btn-default.btn-highlighted::after {
-  background-color: var(--accent-color);
+  background-color: var(--button-hover);
 }
 
 .btn-default.btn-highlighted:hover {
@@ -1328,7 +1330,7 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .service-btn a {
-  background-color: #8d52d9;
+  background-color: var(--button-color);
   height: 60px;
   width: 60px;
   border-radius: 50%;
@@ -1339,7 +1341,7 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .service-btn a:hover {
-  background-color: var(--primary-color);
+  background-color: var(--button-hover);
 }
 
 .service-btn a img {
@@ -1541,7 +1543,7 @@ header.main-header .header-sticky.active .navbar {
 .how-work-company-slider .swiper-button-prev {
   width: 40px;
   height: 40px;
-  background-color: var(--accent-color);
+  background-color: var(--button-color);
   border-radius: 50%;
   color: var(--white-color);
   transition: all 0.3s ease;
@@ -1549,7 +1551,7 @@ header.main-header .header-sticky.active .navbar {
 
 .how-work-company-slider .swiper-button-next:hover,
 .how-work-company-slider .swiper-button-prev:hover {
-  background-color: var(--primary-color);
+  background-color: var(--button-hover);
   transform: scale(1.1);
 }
 
