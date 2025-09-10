@@ -792,6 +792,7 @@ header.main-header .header-sticky.active .navbar {
   padding: 80px 0;
   background-color: #f8f9fa;
   position: relative;
+  background-color: #ffc958;
 }
 
 .quote-content {
@@ -801,7 +802,7 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .quote-section blockquote {
-  background: url("../public/images/icon-blockquote.svg"), #ffc958;
+  background: url("../public/images/icon-blockquote.svg");
   background-repeat: no-repeat;
   background-position: 35px 30px;
   background-size: 58px;
