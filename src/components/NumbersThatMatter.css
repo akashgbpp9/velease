@@ -83,7 +83,7 @@
 }
 
 .ntm-col-head {
-  background: #7e8781;
+  background: linear-gradient(135deg, #ffc958 0%, #c958ff 100%);
   color: #fff;
   font-weight: 700;
   padding: 0 16px;
@@ -128,13 +128,7 @@
   opacity: 0.6;
   transform: translateY(-50%);
   pointer-events: none;
-  animation: dashMove 2s ease-in-out forwards;
-  animation-play-state: paused;
-}
-
-.numbers-that-matter-section.animate .ntm-label.capex::after,
-.numbers-that-matter-section.animate .ntm-label.opex::after {
-  animation-play-state: running;
+  animation: dashMove 2s ease-in-out infinite;
 }
 
 @keyframes dashMove {

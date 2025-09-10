@@ -1189,7 +1189,7 @@ header.main-header .header-sticky.active .navbar {
   position: relative;
   width: 60px;
   height: 60px;
-  background-color: var(--divider-color);
+  background-color: var(--button-color);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -1209,7 +1209,7 @@ header.main-header .header-sticky.active .navbar {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: var(--primary-color);
+  background-color: var(--button-hover);
   border-radius: 50%;
   height: 100%;
   width: 100%;
@@ -3452,7 +3452,7 @@ header.main-header .header-sticky.active .navbar {
   position: relative;
   width: 95px;
   height: 95px;
-  background: var(--divider-color);
+  background: var(--button-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -3466,7 +3466,7 @@ header.main-header .header-sticky.active .navbar {
   position: absolute;
   top: 0;
   left: 0;
-  background: var(--primary-color);
+  background: var(--button-hover);
   border-radius: 50%;
   width: 100%;
   height: 100%;

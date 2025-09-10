@@ -16,7 +16,7 @@ export const Advantages: React.FC<AdvantagesProps> = ({ imageRefs }) => {
               <div className="section-title dark-section">
                 <h3 className="wow fadeInUp">the veLease advantage</h3>
                 <h2 className="text-anime-style-2" data-cursor="-opaque">
-                  A smarter way to build, <span>finance your workspace</span>
+                  A smarter way to build, <span>finance your workspace.</span>
                 </h2>
               </div>
               {/* Section Title End */}
