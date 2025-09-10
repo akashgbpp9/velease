@@ -30,7 +30,7 @@ const TeamSection: React.FC = () => {
     {
       name: "Haroon Kazi",
       position: "Co-founder",
-      image: "/images/team-1.png",
+      image: "/images/team-4.jpeg",
       social: {
         linkdin: "https://www.linkedin.com/in/harun-kazi-21958834/",
       },
