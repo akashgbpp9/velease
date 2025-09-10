@@ -335,8 +335,8 @@ select:focus ~ .react-animated-cursor .cursor-inner {
 }
 .abt-btn-default:hover ~ .react-animated-cursor .cursor-outer {
   transform: scale(3);
-  background-color: var(--primary);
-  border-color: var(--primary);
+  background-color: var(--button-hover);
+  border-color: var(--button-hover);
 }
 
 .abt-btn-default:hover ~ .react-animated-cursor .cursor-inner {
@@ -672,7 +672,7 @@ header.main-header .header-sticky.active .navbar {
   right: 0;
   width: 0;
   height: 106%;
-  background: var(--primary);
+  background: var(--button-hover);
   transform: skew(45deg);
   transition: all 0.4s ease-in-out;
   z-index: -1;

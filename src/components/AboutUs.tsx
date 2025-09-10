@@ -130,16 +130,16 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                     <button
                       className="btn-default abt-btn-default"
                       style={{
-                        backgroundColor: "#C958FF",
+                        backgroundColor: "#FFC958",
                         color: "#FFFFFF",
                         border: "none",
                         transition: "all 0.3s ease",
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = "#192324";
+                        e.currentTarget.style.backgroundColor = "#C958FF";
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.backgroundColor = "#C958FF";
+                        e.currentTarget.style.backgroundColor = "#FFC958";
                       }}
                       onClick={() => {
                         const element = document.getElementById("how-it-works");
