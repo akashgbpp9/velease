@@ -1749,7 +1749,7 @@ header.main-header .header-sticky.active .navbar {
   top: 0;
   left: 0;
   bottom: 0;
-  background-color: var(--primary-color);
+  background: linear-gradient(135deg, #ffc958 0%, #c958ff 100%);
   border-radius: 99px;
   width: 0%;
   transition: width 2s ease;
@@ -2805,7 +2805,7 @@ header.main-header .header-sticky.active .navbar {
   top: 0;
   left: 0;
   bottom: 0;
-  background-color: var(--primary-color);
+  background: linear-gradient(135deg, #ffc958 0%, #c958ff 100%);
   border-radius: 99px;
 }
 
