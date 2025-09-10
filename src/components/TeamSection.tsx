@@ -23,9 +23,9 @@ const TeamSection: React.FC = () => {
     {
       name: "Nikhil Devar",
       position: "Co-founder",
-      image: "/images/team-3.jpg",
+      image: "/images/team-3.png",
       social: {
-        linkdin: "#",
+        linkdin: "https://www.linkedin.com/in/nikhil-devar-07267b11b",
       },
     },
     {
@@ -33,7 +33,7 @@ const TeamSection: React.FC = () => {
       position: "Co-founder",
       image: "/images/team-1.png",
       social: {
-        linkdin: "#",
+        linkdin: "https://www.linkedin.com/in/harun-kazi-21958834/",
       },
     },
   ];
