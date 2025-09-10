@@ -37,13 +37,13 @@ const SolutionSingle: React.FC = () => {
             "We align workspace planning with your growth forecasts and financial structure, ensuring your office design becomes a business advantage.",
         },
         {
-          icon: "/images/icon-why-choose-3.svg",
+          icon: "/images/icon-why-choose-2.svg",
           title: "End-to-End Design & Build",
           description:
             "From concept to fit-out and furnishing, we manage the entire process under one roof, delivering plug-and-play offices on time and on budget.",
         },
         {
-          icon: "/images/icon-why-choose-2.svg",
+          icon: "/images/icon-why-choose-3.svg",
           title: "Flexible Leasing Advantage",
           description:
             "By shifting interiors from CapEx to OpEx, we keep your capital free while providing predictable monthly costs and built-in scalability.",
