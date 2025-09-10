@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Instagram, Twitter, Facebook } from "lucide-react";
 
 const TeamSection: React.FC = () => {
   const teamMembers = [

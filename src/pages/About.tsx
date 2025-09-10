@@ -12,6 +12,7 @@ import {
   Testimonials,
   HowWeWork,
   CTASection,
+  ContactForm,
 } from "../components";
 import SEO from "../components/SEO";
 
@@ -99,13 +100,13 @@ const About: React.FC = () => {
       <AboutUsSection imageRefs={imageRefs} counterRefs={counterRefs} />
 
       {/* Company Timeline Section */}
-      {/* <CompanyTimeline imageRefs={imageRefs} /> */}
+      <CompanyTimeline imageRefs={imageRefs} />
 
       {/* Vision Mission Section */}
       <VisionMissionSection imageRefs={imageRefs} />
 
       {/* VeLease Promise Section */}
-      {/* <VeLeasePromise imageRefs={imageRefs} /> */}
+      <VeLeasePromise imageRefs={imageRefs} />
 
       {/* Best Selling Section */}
       <OurEdge />
@@ -127,6 +128,7 @@ const About: React.FC = () => {
 
       {/* CTA Section */}
       <CTASection />
+      {/* <ContactForm /> */}
     </div>
   );
 };
