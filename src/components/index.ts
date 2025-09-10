@@ -28,3 +28,5 @@ export { default as ContactForm } from "./ContactForm";
 export { default as QuoteSection } from "./QuoteSection";
 export { default as SEO } from "./SEO";
 export { default as NumbersThatMatter } from "./NumbersThatMatter";
+export { default as CompanyTimeline } from "./CompanyTimeline";
+export { default as VeLeasePromise } from "./VeLeasePromise";

@@ -11,21 +11,21 @@ const AboutUsSection: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
   const facilities = [
     {
       icon: "/images/icon-about-facility-1.svg",
-      title: "Capital-Friendly Model",
+      title: "CapEx-Free Interiors",
       description:
-        "We eliminate heavy upfront CapEx with flexible leasing models, converting interiors into predictable monthly operating expenses.",
+        "We eliminate heavy upfront capital outflows by converting interiors into predictable monthly OpEx, preserving liquidity for business growth.",
     },
     {
       icon: "/images/icon-about-facility-2.svg",
-      title: "Design That Performs",
+      title: "End-to-End Partner",
       description:
-        "Our blend of design expertise and financial insight ensures every office is functional, scalable, and aligned with your brand.",
+        "From strategy to design, build, and leasing, VeLease manages everything under one roof — no fragmented vendors or delays.",
     },
     {
       icon: "/images/icon-about-facility-2.svg",
-      title: "Partner-Led Execution",
+      title: "Scalable & Upgradeable",
       description:
-        "From consultation to handover, our professional team manages every stage, creating consistent experiences for tenants, landlords, and IPC partners.",
+        "Your interiors evolve with your business. Swap, upgrade, or expand without reinvestment, ensuring workspaces remain future-ready and efficient.",
     },
   ];
 
@@ -135,7 +135,7 @@ const AboutUsSection: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                   transition={{ duration: 0.6, delay: 0.1 }}
                   viewport={{ once: true }}
                 >
-                  Smart interiors, built for <span>business growth</span>
+                  Making world-class offices <span>accessible to all.</span>
                 </motion.h2>
                 <motion.p
                   className="text-lg text-text leading-relaxed"
@@ -144,12 +144,50 @@ const AboutUsSection: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   viewport={{ once: true }}
                 >
-                  At veLease, we believe offices shouldn’t drain capital or slow
+                  At VeLease, we believe offices shouldn't drain capital or slow
                   expansion. Our team brings together expertise in design,
                   leasing, and financial structuring to help companies and
                   landlords unlock the true value of their spaces. From
                   bare-shell transformations to scalable interiors, we turn
                   workplaces into growth engines.
+                </motion.p>
+                <motion.p
+                  className="text-lg text-text leading-relaxed mt-4"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  At VeLease, we transform heavy office interior costs into a
+                  smart monthly rent. Instead of sinking crores upfront,
+                  businesses can design, build, and move into world-class
+                  offices without the CapEx burden — paying only predictable
+                  OpEx.
+                </motion.p>
+                <motion.p
+                  className="text-lg text-text leading-relaxed mt-4"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  viewport={{ once: true }}
+                >
+                  Our founders bring over 15 years of commercial real estate
+                  experience, managing 1M+ sq.ft. across Mumbai and Pune, with
+                  proven partnerships spanning GCCs, IT firms, MSMEs, and
+                  startups.
+                </motion.p>
+                <motion.p
+                  className="text-lg text-text leading-relaxed mt-4"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  We've lived this model ourselves — scaling a 1,200+ employee
+                  business services company by leveraging flexible, rent-based
+                  interiors. Having experienced the frustrations of CapEx-driven
+                  setups firsthand, we built VeLease to become India's first
+                  Corporate Furniture-as-a-Service (FaaS) interior partner.
                 </motion.p>
               </div>
               {/* Section Title End */}
@@ -169,15 +207,19 @@ const AboutUsSection: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                     <ul className="space-y-2">
                       <li className="flex items-center text-text">
                         <span className="w-2 h-2 bg-accent rounded-full mr-3"></span>
-                        financially smart solutions
+                        Turnkey design & execution
                       </li>
                       <li className="flex items-center text-text">
                         <span className="w-2 h-2 bg-accent rounded-full mr-3"></span>
-                        growth-focused approach
+                        No upfront CapEx
                       </li>
                       <li className="flex items-center text-text">
                         <span className="w-2 h-2 bg-accent rounded-full mr-3"></span>
-                        flexible, future-ready models
+                        Predictable monthly OpEx
+                      </li>
+                      <li className="flex items-center text-text">
+                        <span className="w-2 h-2 bg-accent rounded-full mr-3"></span>
+                        Scalable, upgradeable interiors
                       </li>
                     </ul>
                   </motion.div>

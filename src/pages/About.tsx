@@ -2,13 +2,16 @@ import React, { useEffect, useRef } from "react";
 import {
   PageHeader,
   AboutUsSection,
+  CompanyTimeline,
   VisionMissionSection,
+  VeLeasePromise,
   OurEdge,
   TeamSection,
   AboutFAQSection,
   ClientsSection,
   Testimonials,
   HowWeWork,
+  CTASection,
 } from "../components";
 import SEO from "../components/SEO";
 
@@ -95,8 +98,14 @@ const About: React.FC = () => {
       {/* About Us Section */}
       <AboutUsSection imageRefs={imageRefs} counterRefs={counterRefs} />
 
+      {/* Company Timeline Section */}
+      {/* <CompanyTimeline imageRefs={imageRefs} /> */}
+
       {/* Vision Mission Section */}
       <VisionMissionSection imageRefs={imageRefs} />
+
+      {/* VeLease Promise Section */}
+      {/* <VeLeasePromise imageRefs={imageRefs} /> */}
 
       {/* Best Selling Section */}
       <OurEdge />
@@ -115,6 +124,9 @@ const About: React.FC = () => {
 
       {/* Clients Section */}
       <ClientsSection />
+
+      {/* CTA Section */}
+      <CTASection />
     </div>
   );
 };

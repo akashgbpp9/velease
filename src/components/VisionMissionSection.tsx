@@ -14,7 +14,7 @@ const VisionMissionSection: React.FC<AdvantagesProps> = ({ imageRefs }) => {
               <div className="section-title dark-section">
                 <h3 className="wow fadeInUp">the veLease advantage</h3>
                 <h2 className="text-anime-style-2" data-cursor="-opaque">
-                  A behind-the-scenes <span>look at veLease</span>
+                  Smarter workspaces, <span>simplified growth.</span>
                 </h2>
               </div>
               {/* Section Title End */}
@@ -24,8 +24,10 @@ const VisionMissionSection: React.FC<AdvantagesProps> = ({ imageRefs }) => {
               {/* Section Title Content Start */}
               <div className="section-title-content dark-section">
                 <p className="wow fadeInUp" data-wow-delay="0.2s">
-                  We don’t just design offices — we reimagine how businesses and
-                  landlords think about workspace investments.
+                  VeLease combines interior design, commercial real estate
+                  expertise, and financial structuring into one solution. We
+                  deliver premium, plug-and-play offices that scale with your
+                  ambition while preserving capital for real business growth.
                 </p>
               </div>
               {/* Section Title Content End */}
@@ -52,10 +54,10 @@ const VisionMissionSection: React.FC<AdvantagesProps> = ({ imageRefs }) => {
                   <div className="velease-advantage-content">
                     <h3>Our Vision</h3>
                     <p>
-                      Our vision is to redefine office interiors as strategic
-                      assets. By merging architecture with financial innovation,
-                      we help businesses grow faster while keeping their capital
-                      free for what matters most.
+                      To revolutionize India's office interiors by making
+                      world-class, asset-light workplaces accessible to every
+                      business through Furniture-as-a-Service, blending premium
+                      design with financial innovation.
                     </p>
                   </div>
                 </div>
@@ -80,11 +82,10 @@ const VisionMissionSection: React.FC<AdvantagesProps> = ({ imageRefs }) => {
                   <div className="velease-advantage-content">
                     <h3>Our Mission</h3>
                     <p>
-                      Our mission is to deliver world-class, plug-and-play
-                      workspaces without the burden of heavy CapEx. By offering
-                      flexible leasing, end-to-end design, and continuous
-                      upgrades, veLease ensures every office is future-proof,
-                      scalable, and financially efficient.
+                      To enable companies of all sizes to scale smarter with
+                      turnkey, plug-and-play interiors that convert CapEx into
+                      predictable OpEx — combining design precision, operational
+                      speed, and financial flexibility.
                     </p>
                   </div>
                 </div>

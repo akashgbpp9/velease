@@ -6,34 +6,36 @@ const TeamSection: React.FC = () => {
   const teamMembers = [
     {
       name: "Amaan Kazi",
-      position: "Founder",
+      position: "Co-founder",
       image: "/images/team-1.png",
       social: {
-        // instagram: "#",
-        // twitter: "#",
         linkdin: "https://ae.linkedin.com/in/amaankazi",
       },
     },
     {
       name: "Pratiek Phand",
-      position: "Co-founder, Strategy & Design",
+      position: "Co-founder",
       image: "/images/team-2.jpeg",
       social: {
-        // instagram: "#",
-        // twitter: "#",
         linkdin: "https://in.linkedin.com/in/pratiek-phand-1020331b1",
       },
     },
-    // {
-    //   name: "suzen hilly",
-    //   position: "civil engineering",
-    //   image: "/images/team-3.jpg",
-    //   social: {
-    //     instagram: "#",
-    //     twitter: "#",
-    //     facebook: "#",
-    //   },
-    // },
+    {
+      name: "Nikhil Devar",
+      position: "Co-founder",
+      image: "/images/team-3.jpg",
+      social: {
+        linkdin: "#",
+      },
+    },
+    {
+      name: "Haroon Kazi",
+      position: "Co-founder",
+      image: "/images/team-1.png",
+      social: {
+        linkdin: "#",
+      },
+    },
   ];
 
   return (
@@ -84,7 +86,7 @@ const TeamSection: React.FC = () => {
 
         <div className="row">
           {teamMembers.map((member, index) => (
-            <div className="col-lg-6 col-md-6">
+            <div className="col-lg-3 col-md-6">
               <motion.div
                 key={index}
                 className="team-member-item mb-8"

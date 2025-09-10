@@ -314,7 +314,7 @@ const SolutionSingle: React.FC = () => {
   const serviceEntryImg = [
     "/images/service-entry-img.jpg",
     "/images/dbe-secondary-image.jpg",
-    "/images/faas-secondary-img.jpg",
+    "/images/faas-secondary-img.png",
   ];
 
   const currentIndex = idToIndexMap[id] || 0;

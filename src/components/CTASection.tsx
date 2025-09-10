@@ -8,10 +8,13 @@ const CTASection: React.FC = () => {
         <div className="row align-items-center">
           <div className="col-lg-8">
             <div className="cta-content">
-              <h2>Ready to Transform Your Workspace?</h2>
+              <h2>Reach Out</h2>
+              <h3>Redefining office interiors, one lease at a time.</h3>
               <p>
-                Join hundreds of companies who have already revolutionized their
-                office environments with our Furniture-as-a-Service solution.
+                We've helped businesses and landlords transform thousands of
+                square feet into scalable, branded workspaces that fuel growth.
+                With VeLease, your office becomes more than a place to work — it
+                becomes a strategic advantage.
               </p>
             </div>
           </div>
