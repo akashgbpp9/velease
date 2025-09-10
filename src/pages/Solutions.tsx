@@ -97,6 +97,8 @@ const Services: React.FC = () => {
                       <img
                         src="images/service-1.jpg"
                         alt="Workspace Strategy & Consultation"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </figure>
                   </a>
@@ -141,6 +143,8 @@ const Services: React.FC = () => {
                       <img
                         src="images/service-2.jpg"
                         alt="Design & Build Execution"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </figure>
                   </a>
@@ -185,6 +189,8 @@ const Services: React.FC = () => {
                       <img
                         src="images/service-3.jpg"
                         alt="Furniture-as-a-Service (FaaS)"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </figure>
                   </a>

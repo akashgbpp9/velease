@@ -137,7 +137,11 @@ const Hero: React.FC = () => {
                 <h3 className="wow fadeInUp">Furniture-as-a-Service (FaaS)</h3>
                 <h1 className="text-anime-style-2" data-cursor="-opaque">
                   The Future of Office Leasing is{" "}
-                  <span className="animated-text-container">
+                  <br className="d-block d-lg-none" />
+                  <span
+                    className="animated-text-container"
+                    style={{ whiteSpace: "nowrap" }}
+                  >
                     <span
                       className={`animated-text ${isTyping ? "typing" : ""}`}
                     >

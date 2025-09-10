@@ -62,6 +62,8 @@ const Contact: React.FC = () => {
                     src="/images/service-entry-img.jpg"
                     alt="Contact Us"
                     className="w-full h-auto rounded-lg"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </motion.figure>
               </div>

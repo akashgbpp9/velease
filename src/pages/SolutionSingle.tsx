@@ -526,7 +526,12 @@ const SolutionSingle: React.FC = () => {
                   transition={{ duration: 0.6 }}
                 >
                   <figure className="image-anime reveal">
-                    <img src={servicesImage[currentIndex]} alt="" />
+                    <img
+                      src={servicesImage[currentIndex]}
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
                   </figure>
                 </motion.div>
                 {/* Service Feature Image End */}
@@ -557,7 +562,12 @@ const SolutionSingle: React.FC = () => {
                     {/* Service Entry Image Start */}
                     <div className="service-entry-image">
                       <figure className="image-anime reveal">
-                        <img src={serviceEntryImg[currentIndex]} alt="" />
+                        <img
+                          src={serviceEntryImg[currentIndex]}
+                          alt=""
+                          loading="lazy"
+                          decoding="async"
+                        />
                       </figure>
                     </div>
                     {/* Service Entry Image End */}
