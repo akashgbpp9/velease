@@ -19,7 +19,10 @@ const Footer: React.FC = () => {
                 <div className="col-md-6">
                   {/* Footer Logo Start */}
                   <div className="footer-logo">
-                    <img src="images/veLease-logo.svg" alt="" />
+                    <img
+                      src="images/velease-logo-website-inverted2.svg"
+                      alt=""
+                    />
                     {/* <img src="images/footer-logo.svg" alt="" /> */}
                   </div>
                   {/* Footer Logo End */}
