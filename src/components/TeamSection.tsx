@@ -106,6 +106,7 @@ const TeamSection: React.FC = () => {
                         src={member.image}
                         alt={member.name}
                         className="w-full h-96 object-cover transition-transform duration-300"
+                        style={{ filter: "grayscale(1)" }}
                       />
                     </motion.figure>
                   </a>
