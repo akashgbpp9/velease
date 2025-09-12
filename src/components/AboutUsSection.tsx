@@ -30,7 +30,7 @@ const AboutUsSection: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
   ];
 
   return (
-    <div className="about-us page-about-us py-20 bg-white">
+    <div className="about-us page-about-us bg-white">
       <div className="container mx-auto px-4">
         <div className="row align-items-center">
           <div className="col-lg-6">
