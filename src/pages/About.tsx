@@ -100,7 +100,7 @@ const About: React.FC = () => {
       <AboutUsSection imageRefs={imageRefs} counterRefs={counterRefs} />
 
       {/* Company Timeline Section */}
-      {/* <CompanyTimeline /> */}
+      <CompanyTimeline />
 
       {/* Vision Mission Section */}
       <VisionMissionSection imageRefs={imageRefs} />

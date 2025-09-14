@@ -109,7 +109,17 @@ export default function VeLeaseHorizontalTimeline() {
           nearestIdx = idx;
         }
       });
-      setActive(nearestIdx);
+      const EDGE_TOLERANCE = 24; // px tolerance for edge clamping
+      const atStart = el.scrollLeft <= EDGE_TOLERANCE;
+      const atEnd =
+        el.scrollLeft >= el.scrollWidth - el.clientWidth - EDGE_TOLERANCE;
+      if (atStart) {
+        setActive(0);
+      } else if (atEnd) {
+        setActive(TIMELINE.length - 1);
+      } else {
+        setActive(nearestIdx);
+      }
     };
 
     onScroll();
@@ -120,6 +130,8 @@ export default function VeLeaseHorizontalTimeline() {
   const scrollToIndex = (idx: number) => {
     const el = scrollerRef.current;
     if (!el) return;
+    // Immediately reflect selection
+    setActive(idx);
     const card = el.querySelectorAll<HTMLElement>("[data-tl-card]")[idx];
     if (card) {
       card.scrollIntoView({
@@ -169,31 +181,33 @@ export default function VeLeaseHorizontalTimeline() {
 
       {/* Year rail (desktop) */}
       <div className="d-none d-md-block mb-4">
-        <div className="position-relative">
-          <div className="h-1 w-100 rounded-pill bg-secondary" />
+        {/* Progress bar above buttons */}
+        <div className="mb-2 position-relative" style={{ height: "6px" }}>
+          <div className="position-absolute top-0 start-0 w-100 h-100 rounded-pill " />
           <div
             className="position-absolute top-0 start-0 h-100 rounded-pill bg-primary"
             style={{ width: `${progress * 100}%` }}
           />
-          <div
-            className="mt-2 d-grid"
-            style={{
-              gridTemplateColumns: `repeat(${TIMELINE.length}, 1fr)`,
-              gap: "0.5rem",
-            }}
-          >
-            {TIMELINE.map((item, idx) => (
-              <Button
-                key={item.year}
-                onClick={() => scrollToIndex(idx)}
-                variant={idx === active ? "primary" : "outline-secondary"}
-                size="sm"
-                className="rounded-pill"
-              >
-                {item.year}
-              </Button>
-            ))}
-          </div>
+        </div>
+        {/* Year buttons */}
+        <div
+          className="d-grid"
+          style={{
+            gridTemplateColumns: `repeat(${TIMELINE.length}, 1fr)`,
+            gap: "0.5rem",
+          }}
+        >
+          {TIMELINE.map((item, idx) => (
+            <Button
+              key={item.year}
+              onClick={() => scrollToIndex(idx)}
+              variant={idx === active ? "primary" : "outline-secondary"}
+              size="sm"
+              className="rounded-pill"
+            >
+              {item.year}
+            </Button>
+          ))}
         </div>
       </div>
 
