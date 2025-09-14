@@ -159,20 +159,30 @@ export default function VeLeaseHorizontalTimeline() {
         </div>
         <div className="d-flex align-items-center gap-2">
           <Button
-            variant="outline-secondary"
+            // variant="outline-secondary"
             size="sm"
             onClick={() => jump(-1)}
             aria-label="Previous milestone"
-            className="p-2"
+            className="p-2 gradient-active gradient-hover"
+            style={{
+              backgroundColor: 'var(--button-color)',
+              borderColor: 'transparent',
+              color: 'black'
+            }}
           >
             <ChevronLeft size={20} />
           </Button>
           <Button
-            variant="primary"
+            // variant="outline-secondary"
             size="sm"
             onClick={() => jump(1)}
             aria-label="Next milestone"
-            className="p-2"
+            className="p-2 gradient-active gradient-hover"
+            style={{
+              backgroundColor: 'var(--button-color)',
+              borderColor: 'transparent',
+              color: 'black'
+            }}
           >
             <ChevronRight size={20} />
           </Button>
@@ -182,11 +192,14 @@ export default function VeLeaseHorizontalTimeline() {
       {/* Year rail (desktop) */}
       <div className="d-none d-md-block mb-4">
         {/* Progress bar above buttons */}
-        <div className="mb-2 position-relative" style={{ height: "6px" }}>
+        <div className="my-2 position-relative" style={{ height: "6px" }}>
           <div className="position-absolute top-0 start-0 w-100 h-100 rounded-pill " />
           <div
-            className="position-absolute top-0 start-0 h-100 rounded-pill bg-primary"
-            style={{ width: `${progress * 100}%` }}
+            className="position-absolute top-0 start-0 h-100 rounded-pill"
+            style={{ 
+              width: `${progress * 100}%`,
+              background: 'linear-gradient(135deg, var(--button-color) 0%, var(--button-hover) 100%)'
+            }}
           />
         </div>
         {/* Year buttons */}
@@ -201,9 +214,14 @@ export default function VeLeaseHorizontalTimeline() {
             <Button
               key={item.year}
               onClick={() => scrollToIndex(idx)}
-              variant={idx === active ? "primary" : "outline-secondary"}
+              variant="outline-secondary"
               size="sm"
-              className="rounded-pill"
+              className={`rounded-pill ${idx === active ? 'gradient-active' : 'gradient-hover'}`}
+              style={idx === active ? {
+                background: 'var(--button-color)',
+                borderColor: 'transparent',
+                color: 'black'
+              } : {}}
             >
               {item.year}
             </Button>
@@ -224,6 +242,13 @@ export default function VeLeaseHorizontalTimeline() {
         <style>{`
             /* Hide scrollbar for WebKit browsers */
             .overflow-auto::-webkit-scrollbar { display: none; }
+            
+            /* Gradient button hover effect */
+            .gradient-hover:hover {
+              background: var(--button-hover) !important;
+              border-color: transparent !important;
+              color: white !important;
+            }
           `}</style>
 
         <div className="d-flex gap-4 pe-4" style={{ scrollSnapType: "x" }}>
