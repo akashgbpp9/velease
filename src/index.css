@@ -1232,6 +1232,8 @@ header.main-header .header-sticky.active .navbar {
   max-width: 24px;
   z-index: 1;
   transition: all 0.3s ease-in-out;
+    filter: brightness(0) invert(1);
+
 }
 
 .why-choose-item:hover .icon-box img {
@@ -3492,6 +3494,7 @@ header.main-header .header-sticky.active .navbar {
   max-width: 36px;
   z-index: 1;
   transition: all 0.4s ease-in-out;
+  filter: brightness(0) invert(1);
 }
 
 .velease-advantage-item:hover .icon-box img {
