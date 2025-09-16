@@ -19,7 +19,7 @@ const OurEdge: React.FC = () => {
                   viewport={{ once: true }}
                 >
                   <img
-                    src="/images/best-selling-img-1.jpg"
+                    src="/images/Velease Promise 1.jpg"
                     alt="Best Selling"
                     className="w-full h-96 object-cover rounded-lg"
                   />
@@ -35,7 +35,7 @@ const OurEdge: React.FC = () => {
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true }}
                 >
-                  The VeLease Advantage
+                  The VeLease Promise
                 </motion.h3>
                 <motion.h2
                   // className="text-4xl font-bold text-primary mb-6"
@@ -44,8 +44,7 @@ const OurEdge: React.FC = () => {
                   transition={{ duration: 0.6, delay: 0.1 }}
                   viewport={{ once: true }}
                 >
-                  Design <span>without Debt</span>, Build{" "}
-                  <span>without Burden.</span>
+                  Scaling offices & ambitions, <span>together.</span>
                 </motion.h2>
                 <motion.p
                   className="text-lg text-text leading-relaxed"
@@ -54,9 +53,7 @@ const OurEdge: React.FC = () => {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   viewport={{ once: true }}
                 >
-                  We believe premium offices shouldn’t require massive upfront
-                  spend. veLease transforms interiors into a predictable monthly
-                  lease — freeing your capital for business growth.
+                  With VeLease, you don’t just lease interiors — you gain a strategic growth partner who ensures your workspace evolves seamlessly as your ambitions expand.
                 </motion.p>
               </div>
             </div>
@@ -72,9 +69,10 @@ const OurEdge: React.FC = () => {
                 viewport={{ once: true }}
               >
                 <img
-                  src="/images/best-selling-img-2.jpg"
+                  src="/images/Velease Promise 2.jpg"
                   alt="Best Selling Materials"
                   className="w-full h-full object-cover rounded-lg"
+                  style={{ height: '100%' }}
                 />
               </motion.figure>
             </div>

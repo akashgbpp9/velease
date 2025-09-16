@@ -10,7 +10,7 @@ import {
   Lightbulb,
 } from "lucide-react";
 import WhyChooseUs from "../components/WhyChooseUs";
-import { ContactForm, HowWeWork, OurEdge } from "../components";
+import { ContactForm, HowWeWork, OurEdge, VeLeasePromise } from "../components";
 import SEO from "../components/SEO";
 
 const Services: React.FC = () => {
@@ -229,6 +229,7 @@ const Services: React.FC = () => {
       <WhyChooseUs imageRefs={imageRefs} />
       <HowWeWork imageRefs={imageRefs} />
       <OurEdge />
+      {/* <VeLeasePromise imageRefs={imageRefs} /> */}
       {/* CTA Section */}
       <ContactForm />
     </div>
