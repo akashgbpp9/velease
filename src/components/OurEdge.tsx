@@ -35,7 +35,7 @@ const OurEdge: React.FC = () => {
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true }}
                 >
-                  The veLease Edge
+                  The VeLease Advantage
                 </motion.h3>
                 <motion.h2
                   // className="text-4xl font-bold text-primary mb-6"

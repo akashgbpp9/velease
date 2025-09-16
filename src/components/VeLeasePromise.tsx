@@ -13,9 +13,9 @@ const VeLeasePromise: React.FC<VeLeasePromiseProps> = ({ imageRefs }) => {
           <div className="col-lg-6">
             {/* Section Title Start */}
             <div className="section-title dark-section">
-              <h3 className="wow fadeInUp">The VeLease Promise</h3>
+              <h3 className="wow fadeInUp">HOW IT WORKS</h3>
               <h2 className="text-anime-style-2" data-cursor="-opaque">
-                Scaling offices & ambitions, <span>together.</span>
+                From bare shell to business-ready in <span style={{color: '#FF6B35'}}>three</span> <span style={{color: '#8B5CF6'}}>simple steps.</span>
               </h2>
             </div>
             {/* Section Title End */}
@@ -25,9 +25,10 @@ const VeLeasePromise: React.FC<VeLeasePromiseProps> = ({ imageRefs }) => {
             {/* Section Title Content Start */}
             <div className="section-title-content dark-section">
               <p className="wow fadeInUp" data-wow-delay="0.2s">
-                With VeLease, you don’t just lease interiors — you gain a
-                strategic growth partner who ensures your workspace evolves
-                seamlessly as your ambitions expand.
+                Our streamlined approach ensures you get a fully functional office without delays or heavy upfront costs.
+              </p>
+              <p className="wow fadeInUp" data-wow-delay="0.3s">
+                From initial consultation to final handover, veLease manages every stage so you can move in and get to work — fast.
               </p>
             </div>
             {/* Section Title Content End */}

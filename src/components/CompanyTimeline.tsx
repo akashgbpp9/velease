@@ -148,13 +148,13 @@ export default function VeLeaseHorizontalTimeline() {
   };
 
   return (
-    <div className="w-full my-4 px-5">
+    <div className="w-full my-4 px-5 mb-16">
       {/* Header */}
       <div className="mb-6 d-flex flex-column flex-sm-row align-items-sm-end justify-content-sm-between gap-3">
         <div>
           <h2 className="h2 h3-sm fw-semibold">Our Journey</h2>
           <p className="text-muted small">
-            A horizontal timeline—scroll, drag, or use arrows.
+            From landlords to entrepreneurs, we've lived every side of the workspace journey. VeLease was born out of these real experiences — to give ambitious businesses the same flexibility, speed, and financial freedom that fueled our own growth.
           </p>
         </div>
         <div className="d-flex align-items-center gap-2">
@@ -167,7 +167,8 @@ export default function VeLeaseHorizontalTimeline() {
             style={{
               backgroundColor: 'var(--button-color)',
               borderColor: 'transparent',
-              color: 'black'
+              color: 'black',
+              borderRadius: '50%'
             }}
           >
             <ChevronLeft size={20} />
@@ -181,7 +182,8 @@ export default function VeLeaseHorizontalTimeline() {
             style={{
               backgroundColor: 'var(--button-color)',
               borderColor: 'transparent',
-              color: 'black'
+              color: 'black',
+              borderRadius: '50%'
             }}
           >
             <ChevronRight size={20} />
@@ -346,14 +348,6 @@ function TimelineCard({
             <Badge bg="outline-secondary" className="rounded-pill">
               {item.tag}
             </Badge>
-            <OverlayTrigger
-              placement="top"
-              overlay={<Tooltip>Anchor to this milestone</Tooltip>}
-            >
-              <Button variant="link" size="sm" className="p-0">
-                Copy link
-              </Button>
-            </OverlayTrigger>
           </div>
         </Card.Body>
       </Card>

@@ -93,7 +93,7 @@ const About: React.FC = () => {
       <PageHeader
         title="About us"
         breadcrumbs={breadcrumbs}
-        backgroundImage="/images/page-header-bg.jpg"
+        backgroundImage="/images/about-page-header-bg.jpg"
       />
 
       {/* About Us Section */}
