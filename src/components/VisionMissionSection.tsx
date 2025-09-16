@@ -12,7 +12,7 @@ const VisionMissionSection: React.FC<AdvantagesProps> = ({ imageRefs }) => {
             <div className="col-lg-6">
               {/* Section Title Start */}
               <div className="section-title dark-section">
-                <h3 className="wow fadeInUp">the veLease advantage</h3>
+                <h3 className="wow fadeInUp">The VeLease Advantage</h3>
                 <h2 className="text-anime-style-2" data-cursor="-opaque">
                   Smarter workspaces, <span>simplified growth.</span>
                 </h2>

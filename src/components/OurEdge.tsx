@@ -60,13 +60,14 @@ const OurEdge: React.FC = () => {
           </div>
           <div className="col-lg-6">
             {/* Best Selling Image */}
-            <div className="best-selling-image">
+            <div className="best-selling-image" style={{ height: '100%' }}>
               <motion.figure
                 className="image-anime"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
+                style={{ height: '100%' }}
               >
                 <img
                   src="/images/Velease Promise 2.jpg"
