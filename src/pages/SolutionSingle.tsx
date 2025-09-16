@@ -373,9 +373,22 @@ const SolutionSingle: React.FC = () => {
           backgroundRepeat: "no-repeat",
           backgroundAttachment: "fixed",
           backgroundPosition: "center -0.629297px",
+          position: "relative"
         }}
       >
-        <div className="container">
+        {/* 25% Black Overlay */}
+        <div 
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: "rgba(0, 0, 0, 0.25)",
+            zIndex: 1
+          }}
+        ></div>
+        <div className="container" style={{ position: "relative", zIndex: 2 }}>
           <div className="row">
             <div className="col-lg-12">
               {/* Page Header Box Start */}
