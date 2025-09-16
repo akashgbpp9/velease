@@ -11,8 +11,8 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
       className="about-us"
       style={
         {
-          "--accent": "#FFC958",
-          "--accent-color": "#FFC958",
+          "--accent": "#00B6DF",
+          "--accent-color": "#00B6DF",
         } as React.CSSProperties
       }
     >
@@ -130,7 +130,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                     <button
                       className="btn-default abt-btn-default"
                       style={{
-                        backgroundColor: "#FFC958",
+                        backgroundColor: "#00B6DF",
                         color: "#FFFFFF",
                         border: "none",
                         transition: "all 0.3s ease",
@@ -139,7 +139,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                         e.currentTarget.style.backgroundColor = "#C958FF";
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.backgroundColor = "#FFC958";
+                        e.currentTarget.style.backgroundColor = "#00B6DF";
                       }}
                       onClick={() => {
                         const element = document.getElementById("how-it-works");

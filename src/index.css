@@ -42,12 +42,12 @@
 :root {
   --primary: #192324;
   --secondary: #f8f9fa;
-  --accent: #7c877f;
+  --accent: #00b6df;
   --text: #6b7280;
   --shine-opacity: 0;
   --primary-color: #192324;
   --accent-color: #7c877f;
-  --button-color: #ffc958;
+  --button-color: #00b6df;
   --button-hover: #c958ff;
   --white-color: #ffffff;
   --dark-divider-color: rgba(255, 255, 255, 0.1);
@@ -56,7 +56,7 @@
   --divider-color: #eaf0ec;
   --cursor-color: #7c877f;
   --cursor-blend-mode: exclusion;
-  --default-font: "Hanken Grotesk", sans-serif;
+  --default-font: "Source Sans 3", sans-serif;
 }
 
 body {
@@ -83,6 +83,16 @@ h6 {
   font-weight: 700;
   line-height: 1.1em;
   color: var(--primary-color);
+}
+
+/* Heading font families */
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
+}
+
+h3 {
+  font-family: "Bebas Neue", sans-serif;
 }
 
 figure {
@@ -430,14 +440,14 @@ button:hover ~ .react-animated-cursor .cursor-outer,
 header.main-header {
   position: relative;
   z-index: 100;
-  background: transparent;
+  background: #ffffff;
 }
 
 header.main-header .header-sticky {
   position: relative;
   top: 0;
   z-index: 100;
-  background: transparent;
+  background: #ffffff;
 }
 
 header.main-header .header-sticky.hide {
@@ -453,7 +463,7 @@ header.main-header .header-sticky.active {
   right: 0;
   border-radius: 0;
   transform: translateY(0);
-  background: var(--primary-color);
+  background: #ffffff;
   border-bottom: 1px solid var(--dark-divider-color);
 }
 
@@ -507,11 +517,11 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .main-menu ul li a {
-  font-family: "Hanken Grotesk", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 16px;
   font-weight: 400;
   padding: 15px 14px !important;
-  color: var(--white-color);
+  color: var(--primary-color);
   text-transform: capitalize;
   transition: all 0.3s ease-in-out;
   text-decoration: none;
@@ -756,7 +766,7 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .section-title h2 span {
-  background: linear-gradient(135deg, #ffc958 0%, #c958ff 100%);
+  background: linear-gradient(135deg, #00b6df 0%, #9800df 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -792,7 +802,7 @@ header.main-header .header-sticky.active .navbar {
   padding: 80px 0;
   background-color: #f8f9fa;
   position: relative;
-  background-color: #ffc958;
+  background-color: #00b6df;
 }
 
 .quote-content {
@@ -872,11 +882,7 @@ header.main-header .header-sticky.active .navbar {
   left: 0;
   bottom: 0;
   right: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(25, 35, 36, 0) 0%,
-    rgba(25, 35, 36, 0.4) 80.94%
-  );
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
   height: 100%;
   width: 100%;
   z-index: 1;
@@ -917,6 +923,7 @@ header.main-header .header-sticky.active .navbar {
 
 .hero-content .btn-default.btn-highlighted {
   margin-left: 30px;
+  color: #00b6df;
 }
 
 .hero-btn {
@@ -1189,7 +1196,7 @@ header.main-header .header-sticky.active .navbar {
   position: relative;
   width: 60px;
   height: 60px;
-  background-color: var(--button-color);
+  background-color: #00b6df;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -1209,7 +1216,7 @@ header.main-header .header-sticky.active .navbar {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: var(--button-hover);
+  background-color: #9800df;
   border-radius: 50%;
   height: 100%;
   width: 100%;
@@ -1749,7 +1756,7 @@ header.main-header .header-sticky.active .navbar {
   top: 0;
   left: 0;
   bottom: 0;
-  background: linear-gradient(135deg, #ffc958 0%, #c958ff 100%);
+  background: linear-gradient(135deg, #00b6df 0%, #9800df 100%);
   border-radius: 99px;
   width: 0%;
   transition: width 2s ease;
@@ -2805,7 +2812,7 @@ header.main-header .header-sticky.active .navbar {
   top: 0;
   left: 0;
   bottom: 0;
-  background: linear-gradient(135deg, #ffc958 0%, #c958ff 100%);
+  background: linear-gradient(135deg, #00b6df 0%, #9800df 100%);
   border-radius: 99px;
 }
 
@@ -3076,7 +3083,7 @@ header.main-header .header-sticky.active .navbar {
 
 .main-footer {
   padding: 80px 0 0;
-  background: var(--primary-color);
+  background: #000000;
 }
 
 .main-footer .footer-header {
@@ -3105,7 +3112,7 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .footer-logo img {
-  max-width: 60px !important;
+  max-width: 150px !important;
 }
 
 .footer-social-links ul li {
@@ -3167,12 +3174,13 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .footer-links ul li:hover {
-  color: var(--accent-color);
+  color: #00b6df;
 }
 
 .footer-links ul li a {
   display: block;
   color: inherit;
+  text-decoration: none;
 }
 
 .footer-contact-item {
@@ -3452,7 +3460,7 @@ header.main-header .header-sticky.active .navbar {
   position: relative;
   width: 95px;
   height: 95px;
-  background: var(--button-color);
+  background: #00b6df;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -3466,7 +3474,7 @@ header.main-header .header-sticky.active .navbar {
   position: absolute;
   top: 0;
   left: 0;
-  background: var(--button-hover);
+  background: #9800df;
   border-radius: 50%;
   width: 100%;
   height: 100%;

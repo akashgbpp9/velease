@@ -42,53 +42,31 @@ const Hero: React.FC = () => {
   );
 
   useEffect(() => {
+    // Overwrite behavior: do not delete, just switch to next phrase after a pause
     const currentPhrase = phrases[currentPhraseIndex];
 
-    if (!isDeleting) {
-      // Typing effect
-      if (currentText.length < currentPhrase.length) {
-        setIsTyping(true);
-        const speed = getTypingSpeed(
-          false,
-          currentText.length,
-          currentPhrase.length
-        );
-        const timeout = setTimeout(() => {
-          setCurrentText(currentPhrase.slice(0, currentText.length + 1));
-          setIsTyping(false);
-        }, speed);
-        return () => clearTimeout(timeout);
-      } else {
-        // Pause before deleting - longer pause for better readability
-        const timeout = setTimeout(() => {
-          setIsDeleting(true);
-        }, 2500);
-        return () => clearTimeout(timeout);
-      }
+    if (currentText !== currentPhrase) {
+      // type until full phrase is reached
+      setIsTyping(true);
+      const speed = getTypingSpeed(
+        false,
+        currentText.length,
+        currentPhrase.length
+      );
+      const timeout = setTimeout(() => {
+        setCurrentText(currentPhrase.slice(0, currentText.length + 1));
+        setIsTyping(false);
+      }, speed);
+      return () => clearTimeout(timeout);
     } else {
-      // Deleting effect
-      if (currentText.length > 0) {
-        const speed = getTypingSpeed(
-          true,
-          currentText.length,
-          currentPhrase.length
-        );
-        const timeout = setTimeout(() => {
-          setCurrentText(currentText.slice(0, -1));
-        }, speed);
-        return () => clearTimeout(timeout);
-      } else {
-        // Move to next phrase with a brief pause
-        const timeout = setTimeout(() => {
-          setIsDeleting(false);
-          setCurrentPhraseIndex(
-            (prevIndex) => (prevIndex + 1) % phrases.length
-          );
-        }, 300);
-        return () => clearTimeout(timeout);
-      }
+      // once full phrase typed, wait and then switch to next without deleting
+      const timeout = setTimeout(() => {
+        setCurrentPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
+        setCurrentText("");
+      }, 2500);
+      return () => clearTimeout(timeout);
     }
-  }, [currentText, currentPhraseIndex, isDeleting, getTypingSpeed, phrases]);
+  }, [currentText, currentPhraseIndex, getTypingSpeed, phrases]);
 
   // Background image slider effect
   useEffect(() => {
@@ -136,8 +114,8 @@ const Hero: React.FC = () => {
               <div className="section-title">
                 <h3 className="wow fadeInUp">Furniture-as-a-Service (FaaS)</h3>
                 <h1 className="text-anime-style-2" data-cursor="-opaque">
-                  The Future of Office Leasing is{" "}
-                  <br className="d-block d-lg-none" />
+                  The Future of Office Leasing is
+                  <br />
                   <span
                     className="animated-text-container"
                     style={{ whiteSpace: "nowrap" }}

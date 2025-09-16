@@ -120,7 +120,7 @@
 
 /* Gradient Text Styles */
 .gradient-text {
-  background: linear-gradient(135deg, #ffc958 0%, #c958ff 100%);
+  background: linear-gradient(135deg, #00b6df 0%, #9800df 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -128,7 +128,7 @@
 }
 
 .gradient-text span {
-  background: linear-gradient(135deg, #ffc958 0%, #c958ff 100%);
+  background: linear-gradient(135deg, #00b6df 0%, #9800df 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -137,7 +137,7 @@
 
 /* Button Styles */
 .btn-default {
-  background-color: var(--button-color, #ffc958);
+  background-color: var(--button-color, #00b6df);
   color: #ffffff;
   border: none;
   padding: 12px 24px;
@@ -155,7 +155,7 @@
 }
 
 .btn-primary {
-  background-color: var(--button-color, #ffc958);
+  background-color: var(--button-color, #00b6df);
   color: #ffffff;
   border: none;
   padding: 12px 24px;

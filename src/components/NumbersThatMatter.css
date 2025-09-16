@@ -83,9 +83,10 @@
 }
 
 .ntm-col-head {
-  background: linear-gradient(135deg, #ffc958 0%, #c958ff 100%);
+  background: linear-gradient(135deg, #00b6df 0%, #9800df 100%);
   color: #fff;
   font-weight: 700;
+  font-family: "Playfair Display", serif;
   padding: 0 16px;
   text-align: center;
   text-transform: none;
