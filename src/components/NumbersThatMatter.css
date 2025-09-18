@@ -49,6 +49,7 @@
 .ntm-label {
   font-size: 28px;
   font-weight: 800;
+  font-family: "Playfair Display", serif;
   display: flex;
   align-items: center;
   text-align: center;
@@ -150,15 +151,18 @@
 .ntm-card.value.big {
   font-size: 24px;
   font-weight: 800;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 .ntm-strong {
   font-size: 32px;
   font-weight: 800;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 .ntm-muted {
   font-size: 16px;
+  font-family: "Bebas Neue", sans-serif;
   color: #6b7280;
   margin-top: 6px;
 }
@@ -166,6 +170,7 @@
 .ntm-card.text {
   font-size: 22px;
   font-weight: 600;
+  font-family: "Bebas Neue", sans-serif;
   color: #111827;
 }
 
