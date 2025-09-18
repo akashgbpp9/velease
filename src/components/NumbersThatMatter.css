@@ -26,6 +26,16 @@
   color: #6b7280;
 }
 
+/* Wrapper Grid */
+.ntm-wrapper-grid {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 16px;
+  margin-top: 0px;
+  max-width: 100%;
+  padding-inline: 15px;
+}
+
 /* Grid */
 .ntm-grid {
   display: grid;
@@ -34,7 +44,6 @@
   margin-top: 0px;
   align-items: stretch;
   max-width: 100%;
-  padding-inline: 15px;
   position: relative;
 }
 
@@ -174,13 +183,26 @@
   color: #111827;
 }
 
+/* Disclaimer Row */
+.ntm-disclaimer-row {
+  display: grid;
+  grid-template-columns: minmax(110px, 180px) repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.ntm-disclaimer-spacer {
+  /* Empty spacer that matches the size of the labels column */
+  min-height: 1px;
+}
+
 .ntm-disclaimer {
   font-style: italic;
   font-size: 14px;
   color: #6b7280;
-  text-align: center;
-  margin-top: 16px;
-  grid-column: 1 / -1;
+  text-align: left;
+  margin: 0;
+  padding: 0;
 }
 
 /* Responsive */

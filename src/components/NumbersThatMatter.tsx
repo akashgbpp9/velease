@@ -62,69 +62,80 @@ const NumbersThatMatter: React.FC = () => {
           </div>
         </div>
 
-        <div className="ntm-grid">
-          {/* Labels column */}
-          <div className=" ntm-col ntm-labels">
-            <div className="ntm-label-head" aria-hidden="true"></div>
-            <div className="ntm-label capex">CapEx</div>
-            <div className="ntm-label opex">OpEx</div>
-          </div>
+        <div className="ntm-wrapper-grid">
+          <div className="ntm-grid">
+            {/* Labels column */}
+            <div className=" ntm-col ntm-labels">
+              <div className="ntm-label-head" aria-hidden="true"></div>
+              <div className="ntm-label capex">CapEx</div>
+              <div className="ntm-label opex">OpEx</div>
+            </div>
 
-          {/* Upfront Investment */}
-          {/* <div className="ntm-col">
-            <div className="ntm-col-head hidden"></div>
-            <div className="ntm-label capex">CapEx</div>
-            <div className="ntm-label opex">OpEx</div>
-          </div> */}
-          {/* Upfront Investment */}
-          <div className="ntm-col">
-            <div className="ntm-col-head">Upfront Investment</div>
-            <div className="ntm-card value big" style={{ lineHeight: "1.4" }}>
-              ₹1 Cr upfront
-            </div>
-            <div className="ntm-card value big" style={{ lineHeight: "1.4" }}>
-              ₹0 upfront
-            </div>
-            {/* <div className="ntm-card">
-              <div className="ntm-strong">₹1 Cr </div>
-              <div className="ntm-muted">upfront</div>
-            </div>
-            <div className="ntm-card">
-              <div className="ntm-strong">₹0</div>
-              <div className="ntm-muted">upfront</div>
+            {/* Upfront Investment */}
+            {/* <div className="ntm-col">
+              <div className="ntm-col-head hidden"></div>
+              <div className="ntm-label capex">CapEx</div>
+              <div className="ntm-label opex">OpEx</div>
             </div> */}
-          </div>
-
-          {/* Tax Benefits */}
-          <div className="ntm-col">
-            <div className="ntm-col-head">Tax Benefits</div>
-            <div className="ntm-card">
-              <div className="ntm-strong">₹3L shield</div>
-              <div className="ntm-muted">(10% WDV)</div>
+            {/* Upfront Investment */}
+            <div className="ntm-col">
+              <div className="ntm-col-head">Upfront Investment</div>
+              <div className="ntm-card value big" style={{ lineHeight: "1.4" }}>
+                ₹1 Cr upfront
+              </div>
+              <div className="ntm-card value big" style={{ lineHeight: "1.4" }}>
+                ₹0 upfront
+              </div>
+              {/* <div className="ntm-card">
+                <div className="ntm-strong">₹1 Cr </div>
+                <div className="ntm-muted">upfront</div>
+              </div>
+              <div className="ntm-card">
+                <div className="ntm-strong">₹0</div>
+                <div className="ntm-muted">upfront</div>
+              </div> */}
             </div>
-            <div className="ntm-card">
-              <div className="ntm-strong">₹6L shield</div>
-              <div className="ntm-muted">(100% deductible)</div>
+
+            {/* Tax Benefits */}
+            <div className="ntm-col">
+              <div className="ntm-col-head">Tax Benefits</div>
+              <div className="ntm-card">
+                <div className="ntm-strong">₹3L shield</div>
+                <div className="ntm-muted">(10% WDV)</div>
+              </div>
+              <div className="ntm-card">
+                <div className="ntm-strong">₹6L shield</div>
+                <div className="ntm-muted">(100% deductible)</div>
+              </div>
+            </div>
+
+            {/* Asset Value */}
+            <div className="ntm-col">
+              <div className="ntm-col-head">Asset Value</div>
+              <div className="ntm-card text">Depreciates yearly</div>
+              <div className="ntm-card text">Maintained by veLease</div>
+            </div>
+
+            {/* Cash Flow / Growth */}
+            <div className="ntm-col">
+              <div className="ntm-col-head">Cash Flow/Growth</div>
+              <div className="ntm-card text">
+                Heavy drain, limited liquidity
+              </div>
+              <div className="ntm-card text">
+                Predictable, capital preserved
+              </div>
             </div>
           </div>
 
-          {/* Asset Value */}
-          <div className="ntm-col">
-            <div className="ntm-col-head">Asset Value</div>
-            <div className="ntm-card text">Depreciates yearly</div>
-            <div className="ntm-card text">Maintained by veLease</div>
-          </div>
-
-          {/* Cash Flow / Growth */}
-          <div className="ntm-col">
-            <div className="ntm-col-head">Cash Flow/Growth</div>
-            <div className="ntm-card text">Heavy drain, limited liquidity</div>
-            <div className="ntm-card text">Predictable, capital preserved</div>
+          {/* Disclaimer Row */}
+          <div className="ntm-disclaimer-row">
+            <div className="ntm-disclaimer-spacer"></div>
+            <div className="ntm-disclaimer">
+              *for representation purposes only
+            </div>
           </div>
         </div>
-
-        {/* Disclaimer */}
-        <div className="ntm-disclaimer">for representation purposes only</div>
       </div>
     </section>
   );

@@ -110,6 +110,7 @@ a {
 a:hover {
   text-decoration: none;
   outline: 0;
+  color: #9800df;
 }
 
 /* Contact link styles */
@@ -482,8 +483,8 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .navbar-brand {
-  padding: 0;
-  margin: 0;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .navbar-brand img {
@@ -538,7 +539,7 @@ header.main-header .header-sticky.active .navbar {
 
 .main-menu ul li a:hover,
 .main-menu ul li a:focus {
-  color: var(--accent-color);
+  color: #9800df;
 }
 
 .main-menu ul ul {
@@ -595,7 +596,7 @@ header.main-header .header-sticky.active .navbar {
 
 .main-menu ul ul li a:hover,
 .main-menu ul ul li a:focus {
-  color: var(--primary-color);
+  color: #9800df;
   background-color: transparent;
   padding: 6px 20px 6px 23px !important;
 }
@@ -800,9 +801,15 @@ header.main-header .header-sticky.active .navbar {
 /* Quote Section */
 .quote-section {
   padding: 80px 0;
-  background-color: #f8f9fa;
+  background: linear-gradient(
+    90deg,
+    #00b6df 0%,
+    #4a90e2 25%,
+    #7b68ee 50%,
+    #9370db 75%,
+    #8b5cf6 100%
+  );
   position: relative;
-  background-color: #00b6df;
 }
 
 .quote-content {
@@ -827,7 +834,7 @@ header.main-header .header-sticky.active .navbar {
   font-size: 32px;
   font-weight: 300;
   line-height: 1.4em;
-  color: #192324;
+  color: #ffffff;
   margin-bottom: 20px;
 }
 
@@ -838,7 +845,7 @@ header.main-header .header-sticky.active .navbar {
 .quote-section blockquote cite {
   font-size: 24px;
   font-weight: 300;
-  color: #192324;
+  color: #ffffff;
   font-style: normal;
   display: block;
 }
@@ -882,7 +889,7 @@ header.main-header .header-sticky.active .navbar {
   left: 0;
   bottom: 0;
   right: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.4));
   height: 100%;
   width: 100%;
   z-index: 1;
@@ -898,10 +905,17 @@ header.main-header .header-sticky.active .navbar {
   color: var(--white-color);
 }
 
+.hero-content .section-title h1 {
+  font-family: "Bebas Neue", "Arial Black", sans-serif;
+  font-size: 80px;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+}
+
 .hero-content .section-title h3 {
   display: inline-block;
   position: relative;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 1.6em;
   text-transform: capitalize;
@@ -1232,8 +1246,7 @@ header.main-header .header-sticky.active .navbar {
   max-width: 24px;
   z-index: 1;
   transition: all 0.3s ease-in-out;
-    filter: brightness(0) invert(1);
-
+  filter: brightness(0) invert(1);
 }
 
 .why-choose-item:hover .icon-box img {
@@ -3176,7 +3189,7 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .footer-links ul li:hover {
-  color: #00b6df;
+  color: #9800df;
 }
 
 .footer-links ul li a {
@@ -3690,6 +3703,7 @@ header.main-header .header-sticky.active .navbar {
 .faq-accordion .accordion-header .accordion-button {
   font-size: 20px;
   font-weight: 600;
+  font-family: "Source Sans Pro", sans-serif;
   line-height: 1.2em;
   color: var(--primary-color);
   align-items: start;
