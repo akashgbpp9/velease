@@ -1258,6 +1258,11 @@
   resolved "https://registry.npmjs.org/@eslint/js/-/js-8.57.1.tgz"
   integrity sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==
 
+"@fontsource/source-sans-pro@^5.2.5":
+  version "5.2.5"
+  resolved "https://registry.yarnpkg.com/@fontsource/source-sans-pro/-/source-sans-pro-5.2.5.tgz#938c5fc438f9e9a7af5b7f6d92b91af70ecddd92"
+  integrity sha512-ypendqc4pYUc+EgF7qqPY9iVYEz1t/Qr03VojKxG/2g3dnpHa1B6DOlDxWQjQXDj5QrG6inEqGT0g+edjALZyg==
+
 "@fortawesome/fontawesome-free@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-7.0.0.tgz#e4a6788a2d395ea97e7812a096e29bf9c95b944c"

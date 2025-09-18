@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fontsource/source-sans-pro": "^5.2.5",
     "@fortawesome/fontawesome-free": "^7.0.0",
     "@gsap/react": "^2.1.2",
     "@popperjs/core": "^2.11.8",

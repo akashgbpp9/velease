@@ -17,6 +17,9 @@ import Contact from "./pages/Contact";
 import FAQs from "./pages/FAQs";
 import ImageGallery from "./pages/ImageGallery";
 import NotFound from "./pages/NotFound";
+import "@fontsource/source-sans-pro"; // Defaults to weight 400
+import "@fontsource/source-sans-pro/400.css"; // Specify weight
+import "@fontsource/source-sans-pro/400-italic.css"; // Specify weight and style
 
 function App() {
   return (

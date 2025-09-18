@@ -96,7 +96,11 @@ const AboutUs: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
                 >
                   Design without debt, growth <span> without compromise.</span>
                 </h2>
-                <p className="wow fadeInUp" data-wow-delay="0.2s">
+                <p
+                  className="wow fadeInUp"
+                  data-wow-delay="0.2s"
+                  style={{ fontFamily: "Source Sans Pro" }}
+                >
                   We believe workspaces should accelerate business, not drain
                   it. veLease transforms bare-shells into fully-functional
                   offices with zero upfront cost — so your capital stays free to
