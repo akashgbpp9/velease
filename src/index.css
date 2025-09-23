@@ -48,7 +48,7 @@
   --primary-color: #192324;
   --accent-color: #00b6df;
   --button-color: #00b6df;
-  --button-hover: #c958ff;
+  --button-hover: #9800df;
   --white-color: #ffffff;
   --dark-divider-color: rgba(255, 255, 255, 0.1);
   --secondery-color: #f8f8f8;
@@ -519,8 +519,9 @@ header.main-header .header-sticky.active .navbar {
 
 .main-menu ul li a {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
+  letter-spacing: 0.05em;
   padding: 15px 14px !important;
   color: var(--primary-color);
   text-transform: capitalize;
@@ -708,6 +709,7 @@ header.main-header .header-sticky.active .navbar {
 .btn-default.btn-highlighted {
   background-color: var(--white-color);
   color: var(--accent-color);
+  margin-left: 30px;
 }
 
 .btn-default.btn-highlighted::before {
@@ -716,6 +718,7 @@ header.main-header .header-sticky.active .navbar {
 
 .btn-default.btn-highlighted::after {
   background-color: var(--button-hover);
+  color: var(--white-color);
 }
 
 .btn-default.btn-highlighted:hover {
@@ -732,7 +735,7 @@ header.main-header .header-sticky.active .navbar {
   position: relative;
   color: var(--accent-color);
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 100;
   line-height: 1.6em;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -819,15 +822,27 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .quote-section blockquote {
-  background: url("../public/images/icon-blockquote.svg");
-  background-repeat: no-repeat;
-  background-position: 35px 30px;
-  background-size: 58px;
+  background: none;
+  position: relative;
   border-radius: 0;
   padding: 30px 30px 30px 100px;
   margin-bottom: 0px;
   border: none;
   font-style: italic;
+}
+
+.quote-section blockquote::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 35px;
+  width: 58px;
+  height: 58px;
+  background: url("../public/images/icon-blockquote.svg") no-repeat center
+    center;
+  background-size: contain;
+  filter: brightness(0) invert(1);
+  pointer-events: none;
 }
 
 .quote-section blockquote p {
@@ -889,7 +904,7 @@ header.main-header .header-sticky.active .navbar {
   left: 0;
   bottom: 0;
   right: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.4));
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5));
   height: 100%;
   width: 100%;
   z-index: 1;
@@ -916,7 +931,7 @@ header.main-header .header-sticky.active .navbar {
   display: inline-block;
   position: relative;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 100;
   line-height: 1.6em;
   text-transform: capitalize;
   letter-spacing: 0.1em;
@@ -925,6 +940,7 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .hero-content .section-title p {
+  font-family: "Source Sans Pro", "Source Sans 3", sans-serif;
   font-size: 18px;
   color: var(--white-color);
   width: 100%;
@@ -935,10 +951,10 @@ header.main-header .header-sticky.active .navbar {
   filter: brightness(0) invert(1);
 }
 
-.hero-content .btn-default.btn-highlighted {
+/* .hero-content .btn-default.btn-highlighted {
   margin-left: 30px;
   color: #00b6df;
-}
+} */
 
 .hero-btn {
   display: flex;
