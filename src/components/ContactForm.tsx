@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ContactForm = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -18,11 +20,31 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-    // You can add API call or email service integration here
+    try {
+      const target = e.currentTarget;
+      const data = new FormData(target);
+      data.append("_subject", "New Contact Form Submission");
+      data.append("_captcha", "false");
+      if (!data.has("_honey")) data.append("_honey", "");
+
+      const response = await fetch(
+        "https://formsubmit.co/ajax/sales@velease.com",
+        {
+          method: "POST",
+          body: data,
+        }
+      );
+
+      if (response.ok) {
+        navigate("/thank-you");
+      } else {
+        navigate("/thank-you");
+      }
+    } catch (error) {
+      navigate("/thank-you");
+    }
   };
 
   return (
@@ -51,6 +73,16 @@ const ContactForm = () => {
               className="wow fadeInUp"
               data-wow-delay="0.4s"
             >
+              {/* Prevent bot spam */}
+              <input type="text" name="_honey" style={{ display: "none" }} />
+              {/* Subject */}
+              <input
+                type="hidden"
+                name="_subject"
+                value="New Contact Form Submission"
+              />
+              {/* Disable Captcha */}
+              <input type="hidden" name="_captcha" value="false" />
               <div className="row">
                 <div className="form-group col-md-6 mb-4">
                   <input

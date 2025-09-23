@@ -118,7 +118,7 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ imageRefs }) => {
                     }}
                   >
                     <img
-                      src="/images/why-choose-img-1.jpg"
+                      src="/images/why-choose-img-1.jpeg"
                       alt="Why Choose Image 1"
                     />
                   </figure>
@@ -134,7 +134,7 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ imageRefs }) => {
                     }}
                   >
                     <img
-                      src="/images/why-choose-img-2.jpg"
+                      src="/images/why-choose-img-2.jpeg"
                       alt="Why Choose Image 2"
                     />
                   </figure>
@@ -154,7 +154,7 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ imageRefs }) => {
                     }}
                   >
                     <img
-                      src="/images/why-choose-img-3.jpg"
+                      src="/images/why-choose-img-3.jpeg"
                       alt="Why Choose Image 3"
                     />
                   </figure>
@@ -170,7 +170,7 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ imageRefs }) => {
                     }}
                   >
                     <img
-                      src="/images/why-choose-img-4.jpg"
+                      src="/images/why-choose-img-4.jpeg"
                       alt="Why Choose Image 4"
                     />
                   </figure>

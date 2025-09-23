@@ -734,11 +734,11 @@ header.main-header .header-sticky.active .navbar {
   display: inline-block;
   position: relative;
   color: var(--accent-color);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 100;
   line-height: 1.6em;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   padding-left: 35px;
   margin-bottom: 16px;
 }
@@ -1070,7 +1070,7 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .feedback-counter:hover p {
-  background-color: var(--primary-color);
+  background-color: var(--button-hover);
 }
 
 .feedback-counter h3 {
@@ -1115,6 +1115,7 @@ header.main-header .header-sticky.active .navbar {
 
 .about-us-content-list ul li {
   position: relative;
+  font-family: "Source Sans Pro", "Source Sans 3", sans-serif;
   font-weight: 500;
   color: var(--primary-color);
   padding-left: 30px;
@@ -1165,7 +1166,7 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .about-contact-item:hover .icon-box {
-  background-color: var(--primary-color);
+  background-color: var(--button-hover);
 }
 
 .about-contact-item .icon-box figure {
@@ -1280,6 +1281,7 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .why-choose-item-content p {
+  font-family: "Source Sans Pro", "Source Sans 3", sans-serif;
   color: var(--primary-color);
   margin-bottom: 0;
 }
@@ -1352,6 +1354,17 @@ header.main-header .header-sticky.active .navbar {
 /* Services Section */
 .our-solutions {
   padding: 100px 0;
+}
+
+.our-solutions .section-title-content p {
+  font-family: "Source Sans Pro", "Source Sans 3", sans-serif;
+}
+
+.our-solutions a {
+  text-decoration: none;
+}
+.service-item a {
+  text-decoration: none;
 }
 
 .service-item {
@@ -1743,6 +1756,11 @@ header.main-header .header-sticky.active .navbar {
   background-size: contain;
 }
 
+/* Our Edge typography updates */
+.our-edge p {
+  font-family: "Source Sans Pro", "Source Sans 3", sans-serif;
+}
+
 .our-edge-content {
   padding-right: 50px;
 }
@@ -1763,7 +1781,9 @@ header.main-header .header-sticky.active .navbar {
 }
 
 .skill-data .skill-title {
-  font-size: 16px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.03em;
   text-transform: capitalize;
   color: var(--primary-color);
 }
@@ -3164,6 +3184,7 @@ header.main-header .header-sticky.active .navbar {
   height: 36px;
   width: 36px;
   transition: all 0.3s ease-in-out;
+  text-decoration: none;
 }
 
 .footer-social-links ul li a i {
@@ -4656,6 +4677,11 @@ header.main-header .header-sticky.active .navbar {
 .page-contact-us {
   padding: 100px 0 50px;
   background-color: var(--secondery-color);
+}
+
+/* Contact section title weight adjustment */
+.page-contact-us .section-title h3 {
+  font-weight: 100;
 }
 
 .contact-us-image {

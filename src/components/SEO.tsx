@@ -17,8 +17,8 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = "Office Interior Design in Pune | Flexible Leasing by veLease",
-  description = "Discover modern office interior design in Pune with veLease. We transform bare shells into plug-and-play workspaces with flexible leasing and no upfront cost.",
+  title = "Office Interior Design in Pune | Flexible Leasing by VeLease",
+  description = "Discover modern office interior design in Pune with VeLease. We transform bare shells into plug-and-play workspaces with flexible leasing and no upfront cost.",
   keywords = "office interior design, Pune, flexible leasing, workspace design, office furniture, veLease, plug-and-play office, modern office interiors, office fit-out, furniture as a service",
   canonical,
   ogTitle,

@@ -14,6 +14,7 @@ import ProjectSingle from "./pages/ProjectSingle";
 import Blog from "./pages/Blog";
 import BlogSingle from "./pages/BlogSingle";
 import Contact from "./pages/Contact";
+import ThankYou from "./pages/ThankYou";
 import FAQs from "./pages/FAQs";
 import ImageGallery from "./pages/ImageGallery";
 import NotFound from "./pages/NotFound";
@@ -40,6 +41,7 @@ function App() {
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:id" element={<BlogSingle />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/thank-you" element={<ThankYou />} />
               <Route path="/faqs" element={<FAQs />} />
               <Route path="/gallery" element={<ImageGallery />} />
               <Route path="*" element={<NotFound />} />

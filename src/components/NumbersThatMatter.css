@@ -11,6 +11,17 @@
   --ntm-card-h: 92px; /* card min-height */
 }
 
+/* Section copy styling */
+.numbers-that-matter-section .section-title p {
+  font-family: "Source Sans Pro", "Source Sans 3", sans-serif;
+  width: 80%;
+}
+
+/* Make all typography thin in this section */
+.numbers-that-matter-section * {
+  font-weight: 100 !important;
+}
+
 .numbers-that-matter-section .section-title .sub-heading {
   font-size: 34px;
   font-weight: 700;
@@ -164,7 +175,7 @@
 }
 
 .ntm-strong {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 800;
   font-family: "Bebas Neue", "Arial Black", sans-serif;
 }

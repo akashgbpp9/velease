@@ -10,7 +10,7 @@ const Services: React.FC = () => {
             <div className="section-title">
               <h3>our solutions</h3>
               <h2>
-                Smart workspace. Solutions for{" "}
+                Smart workspace solutions for{" "}
                 <span>every stage of growth.</span>
               </h2>
             </div>

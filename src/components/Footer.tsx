@@ -19,10 +19,16 @@ const Footer: React.FC = () => {
                 <div className="col-md-6">
                   {/* Footer Logo Start */}
                   <div className="footer-logo">
-                    <img
-                      src="images/velease-logo-website-inverted2.svg"
-                      alt=""
-                    />
+                    <Link
+                      to="/"
+                      onClick={scrollToTop}
+                      aria-label="veLease Home"
+                    >
+                      <img
+                        src="images/velease-logo-website-inverted2.svg"
+                        alt="veLease"
+                      />
+                    </Link>
                     {/* <img src="images/footer-logo.svg" alt="" /> */}
                   </div>
                   {/* Footer Logo End */}
@@ -194,7 +200,33 @@ const Footer: React.FC = () => {
                   next dream space!
                 </p>
 
-                <form id="newslettersForm" action="#" method="POST">
+                <form
+                  id="newslettersForm"
+                  onSubmit={async (e) => {
+                    e.preventDefault();
+                    const form = e.currentTarget as HTMLFormElement;
+                    const data = new FormData(form);
+                    data.append("_subject", "Newsletter Signup");
+                    data.append("_captcha", "false");
+                    if (!data.has("_honey")) data.append("_honey", "");
+                    try {
+                      await fetch(
+                        "https://formsubmit.co/ajax/sales@velease.com",
+                        {
+                          method: "POST",
+                          body: data,
+                        }
+                      );
+                    } catch (err) {}
+                    window.location.href = "/thank-you";
+                  }}
+                >
+                  {/* Honeypot */}
+                  <input
+                    type="text"
+                    name="_honey"
+                    style={{ display: "none" }}
+                  />
                   <div className="form-group">
                     <input
                       type="email"
