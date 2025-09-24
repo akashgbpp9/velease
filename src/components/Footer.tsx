@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
                       aria-label="veLease Home"
                     >
                       <img
-                        src="images/velease-logo-website-inverted2.svg"
+                        src="/images/velease-logo-website-inverted2.svg"
                         alt="veLease"
                       />
                     </Link>
