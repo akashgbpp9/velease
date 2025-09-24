@@ -37,7 +37,7 @@ const AboutUsSection: React.FC<AboutUsProps> = ({ imageRefs, counterRefs }) => {
             {/* About Us Images Start */}
             <div className="about-us-images relative">
               {/* About Image 1 Start */}
-              <div className="about-img-1 mb-4">
+              <div className="about-img-1">
                 <motion.figure
                   className="image-anime reveal"
                   ref={(el) => {

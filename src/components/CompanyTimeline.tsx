@@ -148,13 +148,16 @@ export default function VeLeaseHorizontalTimeline() {
   };
 
   return (
-    <div className="w-full my-4 px-5 mb-16">
+    <div className="w-full my-4 px-5 mb-24">
       {/* Header */}
       <div className="mb-6 d-flex flex-column flex-sm-row align-items-sm-end justify-content-sm-between gap-3">
         <div>
           <h2 className="h2 h3-sm fw-semibold">Our Journey</h2>
           <p className="text-muted small">
-            From landlords to entrepreneurs, we've lived every side of the workspace journey. VeLease was born out of these real experiences — to give ambitious businesses the same flexibility, speed, and financial freedom that fueled our own growth.
+            From landlords to entrepreneurs, we've lived every side of the
+            workspace journey. VeLease was born out of these real experiences —
+            to give ambitious businesses the same flexibility, speed, and
+            financial freedom that fueled our own growth.
           </p>
         </div>
         <div className="d-flex align-items-center gap-2">
@@ -165,10 +168,10 @@ export default function VeLeaseHorizontalTimeline() {
             aria-label="Previous milestone"
             className="p-2 gradient-active gradient-hover"
             style={{
-              backgroundColor: 'var(--button-color)',
-              borderColor: 'transparent',
-              color: 'black',
-              borderRadius: '50%'
+              backgroundColor: "var(--button-color)",
+              borderColor: "transparent",
+              color: "black",
+              borderRadius: "50%",
             }}
           >
             <ChevronLeft size={20} />
@@ -180,10 +183,10 @@ export default function VeLeaseHorizontalTimeline() {
             aria-label="Next milestone"
             className="p-2 gradient-active gradient-hover"
             style={{
-              backgroundColor: 'var(--button-color)',
-              borderColor: 'transparent',
-              color: 'black',
-              borderRadius: '50%'
+              backgroundColor: "var(--button-color)",
+              borderColor: "transparent",
+              color: "black",
+              borderRadius: "50%",
             }}
           >
             <ChevronRight size={20} />
@@ -198,9 +201,10 @@ export default function VeLeaseHorizontalTimeline() {
           <div className="position-absolute top-0 start-0 w-100 h-100 rounded-pill " />
           <div
             className="position-absolute top-0 start-0 h-100 rounded-pill"
-            style={{ 
+            style={{
               width: `${progress * 100}%`,
-              background: 'linear-gradient(135deg, var(--button-color) 0%, var(--button-hover) 100%)'
+              background:
+                "linear-gradient(135deg, var(--button-color) 0%, var(--button-hover) 100%)",
             }}
           />
         </div>
@@ -218,12 +222,22 @@ export default function VeLeaseHorizontalTimeline() {
               onClick={() => scrollToIndex(idx)}
               variant="outline-secondary"
               size="sm"
-              className={`rounded-pill ${idx === active ? 'gradient-active' : 'gradient-hover'}`}
-              style={idx === active ? {
-                background: 'var(--button-color)',
-                borderColor: 'transparent',
-                color: 'black'
-              } : {}}
+              className={`rounded-pill badge  ${
+                idx === active
+                  ? "gradient-active"
+                  : "bg-outline-secondary timeline-button-inactive"
+              }`}
+              style={
+                idx === active
+                  ? {
+                      background: "var(--button-color)",
+                      borderColor: "transparent",
+                      color: "white",
+                    }
+                  : {
+                      color: "#6C757D",
+                    }
+              }
             >
               {item.year}
             </Button>
@@ -249,6 +263,11 @@ export default function VeLeaseHorizontalTimeline() {
             .gradient-hover:hover {
               background: var(--button-hover) !important;
               border-color: transparent !important;
+              color: white !important;
+            }
+            
+            /* Timeline button hover effect for inactive buttons */
+            .timeline-button-inactive:hover {
               color: white !important;
             }
           `}</style>
@@ -345,7 +364,11 @@ function TimelineCard({
           <p className="text-muted small">{item.body}</p>
           <hr className="my-3" />
           <div className="d-flex align-items-center justify-content-between">
-            <Badge bg="outline-secondary" className="rounded-pill">
+            <Badge
+              bg="outline-secondary"
+              className="rounded-pill"
+              style={{ color: "#6C757D" }}
+            >
               {item.tag}
             </Badge>
           </div>

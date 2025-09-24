@@ -27,7 +27,6 @@ function App() {
     <HelmetProvider>
       <Router>
         <div className="App">
-          <AdvancedAnimatedCursor />
           {/* <Preloader /> */}
           <Header />
           <main>

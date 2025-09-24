@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin } from "lucide-react";
-import PageHeader from "../components/PageHeader";
 import SEO from "../components/SEO";
 
 const Contact: React.FC = () => {
@@ -34,14 +32,6 @@ const Contact: React.FC = () => {
         description="Get in touch with veLease for office interior design services in Pune. Contact us for consultation, design, and flexible leasing solutions for your workspace."
         keywords="contact veLease, office interior design contact, Pune, workspace consultation, get quote, office design inquiry"
         canonical="/contact"
-      />
-      {/* Page Header */}
-      <PageHeader
-        title="Contact us"
-        breadcrumbs={[
-          { label: "home", href: "/" },
-          { label: "contact us", href: "/contact" },
-        ]}
       />
 
       {/* Page Contact Us */}
@@ -321,6 +311,7 @@ const Contact: React.FC = () => {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
+                  title="Google Maps - Giga Space IT Park, Pune"
                   className="w-full h-96 rounded-lg"
                 ></iframe>
               </motion.div>

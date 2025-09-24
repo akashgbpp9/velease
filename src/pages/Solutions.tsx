@@ -44,41 +44,6 @@ const Services: React.FC = () => {
         keywords="office interior solutions, Pune, workspace consultation, design and build, furniture as a service, office fit-out, workspace transformation"
         canonical="/solutions"
       />
-      {/* Page Header */}
-      <div
-        className="page-header parallaxie"
-        style={{
-          backgroundImage: "url(/images/solution-hero-bg.jpg)",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundAttachment: "fixed",
-          backgroundPosition: "center -0.629297px",
-        }}
-      >
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              {/* Page Header Box Start */}
-              <div className="page-header-box">
-                <h1 className="text-anime-style-2" data-cursor="-opaque">
-                  Solutions
-                </h1>
-                <nav className="wow fadeInUp">
-                  <ol className="breadcrumb">
-                    <li className="breadcrumb-item">
-                      <a href="./">home</a>
-                    </li>
-                    <li className="breadcrumb-item active" aria-current="page">
-                      solutions
-                    </li>
-                  </ol>
-                </nav>
-              </div>
-              {/* Page Header Box End */}
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Services Grid */}
       <section className="services-grid py-20 bg-white">

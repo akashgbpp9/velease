@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import {
-  PageHeader,
   AboutUsSection,
   CompanyTimeline,
   VisionMissionSection,
@@ -8,20 +7,13 @@ import {
   OurEdge,
   TeamSection,
   AboutFAQSection,
-  ClientsSection,
   Testimonials,
   HowWeWork,
   CTASection,
-  ContactForm,
 } from "../components";
 import SEO from "../components/SEO";
 
 const About: React.FC = () => {
-  const breadcrumbs = [
-    { label: "home", href: "/" },
-    { label: "about us", active: true },
-  ];
-
   const counterRefs = useRef<(HTMLSpanElement | null)[]>([]);
   const imageRefs = useRef<(HTMLElement | null)[]>([]);
   // Counter animation
@@ -89,12 +81,6 @@ const About: React.FC = () => {
         keywords="about veLease, office interior design company, Pune, workspace transformation, team, mission, vision, company history"
         canonical="/about"
       />
-      {/* Page Header */}
-      <PageHeader
-        title="About us"
-        breadcrumbs={breadcrumbs}
-        backgroundImage="/images/about-page-header-bg.jpg"
-      />
 
       {/* About Us Section */}
       <AboutUsSection imageRefs={imageRefs} counterRefs={counterRefs} />
@@ -105,11 +91,8 @@ const About: React.FC = () => {
       {/* Vision Mission Section */}
       <VisionMissionSection imageRefs={imageRefs} />
 
-      {/* VeLease Promise Section */}
-      <VeLeasePromise imageRefs={imageRefs} />
-
       {/* Best Selling Section */}
-      <OurEdge />
+      <VeLeasePromise imageRefs={imageRefs} />
 
       {/* Testimonials Section */}
       <Testimonials imageRefs={imageRefs} counterRefs={counterRefs} />
@@ -117,14 +100,13 @@ const About: React.FC = () => {
       {/* Team Section */}
       <TeamSection />
 
+      {/* VeLease Promise Section */}
+      <OurEdge />
       {/* How We Work Section */}
       <HowWeWork imageRefs={imageRefs} />
 
       {/* About FAQ Section */}
       <AboutFAQSection imageRefs={imageRefs} />
-
-      {/* Clients Section */}
-      <ClientsSection />
 
       {/* CTA Section */}
       <CTASection />
