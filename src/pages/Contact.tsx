@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import SEO from "../components/SEO";
 
 const Contact: React.FC = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -19,10 +21,32 @@ const Contact: React.FC = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
+    try {
+      const target = e.currentTarget;
+      const data = new FormData(target);
+      data.append("_subject", "New Contact Form Submission from Contact Page");
+      data.append("_captcha", "false");
+      if (!data.has("_honey")) data.append("_honey", "");
+
+      const response = await fetch(
+        "https://formsubmit.co/ajax/sales@velease.com",
+        {
+          method: "POST",
+          body: data,
+        }
+      );
+
+      if (response.ok) {
+        navigate("/thank-you");
+      } else {
+        navigate("/thank-you");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      navigate("/thank-you");
+    }
   };
 
   return (
@@ -104,6 +128,21 @@ const Contact: React.FC = () => {
                   viewport={{ once: true }}
                 >
                   <form onSubmit={handleSubmit} className="space-y-6">
+                    {/* Prevent bot spam */}
+                    <input
+                      type="text"
+                      name="_honey"
+                      style={{ display: "none" }}
+                    />
+                    {/* Subject */}
+                    <input
+                      type="hidden"
+                      name="_subject"
+                      value="New Contact Form Submission from Contact Page"
+                    />
+                    {/* Disable Captcha */}
+                    <input type="hidden" name="_captcha" value="false" />
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="form-group">
                         <input

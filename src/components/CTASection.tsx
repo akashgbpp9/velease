@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const CTASection: React.FC = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,11 +21,32 @@ const CTASection: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-    // You can add API call or email service integration here
+    try {
+      const target = e.currentTarget;
+      const data = new FormData(target);
+      data.append("_subject", "New CTA Form Submission");
+      data.append("_captcha", "false");
+      if (!data.has("_honey")) data.append("_honey", "");
+
+      const response = await fetch(
+        "https://formsubmit.co/ajax/sales@velease.com",
+        {
+          method: "POST",
+          body: data,
+        }
+      );
+
+      if (response.ok) {
+        navigate("/thank-you");
+      } else {
+        navigate("/thank-you");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      navigate("/thank-you");
+    }
   };
   return (
     <div className="our-clients  py-20 bg-white">
@@ -71,6 +93,21 @@ const CTASection: React.FC = () => {
                     className="wow fadeInUp"
                     data-wow-delay="0.4s"
                   >
+                    {/* Prevent bot spam */}
+                    <input
+                      type="text"
+                      name="_honey"
+                      style={{ display: "none" }}
+                    />
+                    {/* Subject */}
+                    <input
+                      type="hidden"
+                      name="_subject"
+                      value="New CTA Form Submission"
+                    />
+                    {/* Disable Captcha */}
+                    <input type="hidden" name="_captcha" value="false" />
+
                     <div className="row">
                       <div className="form-group col-md-6 mb-4">
                         <input
