@@ -24,9 +24,14 @@
 
 .numbers-that-matter-section .section-title .sub-heading {
   font-size: 34px;
-  font-weight: 700;
+  font-weight: 700 !important;
   color: #1f2937;
   margin-bottom: 16px;
+}
+.numbers-that-matter-section .section-title .sub-heading span {
+  
+  font-weight: 700 !important;
+ 
 }
 
 .numbers-that-matter-section .section-title .copy {
